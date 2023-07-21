@@ -4,7 +4,30 @@
 
 
 ## Apresentação:
-    Nome: Lucas Dias Squinca
-    Idade: 18
-    Curso: Sistemas de Informação - UFMS CPTL
-    Cidade: Mirandópolis/SP
+    **Nome:** Lucas Dias Squinca
+    **Idade:** 18
+    **Cidade:** Mirandópolis/SP
+    **Curso:** Sistemas de Informação
+    **Instituição de ensino:** Universidade Federal de Mato Grosso do Sul - UFMS CPTL (Três Lagoas)
+    **Semestre:** 2º
+    **Hobbies:** Desenvolvimento do corpo através de treinos e alimentação regradas, tudo pelo físico __(não utilizo o suco)__
+    **Experiências:** Business Process (BPMN)
+    **Instagram:** [https://www.instagram.com/lucassquinca/](https://www.instagram.com/lucassquinca/)
+
+### Sprint #1:
+    
+### Sprint #3:
+
+### Sprint #4:
+
+### Sprint #5:
+
+### Sprint #6:
+
+### Sprint #7:
+
+### Sprint #8:
+
+### Sprint #9:
+
+### Sprint #10:
