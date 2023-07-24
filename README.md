@@ -4,9 +4,8 @@
 
 
 ## Apresentação:
-    **Nome:** Lucas Dias Squinca
-
-    **Idade:** 18
+**Nome:** Lucas Dias Squinca
+**Idade:** 18
 
     **Cidade:** Mirandópolis/SP
 
@@ -16,11 +15,13 @@
 
     **Semestre:** 2º
 
-    **Hobbies:** Desenvolvimento do corpo através de treinos e alimentação regradas, tudo pelo físico __(não utilizo o suco)__
+    **Hobbies:** 
 
     **Experiências:** Business Process (BPMN)
 
-    **Instagram:** [https://www.instagram.com/lucassquinca/](https://www.instagram.com/lucassquinca/)
+## Redes Sociais:
+**Instagram:** [https://www.instagram.com/lucassquinca/](https://www.instagram.com/lucassquinca/)
+**LinkedIn:** [https://www.linkedin.com/in/lucas-squinca-32584425b/](https://www.linkedin.com/in/lucas-squinca-32584425b/)
 
 ## Sprint #1:
     
