@@ -18,14 +18,24 @@
 
 **Hobbies:** Cozinhar, Academia, Livros;
 
-**Experiências:** None
+**Experiências:** None;
 
 ## Redes Sociais:
 **Instagram:** [https://www.instagram.com/lucassquinca/](https://www.instagram.com/lucassquinca/)
 
 **LinkedIn:** [https://www.linkedin.com/in/lucas-squinca-32584425b/](https://www.linkedin.com/in/lucas-squinca-32584425b/)
 
+**Twitter:** [https://twitter.com/lucas_squinca](https://twitter.com/lucas_squinca)
+
+## Segurança em Aplicações WEB:
+
+## Métodos ágeis de A a Z:
+
 ## Sprint #1:
+
+### Git & GitHub:
+
+### Linux:
     
 ## Sprint #3:
 
