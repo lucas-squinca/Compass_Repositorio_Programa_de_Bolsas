@@ -1,4 +1,4 @@
-# Repositório Curso D&A - Compass UOL
+<h1 align="center"> Repositório D&A - Compass UOL </h1>
     Repositório destinado para a trilha de atividades da Compass - UOL
     Armazenamento de: Anotações e códigos dos assuntos estudados nas Strings
 
