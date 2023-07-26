@@ -20,7 +20,7 @@
 
 **Experiências:** None;
 
-**Portfólio:** [Nicitov.github.io](Nicitov.github.io)
+**Portfólio:** [https://nicitov.github.io](https://nicitov.github.io)
 
 ## Redes Sociais:
 **Instagram:** [https://www.instagram.com/lucassquinca/](https://www.instagram.com/lucassquinca/)
