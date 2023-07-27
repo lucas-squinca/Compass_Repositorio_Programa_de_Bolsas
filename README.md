@@ -46,8 +46,8 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
     4. Geralmente é requisito essencial para muitas vagas de emprego;
     5. A comunidade é extremamente ativa;
     6. Segurança elevada;
-    7. Possui suporte nativo para muitas linguagens de programação;  
-    
+    7. Possui suporte nativo para muitas linguagens de programação;
+   
     **Sintaxe geral dos comandos:** COMANDO -OPÇÕES ARQUIVOS/DIRETÓRIOS;  
     **Diretório:** É uma pasta com arquivos e/ou outras pastas inseridas nele;
     ### Principais comandos no Linux:
