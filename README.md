@@ -72,7 +72,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
             find -> Encontar diretórios e/ou arquivos;
             +adduer -> Adicionar um usuário;
             +userdel -> Deletar um usuário no Linux;
-    Para mais detalhes sobre os códigos, outras funções e códigos acesse: [Resumo Linux](#)
+    Para mais detalhes sobre os códigos, outras funções e códigos [clique aqui](#).
 
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
