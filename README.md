@@ -14,18 +14,18 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 **📖Livros Preferidos:** [Bíblia | Dom Casmurro | Viagens à minha terra | Bons Dias!];  
 **✨Animes Preferidos:** [Black Clover | Ousama Ranking | Spy X Family];    
 **🛠️Experiências:** [None];  
-**📁Portfólio:** [[nicitov.github.io]][Portfólio];  
+**📁Portfólio:** [[nicitov.github.io]][Portfólio]; 
 ## Redes Sociais
-**Stack Overflow:** [Lucas Dias Squinca][Stack Overflow];  
-**Instagram:** [@lucassquinca][Instagram];  
-**LinkedIn:** [Lucas Squinca][LinkedIn];  
-**Twitter:** [lucas_squinca][Twitter];
+[![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)][Stack Overflow]
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)][Instagram]
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)][LinkedIn]
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)][Twitter]
 
 ## Aprendendo...
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="85px"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg" width="85px"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" width="85px"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="85px"/>
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ## Segurança em aplicações Web
 
