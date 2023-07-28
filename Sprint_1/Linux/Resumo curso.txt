@@ -1,0 +1,363 @@
+__Linux__
+
+HOTKEY: CTRL + ALT + T = ABRE O TERMINAL
+
+Terminal: Uma janela que executa o shell para interpretar e trazer a resposta para os comandos que são digitados;
+Shell: Aquele que executa os comandos digitados no terminal, trazendo a resposta para o mesmo;
+
+**Sintaxe dos comandos Linux: COMANDO -OPÇÕES ARQUIVOS/DIRETORIOS;**
+**ATENÇÃO: O COMANDO "SUDO" DÁ PERMISSÃO DE ADMINISTRADOR, TRABALHANDO NUMA EMPRESA  MUITO PROVAVELMENTE NÃO SERÁ UTILIZADO**
+
+Estrutura de diretórios do Linux:
+
+	Diretório: Pasta com arquivos e/ou outras pastas inseridas neles;
+		Bin: Possui arquivos binários;
+		Boot: Arquivos que ajudam na inicialização do sistema;
+		Dev: Arquivos que representam os dispositivos de entrada e de saída;
+		Etc: Arquivos de configurações de aplicativos;
+		Home: possui os usuários do dispositivo;
+		Lib: Possui arquivos de bilbiotecas que são compartilhados com outros arquivos;
+		media: Responsável por apresentar as pastas dos dispositivos que temos no pc;
+		opt: Arquivos das aplicações não oficiais do sistema;
+		sbin: Arquivos binários de inicialização do sistema;
+		tmp: Arquivos descartáveis, podem ser deletados, temporários;
+		usr: Arquivos de modo leitura que não podem ser modificados;
+		var: Arquivos de log (arquivos variados);
+
+Comando CD:
+	Com ele, podemos mudar de diretório;
+	É um dos comandos mais utilizados do Linux;
+	"cd /" -> Muda para o diretório raiz;
+	Sintaxe básica: cd + Nome do repositório;
+	Subir nível de diretório: "cd .."
+	"cd -" -> Envia-te ao último diretório usado anteriormente e mostra-o na tela;
+	"cd ~" -> Navega até a home do usuário;
+	TAB -> Completa o nome do diretório e/ou mostra todos os diretórios disponíveis;
+	Podemos usar o && no prompt de comando, concatenando dois comandos que serão inicializados em sequência;
+	"cd .." -> Voltar um diretório;
+
+Comando LS:
+	Mostra os arquivos e pastas do respectivo repositório que estamos;
+	"ls -a" -> Mostra os arquivos ocultos de uma pasta;
+	"ls -l" -> Mostra os arquivos com mais detalhes;
+	Podemos combinar parâmetros: "ls -la" -> Mostra arquivos com mais detalhes, inclusive os ocultos;
+	"ls -lh" -> Mostra o tamanho do arquivo;
+	"ls -ltr" -> Ordena e mostra a data de modoficação do arquivo;
+	"ls -parametro (nome do repositório)" -> Sintaxe;
+	"ls -lr (nome do repositório)" -> Mostra os arquivos em ordem reversa;
+	"ls -R" -> Mostra o conteúdo dos diretórios; são os chamados subdiretórios;
+	"ls -lS" -> Ordena o conteúdo de um diretório por tamanho;
+	"ls -m" -> Mostra os diretórios separados por vírgula;
+
+**Alguns comandos possuem a função --help, usada para falar sobre o comando digitado. Ex: "ls --help".**
+
+Comando clear:
+	Limpa o terminal;
+
+Comando cat:
+	1. Cria um arquivo por meio dele;
+	2. Observa o conteúdo de um arquivo;
+	Podemos criar um arquivo juntando outros arquivos:
+		cat arquivo1 arquivo2 > arquivo3 (Assim o arquivo3 será feito);
+	"cat -n" -> Mostra o número de linhas juntamente com o arquivo;
+	"cat -e arquivo" -> Sinaliza o final de cada linha com um $;
+	"cat arquivo1 >> arquivo2" -> Concatena o primeiro arquivo com o segundo;
+	
+Comando touch:
+	Começando a criar arquivos...
+	Também usado para modificar a data de alteração de um arquivo;
+	"touch (arquivo_novo)" -> Criação do arquivo "arquivo_novo";
+	Podemos criar diversos arquivos de uma vez só: touch arq1.txt arq2.txt arq3.txt
+
+Comando man:
+	Manual do Sistema;
+	Um manual completo de um comando em específico;
+	Ex: man ls; man cd; man touch;
+
+**Podemos buscar comando que já usamos tanto rolando para cima quanto com o comando CTRL + R no prompt de comando;**
+
+Gerenciamento de arquivos e diretórios:
+
+Criando diretórios: mkdir "nome do diretório"
+	Podemos criar vários diretórios com somente um comando: mkdir nome nome2 nome3...
+	"mkdir -v nome" -> Mostra com mais detalhes o que está acontecendo com a execução do comando mkdir;
+	"mkdir -p" -> Me permite desenvolver um código mais complexo, como criar um diretório dentro de um diretório dentro de outro diretório;
+
+Removendo diretórios: rm "nome do arquivo"
+	"rm -i nome" -> Informativo, pergunta se você realmente quer remover o diretório;
+	"rm -dv nome" -> Remove diretórios vazios;
+	"rm -rfv nome" -> Remove diretórios que possuem conteúdo em seu interior";
+	"rmdir + nome" -> Remove o diretório do sistema (remove somente diretório);
+	"rmdir -p" -> Remove diretórios dentro de diretórios;
+
+Copiando diretórios e arquivos: cp "nome do arquivo" "nome do novo arquivo copiado"
+	Podemos copiar um arquivo e movê-lo para um diretório: cp "nome do arquivo" "nome do diretório";
+	Podemos também copiar diversos arquivos para um diretório de uma vez digitando todos os nomes dos arquivos seguido pelo nome do diretório;
+	"cp -r" -> Copia diretórios;
+	"cp -r nome/* nome2" -> Copia todos os arquivos de um diretório (nome) para outro diretório (nome2);
+	"cp nome* diretório" -> Copia todos os arquivos que possuem o nome de "nome" até o diretório "diretório";
+
+Movendo diretórios e arquivos: mv / CTRL X do Windows
+	"mv nome nome2" -> Move o arquivo "nome" e o renomeia para "nome2";
+	"mv nome_arquivo nome_diretório" -> Move o arquivo até o diretório mostrado;
+
+**Com o comando pwd podemos saber exatamente aonde estamos no computador, ou seja, o diretório atual que estamos;**
+
+Gerenciamento de pacotes/aplicativos:
+
+Atualizando repositórios: "sudo apt-get update"
+	Por uma questão de segurança, somente administradores podem atualizar aplicativos e repositórios;
+	O comando "sudo" é usado para adquirirmos permissões extras de sistema, para aí sim atualizarmos os pacotes;
+
+Atualizando aplicativos/pacotes: "sudo apt-get upgrade"
+	Atualiza aplicativos existentes no computador;
+
+Instalando pacotes/aplicativos: "sudo apt-get install nome_aplicativo1 nome_aplicativo2 ..."
+
+Removendo pacotes/aplicativos: "sudo apt-get purge nome_aplicativo1 nome_aplicativo2 ..."
+
+Atualizando o Linux: "sudo apt-get dist-upgrade"
+	Atualiza TUDO: novos pacotes, remove pacotes; faz tudo para que tenhamos a versão final do Linux;
+
+Limpando pacotes/aplicativos desnecessários: "sudo apt-get autoremove"
+
+Buscando pacotes/aplicativos: apt-cache search nome_aplicativo
+	Busca por aplicativos para serem instalados;
+
+**Você pode usar somente "apt" nos comandos, ao invés de "apt-get".**
+
+##Filtro e buscas de arquivos e diretórios:
+
+Comando head: Serve para vermos as primeiras linhas de um arquivo.
+	"head nome_documento"
+	"head -n (numero de linhas) nome_documento" -> Mostra a quantidade de linhas exatas de um documento;
+	"head -n 1 documento > documento2" -> Cria um novo documento com a linha do documento1
+
+Comando tail: Serve para vermos o final de um arquivo, as suas últimas linhas.
+	"tail -n (num de linhas) documento.txt"
+	"tail -n 1 doc.txt > doc2.txt" -> Cria um novo documento com a linha do doc.txt
+	"tail -f doc.txt" -> Toda vez que esse documento for atualizado, será informado a alteração num log (debug de logs);
+
+Comando grep: Usado para encontrar conteúdos específicos dentro de arquivos.
+	"grep 'conteudo' nome_documento.txt"
+	O argumento -i irá ignorar, não irá diferenciar maiúsculas e minúsculas;
+	O argumento -c mostra a quantidade de ocorrências do conteúdo buscado no arquivo;
+	"grep 'conteudo' -r" -> Irá procurar o conteúdo em todos os arquivos disponíveis no diretório selecionado;
+
+Comando find: Procurar diretórios ou arquivos.
+	"find -name 'documento.txt'"
+	"find -iname 'documento.txt'" -> Busca ignorando maiúsculas e minúsculas;
+	"find -name 'documento*'" -> Procurando todos os arquivos que possuem o nome "documento";
+	"find -empty" -> Mostra todos os diretórios que estão vazios;
+	O argumento "type" serve para filtrar as buscas, escolhendo mostrar somente arquivos (file) ou somente diretórios;
+	"find -empty -type f/d" -> f = file, d = diretório;
+
+Comando locate: Parecido com o find, mas busca arquivos numa base de dados que está salva em nosso sistema operacional;
+	Maior performance;
+	Não encontrará arquivos muito recentes;
+	"locate nome_arquivo";
+
+**Também podemos executar o noso último comando digitando "!!"**
+
+EDITORES DE TEXTO MAIS UTILIZADOS:
+*Vim (i para habilitar o modo de inserção de texto):
+Editando, salvando e fechando arquivo: 
+	":x" -> Salva e sai automaticamente do arquivo
+	":w" -> Salva e não sai do VIM
+	":q" -> Sai do editor automaticamente
+Deletando linha, undo e redo:
+	Deletando: ESC (volta para a tela de comandos) + dd (para deletar a linha)
+	Revertendo mudanças: teclar U;
+	Revertendo o revertimento: CTRL E;
+Search e replace:
+	Procurar alguma palavra/frase: "/(palavra)" <n> avança para as próximas ocorrências e <shift n> para as ocorrências anteriores;
+	Replace: :%s/(palavra a ser mudada)/(palavra que será inserida) ou somente :s/... para modificar apenas em uma linha;
+
+**Podemos sair sem salvar e ignorando as pendências com :q!**
+
+*Nano
+Criando, salvando e saindo de um arquivo: No prompt, digite: nano (Interface muito interativa)
+Editando arquivo: "nano nome_arquivo" - ao sair (^X) ele pergunta se queremos salvá-lo.
+	CTRL + R = Podemos escolher um arquivo para incrementá-lo com o aberto atualmente.
+Copiando, colando e recortando conteúdo:
+	Copiar e colar: ALT + A (começa a sublinhar todo o conteúdo desejado); ALT + 6 ("ENTER"); CTRL + U (COLAR)
+	Recortar: ALT + A; CTRL + K (RECORTE); CTRL + U (COLAR)
+Movimentação dentro de arquivo: Acessar partes do arquivo de maneira rápida e objetiva;
+	ALT + / -> movimentar até o fim rapidamente;
+	ALT + \	 -> movimentar até o início rapidamente;
+	ALT + G (escolher a linha que queremos ir) -> movimentar para uma linha específica;
+Busca e replace:
+	Buscar alguma coisa de interesse dentro do arquivo: CTRL + W (Leva para a primeira ocorrência do que foi buscado)
+	Buscar alguma coisa para ser substituída: CTRL + R
+
+#Gerenciamento de usuários e grupos:
+
+Adicionar usuários no Linux: sudo adduser "nome_usuário" - Podemos vê-lo com ls /home/;
+Deletando usuários no Linux: sudo userdel --remove "nome_usuário"
+Modificando nome de display do usuário: sudo usermod -c 'nome_novo' nome_antigo
+Mudando o nome do diretório base e do usuário no terminal: sudo usermod -l novo_nome -d /home/novo_nome -m antigo_nome
+Bloqueando e desbloqueando usuários: 
+	sudo usermod -L nome_usuário (BLOQUEAR)
+	sudo usermod -U nome_usuário (DESBLOQUEAR)
+
+Grupos no Linux:
+	O que é? Conjunto de vários usuários com a funcionalidade de facilitar o gerenciamento de permissões (de fazer ou não fazer alguma coisa);
+Visualizando grupos existentes: "getent group"
+Criando Grupos: sudo groupadd -g <ID do grupo> <nome do grupo>
+Deletando Grupos: sudo groupdel <nome do grupo>
+Movendo usuários para outros grupos: sudo usermod -a -G <nome do grupo> <nome do usuário>
+Removendo usuários de um grupo: sudo gpasswd -d <nome do usuário> <nome do grupo>
+
+**Como se tornar um super usuário:** "sudo su" (Assim não precisamos mais usar o sudo) - "exit" para sair do modo super usuário;
+**Como trocar a senha de um usuário?** "passwd"
+
+#Gerenciamento de permissões:
+	O que são permissões? Possibilidade de alterar três propriedades de arquivos e diretórios: Leitura, escrita e execução.
+	Leitura: Se os usuários poderão ler o arquivo (R -read)
+	Escrita: Se os usuários poderão escrever no arquivo (W - write)
+	Execução: Se os usuários poderão executar o arquivo (X - execute)
+
+Entendendo permissões: R W X
+	1 222 333 444
+1: diretório ou arquivo.
+2: Permissões do owner.
+3: Permissões do grupo.
+4: Permissões dos demais usuários que não fazem parte de grupo do arquivo nem são os donos do arquivo.
+
+Sintaxe das permissões:
+1 222 333 444 -> drwxr-xr-x
+1 serve para d ou -: diretório ou arquivo
+222: Permissões do dono
+333: Permissões do grupo
+444: Permissões dos usuários
+d: directory = diretório
+r: read = ler
+w: write = escrever/editar
+x: executar
+-: não há permissão
+
+Permissão numérica:
+	Comando: "chmod xxx file/dir"
+	xxx -> respectivamente, owner, grupo e os demais; São permissões em números.
+
+0 = Sem permissão --
+1 = Executar --x
+2 = Escrever -w-
+3 = Executar e Escrever -wx
+4 = Ler r--
+5 = Ler e Executar r-x
+6 = Ler e escrever rw-
+7 = Ler, escrever e executar rwx
+
+Ex: chmod 777 arquivo -> Todos os usuários (owner, grupos e geral) possuem todas as permissões;
+    chmod 400 arquivo -> Somente o dono possui a permissão de leitura;
+
+Permissão simbólica:
+	Comando: chmod args file/dir
+	args: argumentos;
+	+ : Adiciona permissão a um arquivo ou diretório;
+	- : Remove permissão a um arquivo ou diretório;
+	= : Determina as permissões, substituindo as anteriores;
+	u : Dono do arquivo;
+	g : Grupos;
+	o : Outros
+	a: Todos;
+
+Ex: chmod o=x : Concedendo permissão de executar "para outros"
+    chmod a=rwx : Concedendo todas as permissões para todos
+    chmod g-w : Removendo permissão de escrever para os grupos
+    chmod u+rw : Concedendo permissão de leitura e escrita para o owner/user
+
+Alterando o owner do arquivo:
+	Comando: sudo chown <nome_usuário> <nome_arquivo> (Você perde o arquivo)
+		 sudo chown <nome_usuário>:<grupo> (Para "entregar" o arquivo para o grupo)
+	Se o grupo que o usuário está inserido tem todas as permissões mas o próprio usuário não possui permissões, ele continuará sem permissões sobre o arquivo e/ou diretório
+
+Alterando o grupo do arquivo:
+	Comando: sudo chgrp <grupo> <arquivo>
+
+**Copiar e colar no terminal: CTRL + SHIFT + C (COPIAR); CTRL + SHIFT + V (COLAR)**
+**Histórico dos últimos comandos digitados: Comando -> "history"**
+
+Gerenciamento básico de Redes:
+	Como a Web funciona?
+		Uma requisição sai do seu computador, atravessa a internet até achar o servidor, o qual envia a resposta até o seu computador;
+		1. Há um envio de requisição para um domínio (DNS);
+		2. Verifica-se a reuisição por parte do domínio (DNS = IP);
+		3. Requisição da resposta para o servidor que pertence a este domínio;
+		4. Retorno da resposta a quem solicitou;
+	
+	O que é DNS?
+		Domain Name System: Traduz o endereço de IP em um domínio -> Deste modo não é necessário decorar IP's de servidores;
+	Como funciona?
+		1. Uma pessoa digita um domínio no navegador;
+		2. Um servidor lê o DNS digitado (DNS RESOLVER);
+		3. Encontra o servidor pela combinação de DNS;
+		4. Retorna ao usuário o resultado desejado;
+
+	O que são portas?
+		É um endpoint -> Outro domínio que podemos acessar o mesmo site, muda-se apenas a porta;
+		Ex de portas: 20 -> FTP
+			      22 -> SSH
+			      80 -> HTTP
+			      443 -> HTTPS (certificação de segurança)
+			      3306 -> MySQL
+			      4000 -> API
+
+	O que é TCP?
+		Transmission Control Protocol: Protocolo para transmissão de dados pela rede;
+		Preocupa-se com a confiabilidade dos dados (é mais seguro);
+		O que utiliza o TCP? SMTP (Envio de e-mails); FTP (Transferência de arquivos); HTTP (Protocolo para navegar na internet);
+		
+	O que é UDP?
+		User Datagram Protocol: Também é usado para enviar dados;
+		Preocupa-se mais com a velocidade;
+		Usado principalmente para jogos on-line;
+
+Comandos:
+	ping: Testar se estamos conectados com a internet;
+		"ping google.com" -> Vaerificar se estamos conectados com a google;
+		Detectar se estamos com perda de pacotes (internet ruim);
+		"ping <IP> -> Podemos executar o comando com IP's também;
+		Verificar o nosso "ms";
+	
+	netstat: Ver com o que o nosso computador está conectado ou recebendo informações;
+		"netstat -at" -> Aplicações TCP;
+		"netstat -au" -> Aplicações UDP;
+
+	netcat: Realiza uma conecção específica em algum domínio;
+		netcat -<protocolo> <domínio ou IP> <tipo de porta>
+		Ex: netcat -u google.com 80
+
+	ifconfig: Usado para ver ou mudar as configurações de redes no nosso sistema;
+		
+	nslookup: Saber os IP's através do DNS, ou seja, através de um domínio mostra o IP;
+		  nslookup <DNS>
+		  
+	tcpdump: Ver todas as conexões TCP que a nossa máquina está fazendo;
+		 sudo tcpdump;
+
+	Como ver o ip da sua máquina?
+		"hostname -I"
+
+Compactação e descompactação de arquivos e diretórios no Linux:
+	
+	Compactar um arquivo:
+		Comando: tar -czvf <nome_qualquer>.tar.gz <nome_arquivo>
+	
+	Compactando múltiplos arquivos em um só:
+		Comando: tar -czvf <nome_qualquer>.tar.gz <arquivo1> <arquivo2> <arquivo3> <diretório1> ...
+		Podemos compactar tanto arquivos quanto diretórios;
+
+	Descompactando arquivos:
+		Comando: tar -xzvf <nome_do_arquivo>.tar.gz
+			 tar -xzvf <nome_do_arquivo.tar.gz -C <Diretório de destino>
+
+	Compactando em .zip:
+		Comando: zip -r <nome>.zip <arquivo>	
+	
+	Descompactando em .zip:
+		Comando: unzip <nome>.zip -d <diretório de destino>
+
+	Como ver o que tem dentro de um arquivo compactado?
+		tar -tvf <arquivo compactado>.tar.gz
