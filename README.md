@@ -35,19 +35,19 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 - ### *Git & GitHub*
     
 - ### *Linux*
-    >### Este resumo é dedicado a abordar teoricamente os principais fundamentos e códigos do Linux, para ter acesso o arquivo da teoria completa *[clique aqui](Sprint_1\Linux\README.md)*
+    >### Este resumo é dedicado a abordar teoricamente os principais fundamentos e códigos do Linux, para ter acesso o arquivo da teoria completa *[clique aqui](/Sprint_1/Linux/README.md)*
     O **linux** é um sistema operacional **open source** com diversas distribuições, que são versões diferentes do Linux, como: Debian, Ubuntu, Mint, Kali Linux, dentre outros;  
     Mas afinal, por quê existem tantas distribuições? Diferentemente de outros sistemas operacionais como Windows e MacOS, o Linux não trabalha com atualizações fixas que inviabilizam a utilização das anteriores. Pelo contrário, cada usuário é capaz de, por meio de alguma versão base, desenvolver uma nova versão do Linux com melhorias ou peculiaridades de seu interesse;  
     Agora, falando um pouco sobre o sistema, temos o Kernel, que é o coração de todo o sistema. Ele faz a ligação com os hardwares do computador, os quais entregam as respostas desejadas pelo usuário. Ou seja, é o Kernel que faz a comunicação entre usuário e hardware;
     
     ### *Quais são as principais vantagens do Linux?*
     1. É gratuito;
-    1. É o principal sistema operacional para servidores Web;
-    2. Grandes empresas utilizam com mais recorrência (AWS, Heroku...);
-    3. Geralmente é requisito essencial para muitas vagas de emprego;
-    4. A comunidade é extremamente ativa;
-    5. Segurança elevada;
-    6. Possui suporte nativo para muitas linguagens de programação;
+    2. É o principal sistema operacional para servidores Web;
+    3. Grandes empresas utilizam com mais recorrência (AWS, Heroku...);
+    4. Geralmente é requisito essencial para muitas vagas de emprego;
+    5. A comunidade é extremamente ativa;
+    6. Segurança elevada;
+    7. Possui suporte nativo para muitas linguagens de programação;
 
     **Sintaxe geral dos comandos:** COMANDO -OPÇÕES ARQUIVOS/DIRETÓRIOS;  
     **Diretório:** É uma pasta com arquivos e/ou outras pastas inseridas nele;
