@@ -14,7 +14,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 **📖Livros Preferidos:** [Bíblia | Dom Casmurro | Viagens à minha terra | Bons Dias!];  
 **✨Animes Preferidos:** [Black Clover | Ousama Ranking | Spy X Family];    
 **🛠️Experiências:** [None];  
-**📁Portfólio:** [[nicitov.github.io]][Portfólio]; 
+**📁Portfólio:** [[nicitov.github.io]][Portfólio];
 ## Redes Sociais
 [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)][Stack Overflow]
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)][Instagram]
@@ -33,7 +33,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 ## Sprint #1
 - ### *Git & GitHub*
-    
+    >### Este resumo tem como objetivo exemplificar o uso de Git e GitHub bem como os comandos mais usados. Para entrar em mais detalhes, acesse o *[arquivo completo](/Sprint_1/Git_&_Hub/README.md)*
 - ### *Linux*
     >### Este resumo é dedicado a abordar teoricamente os principais fundamentos e códigos do Linux, para ter acesso o arquivo da teoria completa *[clique aqui](/Sprint_1/Linux/README.md)*
     O **linux** é um sistema operacional **open source** com diversas distribuições, que são versões diferentes do Linux, como: Debian, Ubuntu, Mint, Kali Linux, dentre outros;  
