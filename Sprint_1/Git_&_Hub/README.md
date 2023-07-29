@@ -27,6 +27,69 @@ Git é um projeto de código aberto, ou seja, é descentralizado e permite que q
 #### O que é?
 É um serviço de gerenciamento de repositórios amplamente usado e gratuito.  
 É por meio dele que conseguidos disponibilizar nossos projetos e permitir que outros desenvolvedores possam trabalhar nele ou criarem suas próprias versões pessoais, respeitando o tipo da _licença_ de cada projeto.
+#### Criando repositórios
+Podemos criar um repositório no site da GitHub para depois linká-lo à nossa máquina;  
+Algumas informações necessárias para iniciar um projeto são: Nome do repositório, descrição, licença, etc;  
+É uma interface mais interativa, com alguns cliques o seu repositório remoto está criado;
+
+### Abas do GitHub
+#### **Code**
+Nela temos acesso a diversas informações, como o código fonte, os detalhes da licença agregada ao projeto, o arquivo README.md, etc;  
+É nela também que criamos branches, adicionamos arquivos, e diversas outras coisas!
+
+#### **Issue**
+Por meio dela organiza-se tarefas a serem feitas ou bugs existentes para serem corrigidos. Geralmente é designado para alguém solucionar a issue;  
+Nela podemos atualizar o estado de resolução do problema ou tarefa até que seja efetivamente concluída;
+
+#### **Pull Request**
+É onde os códigos são enviados, os quais passam por uma análise para identificação de issues e novas possíveis funcionalidades;  
+Primeiramente o código passa pelo "pull request" para depois ser enviado para o repositório "main" do projeto;  
+
+#### **Actions**
+Aba para criação de automatizações de deploy com outros serviços, como "Continuous Integration" e "Continuous Development";  
+Por meio do "Actions" podemos criar rotinas de atualização dos códigos automaticamente, por exemplo;
+
+#### **Projects**
+Muito semelhante a aplicações Web de organização de equipe, como: Trello e Monday.com;  
+É um quadro de tarefas já inserido no próprio GitHub, cuja vantajem está atrelada a ter várias aplicações em um só lugar!  
+Estrutura: BackLog | Retorno de Qualidade | Desenvolvimento | Teste | Finalizadas;  
+Método ágil Kanban, onde se criam notas que podem virar pedidos de issues para organização do projeto;
+
+#### **Wiki**
+Aba feita para criar um ambiente para documentação mais extensa, como a própria [Wikipédia](https://pt.wikipedia.org/wiki/Wikipédia:Página_principal);  
+Nela podemos descrever as funcionalidades do projeto;  
+
+#### **Insights**
+Aba de informações sobre o projeto, como: Todos os commits, os contribuidores do projeto, forks, dentre outras;  
+Linha de desenvolvimento do projeto, do início ao fim;  
+
+#### **Settings**
+Aba de configurações, como o próprio nome já diz;  
+Podemos modificar diversas partes do projeto: Nome, contribuidores, acesso, features, até mesmo remover o projeto do repositório remoto;
+
+#### **Gist**
+É uma funcionalidade do GitHub;  
+Nele podemos adicionar pequenos blocos de código que podem ser hospedados do github;  
+Podemos salvar uma solução que achamos interessante, ou também uma pequena funcionalidade importante que não queremos perder, por exemplo:  
+```c
+include <stdio.h>
+
+int main(void)
+{
+    /* Lendo um vetor numérico de até 100 valores */
+
+    int vet[100], tamanho, i;
+
+    printf("Informe o tamanho do vetor");
+    scanf("%d", &tamanho);
+
+    printf("Informe a sequência de números");
+    for(i = 0; i <= tamanho - 1; i = i + 1)
+    {
+        scanf("%d", &vet[i]);
+    }
+}
+```
 
 ### Como enviar repositórios ao GitHub?
 Ao iniciar-mos o nosso repositório, devemos relacioná-lo com o github por meio da seguinte sequência de códigos:
@@ -68,7 +131,8 @@ Após o comando, o repositório do GitHub será atualizado com o conteúdo do re
 
 ### Recebendo alterações
     git pull
-Inversamente ao "git push", usamos o código para receber alterações existentes no repo do GitHub;
+Inversamente ao "git push", usamos o código para receber alterações existentes no repo do GitHub;  
+_Branches (abordado mais a frente) também são atualizadas com o comando "git pull";_
 
 ### Clonar repositórios
 Quando começamos a trabalhar em um projeto já existente, devemos receber o código. Para isso, faz-se o uso do "git clone" para facilitar a cópia de códigos para diferentes máquinas;
@@ -164,5 +228,195 @@ As tags são como "checkpoints" no nosso branch/projeto.
     Podemos enviar todas as nossas tags de uma só vez:
 
         git push origin --tags
+
+### Compartilhamento e Atualização
+- ### Comando para "encontrar" branches
+        git fetch
+    Atualiza os branches e insere oq que não estavam sendo mapeados pelo seu Git;
+#### **Obs: Comandos como "git push" e "git pull" também são usados em branches, podendo receber ou enviar alterações para o repositório remoto ou compartilhar códigos com outros participantes**
+
+- ### Comando "remote"
+        git remote
+    Usado para trackear ou remover um repositório;
+
+        git remote add origin <link>
+    Comando usado quando criamos um repositório remoto, como no GitHub, e queremos adicioná-lo à nossa máquina;
+### Submódulos
+#### O que é?
+É a maneira pela qual podemos ter mais de um projeto em somente um repositório.  
+ "Linkamos" um projeto ao outro, mantendo suas estruturas separadas;
+- ### Verificando submódulos
+        git submodule
+- ### Como adicionar submódulos?
+        git submodule add <repositório>
+- ### Atualizando submódulos
+    Podemos atualizar um submódulo primeiramente commitando as mudanças e após isso executar o comando:
+        
+        git push --recurse-submodules=on-demand
+    Deste modo, atualizamos somente o submódulo, não o projeto o qual está inserido;
+### Análises e inspeção
+- ### Como exibir informações?
+        git show
+    Este comando oferece uma gama de informações, como os commits de nosso branch atual, as modificações feitas nos arquivos entre cada commit feito, dentre outras;
+        
+        git show <tag_nome>
+    Usado para exibir informações sobre uma tag em específico;
+- ### Exibindo diferanças
+        git diff
+    Por meio deste comando, exibe-se as diferenças entre o branch atual e o remoto;
+
+        git diff <arquivo1> <arquivo2>
+    Podemos também exibir as diferenças entre diferentes arquivos;
+- ### Log resumido
+        git shortlog
+    Nos dá informações resumidas, agrupando os commits por autores. Assim, podemos ver quais commits foram enviados ao projeto e por quem;  
+    **Obs: Por meio disso, é visível a importância de enviar boas mensagens nos commits para mostrar aos outros participantes o que foi feito e enviado de maneira prática!**
+- ### Describe
+        git describe --tags
+    Podemos verificar, por meio do comando, todas as tags existentes em nosso projeto;
+### Administrando o repositório
+- ### Limpando arquivos "Untracked"
+        git clean
+    Este comando possui por função limpar/excluir todos os arquivos que não foram adicionados ao repositório por meio do comando "git add ."
+- ### Otimização de REPO's
+        git gc
+    O repositório é otimizado em questões de performance, pois o comando avalia e elimina os arquivos que julga não mais necessários;
+- ### Checando integridade de arquivos
+        git fsck
+    **COMANDO DE ROTINA**  
+    File System Check: checa a integralidade de arquivos bem como sua conectividade, procurando por corrupção nos mesmos.
+- ### Reflog
+        git reflog
+    Este comando exibe todos os seus passos dentro do projeto, desde um novo commit até uma mudança entre branches.  
+    **Atenção:** Reflogs ficam salvos até expirarem (cerca de 30 dias);
+    ### Recuperando arquivos com reflog
+        git reset --hard <hash>
+    Podemos tanto avançar quando retroceder entre as hashs de um reflog. Porém, é importante lembrar de que reflogs expiram;
+- ### Como transformar repo em arquivo
+        git archive --format zip --output main_files.zip main
+    Compactamos um repositório em arquivo .zip, por exemplo;
+
+### Markdown
+É uma forma de estilização de textos para a Web, possuindo diversas funcionalidades, como:
+1. Exibir trechos de código estilizados;
+2. Inserir links;
+3. Inserir imagens;
+4. Atrelar links a imagens;
+
+Suas funcionalidades permitem uma melhor experiência do cliente nas documentações;
+
+- ### Cabeçalhos
+    Usados com o símbolo "#";  
+    Semelhantes ao sistema de cabeçalhos do html, que vão por ordem hierárquica (h1 até h6);  
+    #### Ex:
+
+    ```html
+    <h1>Título Principal</h1>
+    <p>Assunto do título sendo abordado e detalhado</p>
+    <h2>Outro título, menor</h2>
+    ...
+    ```
+    Quanto maior a prioridade (h1), menos hashtags são usadas, ou seja, para usarmos o "h1" em markdown, usamos o "#" uma vez;  
+    #### Ex:
+
+    ```
+    # Título Principal
+    Assunto do título sendo abordado e detalhado
+    ## Outro título, menor
+    ...
+    ```
+- ### Ênfase
+    Usamos símbolos para dar ênfase nos nossos textos, são eles "**" ou "__" para **negrito** (abrindo e fechando) e "*" ou "_" para _itálico_;
+    #### Ex:
+        **Este texto estará em negrito em um arquivo Markdown** | __Este texto também__
+    ```
+        *Este texto estará em itálico em um arquivo Markdown* | _Este texto também_
+    ```
+        _**Este texto estará em negrito e em itálico em um arquivo Markdown**_
+
+- ### Listas
+    Temos listas ordenadas e não ordenadas em arquivos .md, assim como n html;  
+    Listas ordenadas iniciam com: "número".(Item);  
+    Listas não ordenadas iniciam com: *Item;
+    #### Ex de não ordenada:
+    * Primeiro ponto;
+    * Segundo ponto;
+    * Terceiro ponto;  
+
+    #### No código markdown:
+        * Primeiro ponto;
+        * Segundo ponto;
+        * Terceiro ponto;
+
+    #### Ex de ordenada:
+    1. Primeiro item;
+    2. Segundo item;
+    3. Terceiro item;
+
+    #### No código markdown:
+        1. Primeiro item;
+        2. Segundo item;
+        3. Terceiro item;
+
+    Note que, tanto na exibição quanto no código, as listas ordenadas são apresentadas da mesma maneira;
+
+- ### Imagens
+    O Markdown permite que inserimos imagens no nosso documento, por meio do código:
+
+        ![Texto_imagem](link_imagem)
+    
+    #### Ex:
+    **No código:**
+
+        ![logo markdown](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
+    
+    **No documento:**  
+    ![logo markdown](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
+
+    **Obs: A imagem pode se encontrar dentro do repositório ou ter sua url externa, funciona dos dois modos.**
+
+- ### Links
+    Podemos também inserir links facilmente em nosso documento por meio do código:
+
+        [Texto_link](Url_link)
+
+    #### Ex:
+    **No código:**
+        
+        []()
+    
+    **No documento:**
+
+    []()
+
+- ### Códigos no GitHub
+    Para inserir códigos no arquivo markdown usamos abre e fecha de acentos graves:
+
+        ```
+        Seu código aqui
+        ```
+    Ainda podemos deixar o nosso código estilizado, informando em qual linguagem estamos escrevendo após os primeiros três primeiros acentos:
+
+        ```python
+        Seu código aqui
+        ```
+    Deste modo, nosso código fica estilizado, colorido para as funções que são reconhecidas pelo documento.
+    #### Ex:
+    **No código:**
+    ```
+        ```python
+        num = int(input('Informe um número inteiro'))
+        num2 = int(input('Informe outro número'))
+        soma = num + num2
+        print(f'A soma dos dois números é {soma})
+        ```
+    ```
+    **No documento:**
+    ```python
+        num = int(input('Informe um número inteiro'))
+        num2 = int(input('Informe outro número'))
+        soma = num + num2
+        print(f'A soma dos dois números é {soma})
+        ```
 ## **Certificado**
 <img src="Certificado/certificado de conclusão Git e GitHub - foto.jpg" width="600px"/>
