@@ -137,7 +137,7 @@ _Branches (abordado mais a frente) também são atualizadas com o comando "git p
 ### Clonar repositórios
 Quando começamos a trabalhar em um projeto já existente, devemos receber o código. Para isso, faz-se o uso do "git clone" para facilitar a cópia de códigos para diferentes máquinas;
 
-    git clone
+    git clone <Url_repositório>
 ### Como remover arquivos do projeto?
     git rm <nome_arquivo>
 Com este comando, removemos um arquivo da supervisão do git.
@@ -151,14 +151,14 @@ Podemos usar o respectivo comando para ter acesso a um histórico com todos os c
     git mv
 Comando usado para renomear e mover arquivos para outras pastas/diretórios;
 
-### Desfazer alterações
+### Desfazer alterações (arquivo)
     git checkout
 Este comando retoma o estado original do arquivo modificado;
 
 ### Como ignorar arquivos no projeto?
 Ao incluirmos um arquivo chamado ".gitignore" na raiz de nosso projeto, podemos "ignorar" arquivos, basta que adicionemos os nomes dos arquivos dentro do .gitignore;
 
-### Desfazendo alterações
+### Desfazendo alterações (reset total)
     git reset
     git reset --hard (Forçar o reset)
 **CUIDADO!** Com este comando, todas as alterações comitadas e pendentes serão excluídas
@@ -219,7 +219,7 @@ As tags são como "checkpoints" no nosso branch/projeto.
 - ### Verificando tags
         git show <nome>
 - ### Alterando entre tags
-        git checkout <nome>
+        git checkout <nome_tag>
     Com esse comando, conseguimos avançar ou retroceder entre os checkpoints da branch;
 - ### Enviando tags
     Ainda podemos enviar nossas tags para o repositório e assim compartilhá-lo com os nossos colegas desenvolvedores:
@@ -383,11 +383,11 @@ Suas funcionalidades permitem uma melhor experiência do cliente nas documentaç
     #### Ex:
     **No código:**
         
-        []()
+        [Youtube](https://www.youtube.com/watch?v=GHMXAvTSRAY)
     
     **No documento:**
 
-    []()
+    [Youtube](https://www.youtube.com/watch?v=GHMXAvTSRAY)
 
 - ### Códigos no GitHub
     Para inserir códigos no arquivo markdown usamos abre e fecha de acentos graves:
@@ -418,5 +418,43 @@ Suas funcionalidades permitem uma melhor experiência do cliente nas documentaç
         soma = num + num2
         print(f'A soma dos dois números é {soma})
         ```
+- ### TaskList
+    Ainda podemos adicionar uma lista de tarefas no Markdown, tanto concluídas quanto não concluídas.  
+    **Obs:** Essa sintaxe do markdown é especial e exclusiva do GitHub;
+
+    #### Ex:
+    **No código:**
+    
+        [x] Estudar GitHub
+        [ ] Estudar SQL
+    **No documento:**
+        [x] Estudar GitHub
+        [ ] Estudar SQL
+
+### Escrevendo Commits corretamente
+Commits mal escritos atrapalham o entendimento e continuação do projeto.  
+A padronização das mensagens dos commits são de extrema importância para o versionamento do projeto, assim como para o bom entendimento durante seu desenvolvimento;
+
+Escrever bons commits ajuda em:
+1. Reviews de Pull Request;
+2. Melhoria dos Logs (git log), bem como de suas variantes, como "shortlog" e "relog";
+3. Entender em que ponto o projeto se encontra por meio dos commits;
+4. Manutenção do projeto;
+
+#### Possíveis soluções para commits:
+- #### Private Branches
+    Consiste na criação de branches que não serão compartilhados com o repositório. Deste modo, podemos escrever qualquer tipo de commit;  
+    Ao solucionarmos o problema ou projeto, podemos dar um "rebase" com o comando:
+     
+        git rebase <atual> <funcionalidade> -i
+    Com esse comando, podemos editar ou até mesmo excluir commits dados. Assim, commits também podem ser reutilizados, apenas trocamos o que está escrito;  
+    Excluímos com "squash" e renomeamos com "reword".
+- #### Boas Práticas de commits
+    Podemos:
+    1. Separar o assunto do corpo da mensagem (como se fosse um "título", assunto principal);
+    2. Máximo de 50 caracteres para o assunto;
+    3. Máximo de 72 caracteres para o corpo;
+    4. Explicar o "porque" e o "como" do commit, não o código escrito em si;
+
 ## **Certificado**
 <img src="Certificado/certificado de conclusão Git e GitHub - foto.jpg" width="600px"/>

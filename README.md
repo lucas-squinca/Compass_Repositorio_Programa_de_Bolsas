@@ -15,6 +15,9 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 **✨Animes Preferidos:** [Black Clover | Ousama Ranking | Spy X Family];    
 **🛠️Experiências:** [None];  
 **📁Portfólio:** [[nicitov.github.io]][Portfólio];
+------
+>### **João 3:16 "Porque Deus amou o mundo de tal maneira que entregou o seu Filho unigênito para que todo aquele que nEle crê nao pereça, mas tenha a vida eterna".**
+------
 ## Redes Sociais
 [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)][Stack Overflow]
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)][Instagram]
@@ -26,15 +29,167 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-
+---------------
 ## Segurança em aplicações Web
 
 ## Métodos ágeis de A a Z
 
 ## Sprint #1
 - ### *Git & GitHub*
+    ### Para acessar o certificado [clique aqui](/Sprint_1/Git_&_Hub/Certificado/)
     >### Este resumo tem como objetivo exemplificar o uso de Git e GitHub bem como os comandos mais usados. Para entrar em mais detalhes, acesse o *[arquivo completo](/Sprint_1/Git_&_Hub/README.md)*
+    Antes de abordar plenamente sobre Git e GitHub, é importante detalhar o que é **controle de versão**:
+
+    Controle de versão é um modo de trabalhar com o código fonte em uma aplicação. Possibilita o trabalho conjunto.  
+    Existem algumas ferramentas que permitem o trabalho com o código fonte, dentre elas temos o **Git**.
+
+    **Git** é um programa de controle de versão que se baseia no controle de repositórios. Nele, qualquer pessoa pode compartilhar e modificar projetos.
+    ### Repositórios no Git
+    É onde o código é armazenado. Geralmente são ligados a um servidor de gerenciamento de repositórios (GitHub).
+    ### GitHub
+    É um serviço de gerenciamento de repositórios amplamente usado;
+    É nele que disponibilizamos os nossos códigos com outros dev's;
+    ### Abas do GitHub
+    - **Code:** Nela temos acesso aos arquivos, ao readme, a licença do projeto, criação de branches, etc;
+    - **Issue:** Nele organiza-se problemas e tarefas e serem feitos, designando os responsáveis pelas tarefas;
+    - **Pull Request:** Onde os códigos são enviados para uma avaliação. Quando aprovado, será enviado ao repo remoto principal;
+    - **Actions:** Aba para criação de automatizações. Por exemplo, automizar um "git push" todo dia 12 às 14 horas;
+    - **Projects:** Aba para criação de um quadro de tarefas a serem feitas. As notas criadas podem virar issues. Semelhante a sites de gerenciamento de tarefas, como Trello e Monday.com;
+    - **Wiki:** Aba para criação de praticamente uma "Wikipédia" do seu projeto. Criação de uma documentação mais extensa do projeto;
+    - **Insights:** Aba que mostra a linha de desenvolvimento do projeto do iníco ao fim;
+    - **Settings:** Aba de configurações (mudar nome do projeto, ver contribuidores, etc.);
+    - **Gist:** Onde podemos adicionar pequenos blocos de códigos e salvá-los;
+    ### Ligando um repositório ao GitHub
+    #### Siga os seguintes passos:
+        echo "# <nome_repo_github>" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git branch -M main
+        git remote add origin https://github.com/<usuario_github>/<nome_repo_github>.git
+        git push -u origin main
+    ### Comandos fundamentais do Git
+        git status -> Verifica alterações no projeto;
+        git add . -> Adiciona arquivos "untracked";
+        git commit -a -m <mensagem> -> Salva todas as alterações;
+        git push -> Envia as alterações para o repositório remoto;
+        git pull -> Recebe alterações do repositório remoto | alterações de branch;
+        git clone <Url> -> Clona um repositório existente;
+        git rm <arquivo> -> Remove um arquivo específico; do projeto;
+        git log -> Histórico com todos os commits dados
+        git mv -> Renomeia arquivos | Move arquivos dentro do repo;
+        git checkout -> Desfaz alterações de um arquivo, ou seja, volta ao estado original;
+        git reset --hard -> Desfaz todas as alterações já commitadas e as pendentes;
+    #### **Podemos ignorar arquivos adicionando um arquivo .gitignore na pasta do repositório.**
+
+    ### Branches
+    Modo de separar diferentes versões de um projeto. Primeiramente, desenvolve-se uma parte e um projeto em uma branch e depois une-se a "main";
+    #### Principais Comandos
+        git branch <nome_branch> -> Cria branches
+        git branch -> Visualiza Branches
+        git branch -d <nome_branch> -> Deleta um branch específico;
+        git checkout <nome_branch> -> Muda de branch;
+        git checkout -b <nome_novo_branch> -> Cria um branch novo e automaticamente muda para ele;
+        git merge <nome_branch> -> Une branches
+        git stash -> "Salva" a ultima versão do seu código, permitindo alternativas diferentes de desenvolvimento. Quando executado, volta a última versão salva;
+        git stash list -> Visualizar stashs existentes;
+        git stash <nome_stash> -> Recuperar stash e trabalhar a partir do que está salvo nela;
+        git stash clear -> Remove todas as stashs;
+        git stash drop <nome_stash> -> Remove uma stash em específico;
+        git tag -a <nome_tag> -m <mensagem> -> Cria uma tag;
+        git show <nome> -> Verifica uma tag;
+        git checkout <nome_tag> -> Muda de uma tag para outra;
+        git push origin <nome_tag> -> Enviar tags para o repositório remoto;
+        git push origin --tags -> Enviar todas as tags de uma vez;
+
+    ### Compartilhamento e atualização
+    #### Principais Comandos
+        git fetch -> Atualiza e encontra branches não mapeados pelo Git;
+        git remote -> Remove ou trackeia um repositório remoto;
+        git remote add origin <link> -> Liga um repositório remoto existente ao seu repo Git da máquina (quando o repositório local ainda não está linkado a um repo remoto);
+        git submodule -> Verifica submódulos;
+        git submodule add <repositório> -> Adiciona submódulos;
+        git push --recurse-submodules=on-demand -> Atualiza um submódulo (apenas ele);
+
+    ### Análises e inspeção
+    #### Principais Comandos
+        git show -> Exibe uma gama de informações sobre o repositório;
+        git show <tag_nome> -> Exibe informações sobre uma tag em específico;
+        git diff -> Exibe as diferenças entre branches;
+        git diff <arquivo1> <arquivo2> -> Exibe as diferenças entre diferentes arquivos;
+        git shortlog -> Exibe informações resumidas sobre o repositório, as quais se agrupam por autor;
+        git describe --tags -> Verifica todas as tags existentes em nosso projeto;
+
+    ### Administrando o Repositório
+    #### Principais Comandos
+        git clean -> Remove todos os arquivos "untracked"
+        git gc -> Otimiza o repositório em questão de performance;
+        git fsck -> Checa a integridade de arquivos;
+        git reflog -> Exibe todas as atividades feitas do projeto. Uma "linha do tempo";
+        git reset --hard <hash> -> Avança ou retrocede entre hashs do reflog. Recupera arquivos com reflog;
+        git archive --format zip --output main_files.zip main -> Cria um arquivo .zip do nosso repositório;
+
+    ### Markdown
+    #### Principais Comandos
+    - Cabeçalhos: Iguais ao do HTML5;
+        
+            # = <h1>
+            ## = <h2>
+            ### = <h3>
+            #### = <h4>
+            ##### = <h5>
+            ###### = <h6>
+    - Ênfase: Negrito e Itálico;
+            
+            **<Seu texto em negrito aqui>**
+            __<Seu texto em negrito aqui>__
+        ```
+            *<Seu texto em itálico aqui>*
+            _<Seu texto em itálico aqui>_
+        ```
+            _**<Seu texto em negrito e itálico aqui>**_
+    - Listas: Ordenada e Não Ordenada
+        
+            Ordenada:
+                1. Primeiro ponto;
+                2. Segundo ponto;
+                3. Terceiro ponto;
+            Não ordenada:
+                * Primeiro ponto;
+                * Segundo ponto;
+                * Terceiro ponto;
+    - Imagens:
+            
+            ![Texto_imagem](link_imagem)
+    - Links:
+            
+            [Texto_link](Url_link)
+    - Códigos: Colocar o código entre seis acentos graves
+
+            ```
+            <Seu código aqui>
+            ```
+        Podemos ainda estilizar com as cores da linguagem escrita:
+            
+            ```<Linguagem de programação>
+            <Seu código aqui>
+            ```
+    - TaskList:
+
+            [x] Task concluída
+            [ ] Task não concluída
+    ### Boas práticas no Commit
+    É importante padronizar nossas mensagens nos commits para deixar o processo de criação claro, assim como para o desenvolvimento pleno de nosso projeto.  
+    Podemos, para melhorar nossos commits:
+    1. Fazer separação do entre o corpo e o assunto do commit;
+    2. Desenvolver o assunto com no máximo 50 caracteres;
+    3. Desenvolver o corpo do commit com no máximo 72 caracteres;
+    4. Explicar, no commit, o "porque" e "como" **do commit**, não do que está escrito e sendo inserido no código;
+
+>##### Para mais informações e explicações sobre Git e GitHub, não se esqueça de acessar o [README.md de Git e GitHub](/Sprint_1/Git_&_Hub/README.md) 😉
+    
 - ### *Linux*
+    ### Para visualizar o certificado [clique aqui](/Sprint_1/Linux/Certificado/)
     >### Este resumo é dedicado a abordar teoricamente os principais fundamentos e códigos do Linux, para ter acesso o arquivo da teoria completa *[clique aqui](/Sprint_1/Linux/README.md)*
     O **linux** é um sistema operacional **open source** com diversas distribuições, que são versões diferentes do Linux, como: Debian, Ubuntu, Mint, Kali Linux, dentre outros;  
     Mas afinal, por quê existem tantas distribuições? Diferentemente de outros sistemas operacionais como Windows e MacOS, o Linux não trabalha com atualizações fixas que inviabilizam a utilização das anteriores. Pelo contrário, cada usuário é capaz de, por meio de alguma versão base, desenvolver uma nova versão do Linux com melhorias ou peculiaridades de seu interesse;  
@@ -152,6 +307,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
     3. TCP: Protocolo de transmissão de dados da rede, o qual se preocupa com a confiabilidade dos dados;
     4. UDP: Protocolo para transmissão de dados, mas se preocupa com a velocidade de transmissão;
 
+>##### Para informações mais completas sobre Linux e suas funcionalidades, acesso o [README.md](/Sprint_1/Linux/README.md) específico de Linux 😊
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
 [Twitter]: https://twitter.com/lucas_squinca
