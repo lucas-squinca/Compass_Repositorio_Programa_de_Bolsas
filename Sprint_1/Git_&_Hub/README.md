@@ -428,8 +428,8 @@ Suas funcionalidades permitem uma melhor experiência do cliente nas documentaç
         [x] Estudar GitHub
         [ ] Estudar SQL
     **No documento:**
-        [x] Estudar GitHub
-        [ ] Estudar SQL
+    - [x] Estudar GitHub
+    - [ ] Estudar SQL
 
 ### Escrevendo Commits corretamente
 Commits mal escritos atrapalham o entendimento e continuação do projeto.  
