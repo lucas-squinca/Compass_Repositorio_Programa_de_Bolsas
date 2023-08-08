@@ -309,6 +309,12 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 >##### Para informações mais completas sobre Linux e suas funcionalidades, acesso o [README.md](/Sprint_1/Linux/README.md) específico de Linux 😊
 
+## Sprint #2
+
+- ### SQL p/ análise de dados
+
+- ### Big Data Fundamentos 3.0
+
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
 [Twitter]: https://twitter.com/lucas_squinca
 [LinkedIn]:https://www.linkedin.com/in/lucas-squinca 
