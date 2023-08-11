@@ -1,6 +1,7 @@
 Exercícios AWS 2/10 SQL
 =======================
-
+### Readme dedicado aos exercícios propostos da AWS 2/10.  
+#### Exercícios E1 a E16.
 ## E1
 ![image](/Sprint_2/SQL_análise_de_dados/Exercícios/AWS%202-10/img/Data%20&%20Analytics%20-%20PB%20-%20AWS%202_10%20-%20Exercício%2001.png)
 
