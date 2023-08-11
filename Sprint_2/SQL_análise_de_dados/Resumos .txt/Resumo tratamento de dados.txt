@@ -1,0 +1,29 @@
+### Tratamento de Dados
+#### Conversão de unidades:
+	Opedador ::
+	Operador CAST()
+Só iremos usar o cast em ocasiões que o :: não funcionar;
+	texto para data: usar "::date" na frente dos textos; (usando com cast: cast('texto' as date));
+	texto para número: usar "::numeric" na frente dos textos; (usando com cast: cast('texto' as numeric));
+	número para texto: REPLACE -> "replace(coluna/número/etc, 'parte a ser retirada', 'parte a ser colocada no lugar da que foi retirada');
+
+#### Tratamento Geral
+Tipos:
+	Case when: Muito semelhante ao "switch-case", entra em condições específicas e se caso uma delas e exclusivamente uma delas for verdadeira, a ação de dentro do "then" é executada.
+		Se nenhuma delas for executada, o comando estipulado após o "else" é executado;
+	
+	Coalesce(): Tratamento de dados nulos -> Verifica qual é o primeiro campo não nulo de uma lista de valores. Vai olhar o primeiro item da lista, se for nulo, ele pula para o segundo, senão, ele pega o valor e parte para o próximo;
+
+#### Tratamento de texto
+	LOWER(): Transformar todo o texto em letras minúsculas;
+	UPPER(): Transformar todo o texto em letras maiúsculas;
+	TRIM(): Remove os espaços das extremidades de um texto;
+	REPLACE(): É utilizado para substituir uma string por outra string;
+
+#### Tratamento de datas e horas
+	INTERVAL: Soma datas numa unidade desejada, se ela não for especificada, o SQL retornará em dias; 
+	DATE_TRUNC: "Trunca", ou seja, fixa uma data no início do período;
+	EXTRACT: Usado para extrair unidades de uma data/tomestamp;
+	DATEDIFF: 
+	Sem função:Usar a subtração e divisão para pegar um valor da diferença entre duas datas. /7 para semanas, /30 para mês, /365 para ano;
+	Com função: Criar uma função do postdgressql;

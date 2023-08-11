@@ -1,0 +1,45 @@
+### Manipulação de Dados
+#### Criar tabelas a partir de uma query
+Usar na query que desejamos criar uma tabela, acima do comando "from": into <schema.nova_tabela>
+#### Criar tabelas do zero
+	create table <schema>.<nome_nova_tabela> (coluna1 <tipo> coluna2 <tipo>...)
+A tabela será criada sem nada, para adicionar conteúdo para as colunas utilizamos:
+	insert into <schema>.<tabela> (coluna1, coluna2...)
+	values
+	('conteúdo coluna1', 'conteúdo coluna2'),
+	('conteudo2 coluna1', 'conteúdo2  coluna2'),
+	...
+#### Deleção de tabelas
+	drop table <schema>.<nome_coluna>
+
+#### Inserção de linhas
+	insert into <schema>.<nome_tabela>
+	(coluna1, coluna2...)
+	
+	values
+	('linha1 p/ coluna1', 'linha1 p/ coluna2'),
+	('linha2 p/ coluna1', 'linha2 p/ coluna2'),
+	...
+
+#### Atualização de linhas
+	update <schema>.<tabela>
+	set <coluna> = 'linha'
+	where <coluna2> = 'linha2'
+#### Deleção de linhas
+	delete from <schema>.<tabela>
+	where coluna = 'linha'
+	or ...
+
+#### Inserindo colunas
+	alter table <schema>.<tabela>
+	add <nome_nova_coluna> <tipo_unidade>
+Para inserir dados nas novas colunas, utilizados o update e set já aprendidos;
+#### Alterando colunas
+	alter table <schema>.<tabela>
+	alter column <nome_coluna> type <unidade> -> Alterando o tipo de dados que a coluna suporta;
+	rename column <coluna> to <novo_nome> -> Muda o nome de uma coluna existente;
+#### Deletando colunas
+	alter table <schema>.<tabela>
+	drop column <nome_coluna>
+
+O comando alter table seleciona a tabela, para fazer qualquer alteração em colunas precisamos utilizá-lo antes;

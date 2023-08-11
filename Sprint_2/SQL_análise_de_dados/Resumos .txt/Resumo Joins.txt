@@ -1,0 +1,15 @@
+### JOIN's
+Combinam colunas de uma ou mais tabelas;  
+	select t1.coluna_1, t1.coluna_1, t2.coluna_1, t2.coluna_2
+	from schema.tabela_1 as t1
+	ALGUM join schema.tabela_2 as t2
+    	on condição_de_join
+
+Tipos de Join's:
+	* LEFT JOIN: Toma como referência a tabela à esquerda, pegando todos os dados. Equanto pegamos apenas os elementos da tabela direita que batem com as da esquerda;
+	* INNER JOIN: Pega apenas os dados que existem tanto na tabela da esquerda quanto da direita;
+	* RIGHT JOIN: Toma como referência os dados da tabela da direita e pega somente os dados da tabela esquerda que correspondam aos da direita;
+	* FULL JOIN: Pega todos os dados, tanto da tabela da direita quanto da esquerda e os unem;
+
+
+O uso do comando "join" sozinho funciona como "inner join" -> Pega as informações que existem em todas as colunas.

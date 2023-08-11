@@ -1,0 +1,39 @@
+### Comandos básicos
+
+- ### SELECT
+Comando usado para selecionar as colunas de tabelas
+	select coluna_1, coluna_2, coluna3 from schema_1.tabela_1
+Devemos separar colunas por vírgulas quando selecionarmos mais de uma;  
+Podemos usar o "*" para selecionar todo o conteúdo da tabela;  
+
+- ### DISTINCT
+Usado para remover linhas duplicadas e mostrar somente linhas distintas;  
+	select distinct coluna_1, coluna_2, coluna_3
+	from schema_1.tabela_1
+Se mais de uma colina for selecionada, o comando "SELECT DISTINT" irá retornar todas as combinações distintas;  
+
+- ### WHERE
+Usado para filtrar linhas de acordo com uma condição
+	select coluna_1, coluna_2, coluna_3
+	from schema_1.tabela_1
+	where condição_x=true
+No PostgreSQL são utilizadas aspas simples para delimitar strings: 'Texto'
+Pode-se combinar mais de uma condição utilizando os operadores lógicos...
+No PostgreSQL as datas são escritas no formato 'YYYY-MM-DD' ou 'YYYYMMDD'
+
+- ### ORDER BY
+Comando usado para ordenar a seleção de acordo com uma regra defenida pelo usuário;
+	select coluna_1, coluna_2, coluna_3
+	from schema_1.tabela_1
+	where condição_x=true
+	order by coluna_1
+Por padrão, esse comando ordena em ordem crescente, para usar o decrescente use o comando: DESC  
+Em strings, a ordenação padrão é em ordem alfabética  
+
+- ### LIMIT
+Comando usado para limitar o n° de linhas da consulta -> Explorar dados;
+
+	select coluna_1, coluna_2, coluna_3
+	from schema_1.tabela_1
+	limit N
+Usado principalmente com o ORDER BY para situações como: TOP "n" pamentos mais recentes, produtos mais caros...

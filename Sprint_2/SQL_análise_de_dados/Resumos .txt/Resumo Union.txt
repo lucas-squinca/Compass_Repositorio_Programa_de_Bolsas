@@ -1,0 +1,9 @@
+### Unions
+Usado para "colar" uma tabela sobre a outra, desde que as tabelas tenham a mesma quantidade de colunas e essas colunas possuam o mesmo tipo de unidade;  
+*Se* você possui duas colunas com 10 linhas e **todas** são numéricas, você pode usar o comando "union", por exemplo;  
+
+#### UNION ALL
+Realiza sua função citada anteriormente, mas não elimina linhas duplicadas;
+
+#### UNION
+Remove linhas iguais/duplicadas;

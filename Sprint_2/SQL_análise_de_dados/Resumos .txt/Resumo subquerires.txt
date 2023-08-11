@@ -1,0 +1,12 @@
+### Subqueries
+Possibilitam a consulta de dados de outras consultas;  
+Temos diferentes tipos de subqueriers:
+	* Subquery no WHERE
+	* Subquery no WITH
+	* Subquery no FROM
+	* Subquery no SELECT
+
+
+Como se fosse uma função;  
+Para que as subqueries WHERE e SELECT funcionem, elas precisam retornar somente um valor;  
+Toda subquery FROM pode ser uma subquery WITH, e é recomendável que se utilze as subqueries WITH, pois são mais legíveis no código.  

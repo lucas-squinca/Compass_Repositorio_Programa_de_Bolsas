@@ -1,0 +1,22 @@
+### Funções agregadas
+Funcionam para executar operações aritméticas nos registros da coluna;
+	1. COUNT()
+	2. SUM()
+	3. MIN()
+	4. MAX()
+	5. AVG()
+
+Funções agregadas não consideram o valor "null" como 0;  
+Na função COUNT() podemos usar o "*" para contar os registros;  
+COUNT(DISTINCT) mostrará somente valores exlusivos;
+Podemos usar uma linha de código em outro código (subqueries -> serão vistas mais adiante);  
+
+### GROUP BY
+Agrupa os registros semelhantes de uma coluna;  
+O GROUP BY usado sozinho, sem funções de agregação, funciona como um DISTINCT, que elimina as linhas duplicadas;  
+Também se pode referenciar a coluna no "group by" de maneira ordinal, ou seja, por números, de acordo com a posição que estão no respectivo select;  
+
+### HAVING
+Filtra as linhas da seleção por uma coluna agrupada;
+Tem a mesma função do WHERE. mas pode ser utilizado para filtrar os resultados das funções agregadas;  
+O HAVING também pode filtrar colunas não agregadas;

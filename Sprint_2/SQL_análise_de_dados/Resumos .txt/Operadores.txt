@@ -1,0 +1,38 @@
+### Operadores aritmédicos
+Realizam operações matemáticas.
+	1. Adição: +
+	2. Subtração: -
+	3. Multiplicação: * 
+	4. Divisão: /
+	5. Módulo: %
+	6. Exponencial: ^
+	7. OU: || -> Para strings (não é operador aritmédico)
+
+Podemos "nomear" colunas novas usando "as"
+Ex:
+	(current_date - birth_date) / 365 **as** age -> Este comando pega a data atual, subtrai da data de aniversãrio salva no banco de dados, divide por 365 (calculando a idade da pessoa). Logo, demos o nome da coluna de "age".
+Usamos aspas duplas para nomes de colunas para mostrar que tudo, mesmo com espaços, é o nome da coluna.
+O operador "||" em strings irá concatener as strings: 'eduardo' || 'carlos' = eduardocarlos.
+
+### Operadores de comparação
+Comparam dois valores e retornam TRUE ou FALSE;  
+Usado em conjunto com o WHERE para filtrar linhas de uma seleção;
+	1. = IGUAL
+	2. > MAIOR
+	3. < MENOR
+	4. <= MENOR OU IGUAL
+	5. >= MAIOR OU IGUAL
+	6. <> DIFERENTE
+
+Usados também para criarem colunas "flag" que retornam TRUE ou FALSE;
+
+### Operadores lógicos
+Unir expressões simples em compostas;
+	1. AND: Verificação se ambas são verdadeiras, se uma for falsa, o resultado será FALSE;
+	2. OR: Vaerificação se pelo menos uma é verdadeira, assim o resultado será TRUE;
+	3. NOT: Inverte o valor, se é TRUE, vira FALSE;
+	4. BETWEEN: Verifica quais valores estão dentro do range definido;
+	5. IN: Funciona como múltiplos OR'S, se algo está dentro de...;
+	6. LIKE: Compara textos e é sempre utilizado em conjunto com o "%", que funciona indicando que qualquer texto pode aparecr no lugar do campo definido;
+	7. ILIKE: Igual o Like, mas ignora se o campo tem letras maiúsculas ou minúsculas na comparação;
+	8. IS NULL: Verifica se o campo é nulo;
