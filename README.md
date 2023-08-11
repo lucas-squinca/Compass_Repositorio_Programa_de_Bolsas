@@ -312,6 +312,112 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ## Sprint #2
 
 - ### SQL p/ análise de dados
+    ### Para acessar o certificado, [clique aqui](/Sprint_2/SQL_análise_de_dados/Certificado/Certificado%20de%20conclusão%20SQL%20para%20análise%20de%20dados.jpg)
+
+    >### Este é um resumo dos conceitos trabalhados no curso de SQl para análise de dados. Para ver o conteúdo completo [clique aqui](/Sprint_2/SQL_análise_de_dados/README.md)
+    #### *O que é SQL?*
+    É uma linguagem de programação usada para processar informações num banco de dados relacional. As informações armazenadas no banco de dados podem ser vista em formato tabular, com suas delimitações feitas por linhas e colunas;  
+    #### Quais são os comandos básicos de SQL?
+
+        SELECT -> Usado para selecionar colunas;
+        DISTINCT -> Mostra somente linhas distintas, sem duplicação;
+        WHERE -> Usado com uma <condição>, a qual determinará os dados que serão apresentados;
+        ORDER BY -> Ordenar uma seleção de acordo com uma determinada <condição>;
+        LIMIT -> Limita o nº de linhas em uma consulta;
+        FROM -> Seleciona de onde os dados serão retirados / quais tabelas serão utilizadas;
+    
+    #### Operadores
+    ##### De comparação:
+        = -> IGUAL;
+        > -> MAIOR QUE;
+        < -> MENOR QUE;
+        >= -> MAIOR OU IGUAL A QUE;
+        <= -> MENOR OU IGUAL A QUE;
+        <> -> DIFERENTE;
+        
+    ##### Lógicos:
+        AND -> Se uma proposição for falsa, o resultado também será falso;
+        OR -> Se uma das proposições for verdadeira, o resultado também será verdadeiro;
+        NOT -> Inverte o valor da proposição;
+        BETWEEN -> Verifica dentro de um espaço delimitado pelo comando;
+        IN -> Tudo que esteja "dentro" de algo. Funciona como múltiplos Or's;
+        LIKE -> Compara textos;
+        ILIKE -> Compara textos ignorando divergências entre maiúsculas e minúsculas;
+        IS NULL -> Verifica se o campo é nulo;
+    #### Funções agregadas:
+
+    ##### **GROUP BY**
+    Agrupa os registros semelhantes existentes em uma coluna;
+        
+        Select <coluna1>, <coluna2>, <coluna3>
+        from <schema.tabela>
+        group by <coluna1>
+    ##### **HAVING**
+    Filtra as linhas de seleção por uma coluna agrupada, podendo ser usado para filtrar resultados de função agregadas, algo que é inviável usando o WHERE;
+
+    #### Join
+    Combina as colunas de tabelas distintas.
+    * Inner Join: Pega os dados que possuem semelhança em ambas tabelas;
+    * Left Join: Seleciona tudo da tabela à esquerda e correlaciona os dados da tabela à direita que possuem semelhança;
+    * Right Join: Seleciona tudo da tabela à direita e correlaciona os dados da tabela à esquerda que possuem semelhança;
+    * Full Join: Seleciona todos os dados de ambas as colunas;
+
+    #### Union
+    "Cola" as colunas de uma mesma tabela, desde que elas possuam a mesma quantidade de colunas e com o mesmo tipo de dado inserido nelas;
+
+    #### Subqueries
+    É a posibilidade de consultarmos dados de outras consultas (como uma função);
+
+    **Exemplos feitos no curso:**
+    ##### WHERE:
+        select *
+        from sales.products
+        where price = (select min(price) from sales.products)
+
+        select min(price) from sales.products
+
+    ##### WITH
+        with alguma_tabela as (
+            select
+	            professional_status,
+	            (current_date - birth_date)/365 as idade
+            from sales.customers
+        )
+        select 
+	        professional_status,
+	        avg(idade) as idade_media
+        from alguma_tabela
+        group by professional_status
+    
+    ##### FROM
+        select 
+	        professional_status,
+	        avg(idade) as idade_media
+        from (
+		        select
+			        professional_status,
+			        (current_date - birth_date)/365 as idade
+		        from sales.customers
+	        ) as alguma_tabela
+        group by professional_status
+
+    ##### SELECT
+        select
+	        fun.visit_id,
+	        fun.visit_page_date,
+	        sto.store_name,
+	        (
+		        select count(*)
+		        from sales.funnel as fun2
+		        where fun2.visit_page_date <= fun.visit_page_date
+			        and fun2.store_id = fun.store_id
+	        ) as visitas_acumuladas
+        from sales.funnel as fun
+        left join sales.stores as sto
+	        on fun.store_id = sto.store_id
+        order by sto.store_name, fun.visit_page_date
+
+    ###### Acesse o [resumo completo](/Sprint_2/SQL_análise_de_dados/README.md) de SQL para mais informações.
 
 - ### Big Data Fundamentos 3.0
 

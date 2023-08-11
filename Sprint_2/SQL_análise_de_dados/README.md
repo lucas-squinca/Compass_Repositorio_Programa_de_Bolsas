@@ -93,23 +93,23 @@ Unir expressões simples em compostas;
 ### Funções agregadas
 Funcionam para executar operações aritméticas nos registros da coluna;
 
-	1. COUNT()
-	2. SUM()
-	3. MIN()
-	4. MAX()
-	5. AVG()
+	1. COUNT() -> Contagem de linhas;
+	2. SUM() -> Soma de conteúdos das linhas;
+	3. MIN() -> Mostra o menor valor de um conjunto;
+	4. MAX() -> Mostra o maior valor de um conjunto;
+	5. AVG() -> Média dos dados fornecidos;
 
 > Funções agregadas não consideram o valor "null" como 0;  
 > Na função COUNT() podemos usar o "*" para contar os registros;  
 > COUNT(DISTINCT) mostrará somente valores exlusivos;  
 > Podemos usar uma linha de código em outro código (subqueries -> serão vistas mais adiante);  
 
-- ### GROUP BY
+#### GROUP BY
 Agrupa os registros semelhantes de uma coluna;  
 O GROUP BY usado sozinho, sem funções de agregação, funciona como um DISTINCT, que elimina as linhas duplicadas;  
 Também se pode referenciar a coluna no "group by" de maneira ordinal, ou seja, por números, de acordo com a posição que estão no respectivo select;  
 
-- ### HAVING
+#### HAVING
 Filtra as linhas da seleção por uma coluna agrupada;  
 Tem a mesma função do WHERE. mas pode ser utilizado para filtrar os resultados das funções agregadas;  
 O HAVING também pode filtrar colunas não agregadas;  
@@ -140,5 +140,112 @@ Realiza sua função citada anteriormente, mas não elimina linhas duplicadas;
 
 #### UNION
 Remove linhas iguais/duplicadas;
+
+### Subqueries
+Possibilitam a consulta de dados de outras consultas;  
+Temos diferentes tipos de subqueriers:
+* Subquery no WHERE
+* Subquery no WITH
+* Subquery no FROM
+* Subquery no SELECT
+
+
+Como se fosse uma função;  
+Para que as subqueries WHERE e SELECT funcionem, elas precisam retornar somente um valor;  
+Toda subquery FROM pode ser uma subquery WITH, e é recomendável que se utilze as subqueries WITH, pois são mais legíveis no código.  
+
+
+### Tratamento de Dados
+#### Conversão de unidades:
+	Opedador ::
+	Operador CAST()
+Só iremos usar o cast em ocasiões que o :: não funcionar;  
+
+	--> texto para data: usar "::date" na frente dos textos; (usando com cast: cast('texto' as date));
+	texto para número: usar "::numeric" na frente dos textos; (usando com cast: cast('texto' as numeric));
+	--> número para texto: REPLACE -> "replace(coluna/número/etc, 'parte a ser retirada', 'parte a ser colocada no lugar da que foi retirada');
+
+#### Tratamento Geral
+Tipos:  
+**Case when:** Muito semelhante ao "switch-case", entra em condições específicas e se caso uma delas e exclusivamente uma delas for verdadeira, a ação de dentro do "then" é executada.  
+Se nenhuma delas for executada, o comando estipulado após o "else" é executado;
+	
+**Coalesce():** Tratamento de dados nulos -> Verifica qual é o primeiro campo não nulo de uma lista de valores. Vai olhar o primeiro item da lista, se for nulo, ele pula para o segundo, senão, ele pega o valor e parte para o próximo;
+
+#### Tratamento de texto
+
+	LOWER(): Transformar todo o texto em letras minúsculas;
+	UPPER(): Transformar todo o texto em letras maiúsculas;
+	TRIM(): Remove os espaços das extremidades de um texto;
+	REPLACE(): É utilizado para substituir uma string por outra string;
+
+#### Tratamento de datas e horas
+
+	INTERVAL: Soma datas numa unidade desejada, se ela não for especificada, o SQL retornará em dias; 
+	DATE_TRUNC: "Trunca", ou seja, fixa uma data no início do período;
+	EXTRACT: Usado para extrair unidades de uma data/tomestamp;
+	DATEDIFF: 
+	Sem função:Usar a subtração e divisão para pegar um valor da diferença entre duas datas. /7 para semanas, /30 para mês, /365 para ano;
+	Com função: Criar uma função do postdgressql;
+
+### Manipulação de Tabelas
+#### Criar tabelas a partir de uma query
+Usar na query que desejamos criar uma tabela, acima do comando "from": into <schema.nova_tabela>
+#### Criar tabelas do zero
+
+	create table <schema>.<nome_nova_tabela> (coluna1 <tipo> coluna2 <tipo>...)
+
+A tabela será criada sem nada, para adicionar conteúdo para as colunas utilizamos:
+
+	insert into <schema>.<tabela> (coluna1, coluna2...)
+	values
+	('conteúdo coluna1', 'conteúdo coluna2'),
+	('conteudo2 coluna1', 'conteúdo2  coluna2'),
+	...
+
+#### Deleção de tabelas
+
+	drop table <schema>.<nome_coluna>
+
+#### Inserção de linhas
+
+	insert into <schema>.<nome_tabela>
+	(coluna1, coluna2...)
+	
+	values
+	('linha1 p/ coluna1', 'linha1 p/ coluna2'),
+	('linha2 p/ coluna1', 'linha2 p/ coluna2'),
+	...
+
+#### Atualização de linhas
+
+	update <schema>.<tabela>
+	set <coluna> = 'linha'
+	where <coluna2> = 'linha2'
+#### Deleção de linhas
+
+	delete from <schema>.<tabela>
+	where coluna = 'linha'
+	or ...
+
+#### Inserindo colunas
+	alter table <schema>.<tabela>
+	add <nome_nova_coluna> <tipo_unidade>
+Para inserir dados nas novas colunas, utilizados o update e set já aprendidos;
+
+#### Alterando colunas 
+
+	alter table <schema>.<tabela>
+	alter column <nome_coluna> type <unidade> -> Alterando o tipo de dados que a coluna suporta;
+	rename column <coluna> to <novo_nome> -> Muda o nome de uma coluna existente;
+
+#### Deletando colunas
+
+	alter table <schema>.<tabela>
+	drop column <nome_coluna>
+
+O comando alter table seleciona a tabela, para fazer qualquer alteração em colunas precisamos utilizá-lo antes;
+
+
 ## Certificado
 ![Image](Certificado/Certificado%20de%20conclusão%20SQL%20para%20análise%20de%20dados.jpg)
