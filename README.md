@@ -417,9 +417,18 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 	        on fun.store_id = sto.store_id
         order by sto.store_name, fun.visit_page_date
 
-    ###### Acesse o [resumo completo](/Sprint_2/SQL_análise_de_dados/README.md) de SQL para mais informações.
+    >###### Acesse o [resumo completo](/Sprint_2/SQL_análise_de_dados/README.md) de SQL para mais informações.
 
 - ### Big Data Fundamentos 3.0
+
+
+## Certificados AWS
+### Sprint #1
+![image](Certificados%20AWS/Certificado%20AWS%201-10.jpg)
+---------------
+### Sprint #2
+![image](Certificados%20AWS/Certificado%20AWS%202-10.jpg)
+
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
 [Twitter]: https://twitter.com/lucas_squinca
