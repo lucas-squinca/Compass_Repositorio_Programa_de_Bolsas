@@ -196,7 +196,7 @@ A cargo do engenheiro de Machine Learning;
 O MLOPs visa unificar o desenvolvimento de sistemas com a implantação destes sistemas para padronizar e agilizar a entrega contínua de modelos com alto desempenho em produção.
 
 #### DevOPs
-É uma abordagem para o desenvolvimento de software que acelera o ciclo de vida do construção usando automação. Implantação **contínua** de software.
+É uma abordagem para o desenvolvimento de software que acelera o ciclo de vida da construção usando automação. Implantação **contínua** de software.
 * Reduz o tempo de implantação;
 * Diminui o tempo de lançamento no mercado;
 * Minimiza defeitos;
@@ -314,7 +314,7 @@ Dentre alguns setores temos:
     ...
 
     Na definição dos requisitos técnicos, precisamos:
-    * Definir quais são os atributos de banco de dados ue serão usados;
+    * Definir quais são os atributos de banco de dados que serão usados;
     * Definir quais serão as fontes de dados (Se eu tenho um objetivo bem definido, logo também sei em quais fontes de dados procurar);
     * Definir quais serão as ferramentas de análise a serem utilizadas;
     * Elencar quais serão as habilidades necessárias para trabalhar neste projeto: Para capitação de funcionários equipes, ou ainda contratar novas pessoas já capacitadas;
@@ -322,8 +322,6 @@ Dentre alguns setores temos:
     * Definir as ferramentas que serão usadas para visualização de gráficos;
 
     #### **Criação de um "Total Business Value Assessment"**
-    **Time to business:** Quanto tempo para que o resultado gere resultado (geralmente 3 anos).
-
     No TBVA, precisamos levar em conta alguns aspectos para ver se realmente o projeto que estamos planejando nos dará o retorno esperado (valor). Ou seja, precisamos validar se não perderemos o nosso tempo nos dedicando ao projeto planejado.  
     Dentre os aspectos temos:
     * **Time to business:** Quanto tempo para que o resultado gere resultado (geralmente 3 anos).

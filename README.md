@@ -420,6 +420,178 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
     >###### Acesse o [resumo completo](/Sprint_2/SQL_análise_de_dados/README.md) de SQL para mais informações.
 
 - ### Big Data Fundamentos 3.0
+    ### O que é Big Data?
+    Grande conjunto de dados complexos que possuem: Volume(a quantidade de dados que é gerado diariamente), Variedade(formato dos dados), Velocidade(os dados são gerados com uma velocidade gigantesca) e Veracidade(a confiabilidade dos dados). Estes, inclusive, são os 4 V's que unidos compõem o Big Data.
+
+    **IMPORTANTE:** O "V" de Volume é crítico no big data, visto que é um fator de grande consideração na hora de implementar o Big Data. Você é capaz de comportar tantos dados assim? Precisamos das ferramentas certas para desenvolver e integrar Big Data Analytics em nosso projeto.
+
+    ### Big Data Vs Ciência de Dados
+    Como vimos, Big data é um grande conjunto de dados. Porém, dele não se extrai informações valiosas e insights ao acaso.  
+    Deste modo, a ciência de dados é o conjunto de métodos usados para extrair valor do Big Data.  
+
+    Quando usamos ciência de dados para extrair valor do Big Data, temos o que é chamado de: **Big Data Analytics**
+
+    ### Armazenando Dados:
+    Quando os dados são estruturados usamos: Data WareHouse;  
+    Quando os dados **não** são estruturados usamos: DataLake;
+
+    Dependendo do cenário, podemos armazenar primeriamente os dados brutos num Datalake e depois estruturá-los em um Data WareHouse.
+
+    ### SQL Vs NoSQL
+    * Bancos de dados relacionais: São bancos de dados estruturados e com schema bem definido;
+
+    * Bancos de dados não relacionais: São bancos de dados com dados não estruturados e sem necessidade de definir o schema previamente;
+
+    ### Data WareHouse
+    Sistema de armazenamento de dados que conecta e harmoniza diferentes fontes de dados.  
+    Possui o schema bem definido previamente ao armazenamento dos dados.  
+    
+    #### Benefícios do DW
+    * Melhor análise dos negócios;
+    * Consultas mais rápidas;
+    * melhoria da qualidade dos dados;
+    * Visão histórica;
+
+    ### DataLake
+    Sistema de armazenamento usado para armazenar dados em seus formatos originais, brutos.  
+    Não é necessário definir o schema antes de armazenar os dados.  
+
+    É importante ficar atento quanto aos dados que são armazenados, pois se não forem minimamente tratados, o DataLake certamente se tornará numa bagunca; o chamado **Data Swamp**.
+
+    #### Benefícios do DataLake
+    * Armazenamento em formato bruto;
+    * Importação de qualquer quantidade de dados em tempo real;
+    * Repositório central para todos os dados da empresa;
+    * Sem necessidade de movimentação dos dados;
+
+    ### DataStores
+    Repositório usado para armazenar coleções de dados com formatos variados.  
+    Os dados já estão praticamente preparados para serem usados.
+
+    #### Benefícios do DataStore
+    * Armazenamento de variados tipos de dados;
+    * Flexibilidade;
+    * Suporte a dados semi-estruturados;
+    * Custo total menor.
+
+    ### Armazenamento e Processamento paralelos
+    #### Cluster de computadores
+    São um conjunto de servidores unidos para um mesmo fim;
+
+    **Escalabilidade Horizontal:** Para aumentar a capacidade, instalam-se novas máquinas.  
+    **Escalabilidade Vertical:** Para aumentar a capacidade, melhoram-se as máquinas já instaladas.
+
+    #### Armazenamento Paralelo
+    Distribuição dos dados armazenados em diversos servidores, aumentando assim a sua capacidade com hardware de baixo custo.
+
+    Exemplo de Software usado: Apache Hadoop -> Nele, os arquivos são salvos em mais de um computador. Caso um falhe, os arquivos/dados não serão perdidos;
+
+    #### Arquitetura de armazenamento e Processamento Paralelo
+    - **MapReduce Layer:** Usado para processar dados em um ambiente distribuído;
+    - **HDFS Layer:** Armazenamento dos dados dentro das máquinas do cluster;
+
+    #### Soluções de arquitetura e processamento paralelo
+    * Apache Hadoop;
+    * CloudEra;
+    * Azure;
+    * DataBricks;
+
+    ### Cloud Computing
+    Devido ao grande volume de dados gerado diariamente, servidores locais não podem mais comportar individualmente. O desenvolvimento em nuvem entra para liberar e facilitar o Big Data Analytics.
+
+    É uma ferramenta que oferece acesso a um servidor com ferramentas e recursos fornecidos por um provedor;  
+
+    #### Principais provedores em nuvem
+    * Amazon Web Services;
+    * Microsoft Azure;
+    * Google Cloud Plataform;
+    * IBM Cloud;
+    * Oracle Cloud.
+
+    ### MLOPs e DataOPs
+    **Machine Learning:** Usa algoritmos e dados para imitar o processo de aprendizagem humana em uma máquina; 
+
+    **PipeLine de Dados:** É o fluxo da máquina, o processo desde o início até a máquina já aperfeiçoada;
+
+    **DevOPs:** Abordagem para o desenvolvimento de software utilizando automação.
+
+    #### MLOPs
+    Unifica o desenvolvimento de sistemas para padronizar e agilizar entregas constantes com alta qualidade;
+
+    #### DataOPs
+    Linha de produção orientada a processos para o desenvolvimento de análises;
+
+    ### Big Data Vs Small Data
+    **Big Data**, como já citado anteriormente, refere-se a um grande conjunto de dados com velocidade, variedade, volume e veracidade.  
+    Já **Small Data** refere-se a um conceito da quantidade unicamente necessária e mínima para desenvolver um problema.
+
+    ### DaaS (Data as a Service)
+    Alavanca os dados com um ativo de negócios para garantir maior agilidade na análise;
+
+    #### Arquitetura DaaS
+    * Simplifica o acesso aos dados;  
+    * Oferece um fluxo de dados já tratados;  
+
+    #### Principais benefícios das DaaS
+    * Monetização dos dados;
+    * Redução dos custos;
+    * Caminho mais rápido para invovação;
+    * Agilidade no processo de decisão baseado em dados;
+
+    ### As Arquiteturas modernas de Big Data
+    #### Data LakeHouse
+    Possibilita o uso de BI e Machine Learning em todos os dados armazenados, combinando a flexibilidade dos datalakes com o gerenciamento de dados e transações ACID dos Data WareHouse.
+    #### Data Mesh
+    Arquitetura de plataforma que consegue abrangir todos os dados da empresa. Permite um design orientado ao domínio e ao autoatendimento.  
+    *Obs:* Arquitetura completamente descentralizada;  
+
+    Os datamesh's resolvem três problemas, são eles: falta de propriedade; falta de qualidade; escalonamento organizacional.
+
+    Evita a duplicação de esforços por meio de um tratamento de dados como produto e sua infraestrutura como plataforma.
+
+    ### ETL
+    É o processo de extração e consecutiva limpeza dos dados para que os mesmos possam ser utilizados.
+
+    #### ETL Vs ELT
+    O ELT não faz esse processo de limpeza primordial para depois armazenar os dados. Nela, os dados são armazenados brutos em um DataLake e posteriormente, conforme a necessidade, pega-se os dados, promove-se a limpeza para depois utilizá-los. Nele também conseguimos:
+    * Deixamos o DW pronto para o usuário;
+    * Conseguimos armazenar todos os dados;
+
+    #### Soluções ETL e ELT presentes no mercado:
+    * Oracle Data Integrator;
+    * Pentaho;
+    * Apache Spark;
+    * Apache nifi;
+    * Azure Data Factory;
+
+    ### Os quatro passos essenciais para iniciar um projeto Big Data
+    #### Definição do Business Care
+    * Definição dos objetivos a serem alcançados;
+    * Delimitar os problemas a serem resolvidos;
+    * Definir como será desenvolvido o projeto, do início ao fim;
+
+    #### Planejamento do Projeto
+    * Determinar e quantificar os requisitos necessários;
+    * Identificar as questões comerciais e o resultado alvo esperado;
+    * Definir como seria uma implementação de Big Data bem definida;
+    * Definir uma linha de tempo;
+
+    #### Definição dos requisitos técnicos
+    * Definir quais são os atributos de banco de dados que serão usados;
+    * Definir quais serão as fontes de dados usadas;
+    * Definir quais serão as ferramentas de análise;;
+    * Elencar quais serão as habilidades necessárias para trabalhar neste projeto: Capacitação de funcionários;
+    * Definir qual será o tipo de arquitetura usada no projeto;
+    * Definir as ferramentas que serão usadas para visualização de gráficos;
+
+    #### Criação de um Total Business Value Assessment
+    No TBVA, precisamos validar se o nosso esforço no projeto realmente trará valor. Nesse aspecto, alguns aspectos são levantados:
+    * Time to business: Quanto tempo para que o projeto esteja pronto?
+    * Escalabilidade: Precisamos ter cuidado para que a dimensão
+    * Padrões técnicos: A empresa precisa criar seus próprios padrões técnicos;
+    * Maturidade para dados: A empresa realmente tem a estrutura para armazenamtento dos dados?
+    * Facilidade de uso: O quão fácil é a utilização do projeto para o cliente?
+
 
 
 ## Certificados AWS
