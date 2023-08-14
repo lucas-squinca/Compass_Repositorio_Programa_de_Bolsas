@@ -59,4 +59,57 @@ Podemos concatenar números com strings caso não haja ambiguidade, como em:
     print('Você é ' + 3 * 'muito ' + 'legal!')
 
 Neste caso, o número três "multiplicando" a palavra "muito" irá repetí-la três vezes.
+
+#### Variáveis
+Quando criamos uma variável, estamos gerando um espaço de memória que é nomeado para que possamos trabalhar com ela.
+
+    a = 10
+
+Criamos uma variável que possui o valor inteiro 10;
+
+**Obs:** Por ser uma linguagem dinâmica, uma mesma variável pode mudar os tipos de dados de seu conteúdo (ao contrário de, por exemplo, linguagem C, na qual devemos declarar o tipo de nossa variável antes de usá-la, não podendo ser mudada posteriormente).
+
+#### Comentários de código
+Podemos "comentar" partes de nosso código quando queremos que esta definida região seja ignorada quando dermos "run" no código. Com ele, podemos criar anotações e comentários sobre o que o nosso código faz nas prórpias linhas de comando.
+
+Comentando apenas uma linha, usamos o "#"
+
+    # Esta linha está comentada
+
+Também podemos comentar diversas linhas adicionando o "#" no início de cada uma
+
+    # Esta linha está comentada
+    # Esta também
+    # print('Essa aqui também')
+
+Podemos ainda realmente comentar diversas linhas abrindo e fechando aspas duplas ou simples
+
+    """
+    Todas estas linhas
+    estarão comentadas
+    em seu código
+    !!
+    """
+
+**Obs:** Use comentários com calmaria e pensando realmente se o comentário é necessário para o seu código.
+#### Operadores aritmédicos
+
+    - -> Subtração;
+    + -> Soma;
+    * - > Multiplicação;
+    / - > Divisão;
+    // -> Divisão com resultado em número inteiro;
+    ** -> Potência;
+    % -> Módulo: Devolve o resto da divisão;
+
+#### Operadores relacionais
+Cuja resposta sempre será um valor bool (**True** or **False**)
+
+    > -> Maior;
+    < -> Menor;
+    >= -> Maior ou igual;
+    <= -> Menor ou igual;
+    != -> Diferente de;
+    == -> Igual a;
+    
 ## Certificado
