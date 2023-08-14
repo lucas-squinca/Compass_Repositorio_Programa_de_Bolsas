@@ -420,7 +420,10 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
     >###### Acesse o [resumo completo](/Sprint_2/SQL_análise_de_dados/README.md) de SQL para mais informações.
 
 - ### Big Data Fundamentos 3.0
-  >#### Importante: Para acessar o resumo completo [clique aqui!](/Sprint_2/Big_Data_Fundamentos_3.0/README.md)
+
+    #### Acesse o certificado de Big Data clicando [aqui](/Sprint_2/Big_Data_Fundamentos_3.0/Certificado/Certificado%20de%20conclusão%20Big%20Data%20Fundamentos%203.0.jpg)
+
+    >#### Importante: Para acessar o resumo completo [clique aqui!](/Sprint_2/Big_Data_Fundamentos_3.0/README.md)
     
     ### O que é Big Data?
     Grande conjunto de dados complexos que possuem: Volume(a quantidade de dados que é gerado diariamente), Variedade(formato dos dados), Velocidade(os dados são gerados com uma velocidade gigantesca) e Veracidade(a confiabilidade dos dados). Estes, inclusive, são os 4 V's que unidos compõem o Big Data.
@@ -593,6 +596,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
     * Padrões técnicos: A empresa precisa criar seus próprios padrões técnicos;
     * Maturidade para dados: A empresa realmente tem a estrutura para armazenamtento dos dados?
     * Facilidade de uso: O quão fácil é a utilização do projeto para o cliente?
+
 
     >##### Acesse o [resumo completo](/Sprint_2/Big_Data_Fundamentos_3.0/README.md) para informações mais aprofundadas!
 
