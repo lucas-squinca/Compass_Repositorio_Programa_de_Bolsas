@@ -411,4 +411,58 @@ O python automaticamente identifica o tipo do valor de um resultado.
     print(f'Nome: {nome} Idade: {idade}')
 
 ### Estruturas de Controle
+#### If, Elif e Else
+Estrutura condicional. Nela usamos uma certa condição, caso a mesma seja verdadeira, o bloco de comandos que estão dentro do comando **If** será executado.  
+Se também usamos um **Elif**, caso a condição do If seja falsa, passamos para a verificação se a condição do elif é verdadeira. Em caso afirmativo, o bloco de comandos inserido no Elif é executado.  
+Agora, se nenhuma condição for verdadeira, podemos inserir um **else**, que abrange todas as situações em que as condições tanto do if quanto do elif são falsas.
+
+> [Exemplo if/elif/else](/Sprint_3/_Python_/Códigos_curso/Estrutura%20de%20dados/ex_if.py)
+
+#### While
+É uma estrutura de repetição feita para rodar uma certa parte de código até que a condição inserida no mesmo se torne verdadeira;  
+Geralmente usado quando vamos fazer números indeterminados de repetições, até que uma certa condição seja verdadeira;
+
+> [Exemplo While](/Sprint_3/_Python_/Códigos_curso/Estrutura%20de%20dados/while_1.py)
+
+#### For
+É um laço de repetição usado quando já sabemos quantas vezes iremos fazer aquela determinada repetição;
+> [Exemplo de 'For'](/Sprint_3/_Python_/Códigos_curso/Estrutura%20de%20dados/for_1.py)
+#### Break and Continue
+São ferramentas geralmente usadas com estruturas de repetição (laços);  
+* Continue:  
+Quando estruturamos um laço e uma condição em um if e, dentro do if, o **continue** para toda informação verdadeira que entra no if, o código simplismente continuará rodando, seguindo em frente.  
+O continue, mesmo dentro de uma estrutura condicional, está mais relacionado com o laço no qual está inserido;
+
+* Break:  
+Ao estruturarmos um laço com uma condição dentro do mesmo e, dentro do if, utilizamos um **break**, toda e qualquer afirmação falsa irá passar pelo if e o laço continuará rodando. Quando uma condição verdadeira for passada na estrutura condicional, o break é acionado e ele sai do **laço** imediatamente
+
+> [Exemplo break e continue](/Sprint_3/_Python_/Códigos_curso/Estrutura%20de%20dados/break_continue.py)
+
+#### Switch/Case
+Estrutura de múltiplas escolhas, onde caso uma seja verdadeira, será executado o código e passará para a próxima estrutura após o switch.  
+Você escolhe uma variável (switch) e determina casos para ela, se um caso for atendido, o código dentro do case será executado.  
+Nele ainda temos o default, onde caso nenhuma condição dos cases forem atendidas, será executado o código da estrutura 'default'.
+
+**Na linguagem python, NÃO TEMOS essa estrutura, mas podemos simulá-la com funções e dicionários**
+
+> [Exemplo simulação Switch/Case](/Sprint_3/_Python_/Códigos_curso/Estrutura%20de%20dados/switch_1.py)
+
+**ATUALIZAÇÃO**: A partir da versão 3.10, o python implementou uma estrutura switch, o match/case;  
+Extremamente parecido com o switch/case de outras linguagens de programação;  
+
+```python
+match valor:
+    case <padrao_1>:
+        <codigo_caso_padrao_1>
+	case <padrao_2>:
+        <codigo_caso_padrao_2>
+	case <padrao_3>:
+        <codigo_caso_padrao_3>
+    case _:
+        <codigo_caso_nenhum_padrao_definido>
+```
+
+### Manipulação de arquivos
+
+
 ## Certificado
