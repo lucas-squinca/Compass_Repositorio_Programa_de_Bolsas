@@ -1,0 +1,6 @@
+Nome: Maria, Idade: 18
+Nome: Eduardo, Idade: 70
+Nome: Luis, Idade: 17
+Nome: Lucas, Idade: 52
+Nome: Bruno, Idade: 48
+Nome: Mariana, Idade: 26
