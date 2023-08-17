@@ -464,5 +464,85 @@ match valor:
 
 ### Manipulação de arquivos
 
+### Comprehension
+É uma forma de criar listas mias consisas, a partir de somente uma linha (somente em python);  
+Python é uma linguagem de altíssimo nível, logo ele permite essas funcionalidades que facilitam a nossa vida;  
+
+Como fazer uma list comprehension?
+
+    <variável> = [ <espressão> for item in <list> if <condicional>]
+
+Ex: Lista com o dobro dos valores de 1 a 10
+```python
+dobros = [i * 2 for i in range(1, 11)]
+print(dobros)
+```
+Caso não quiséssemos utilizar o list comprehension, poderíamos dar a mesma saída usando uma lista normal e uma sequência de ações:
+```python
+dobros = []
+for i in range(1, 11):
+    dobros.append(i * 2)
+print(dobros)
+```
+> Outro exemplo de comprehension [aqui](/Sprint_3/_Python_/Códigos_curso/list_comprehension/comprehension_2.py)
+
+#### Generator
+Semelhante ao list comprehension, mas gera os dados e os envia sob demanda, ocupando **MUITO** menos espaço na memória;
+
+    <var> = ( <expressão> for <list> if <condicional>)
+
+Ex:
+```python
+generator = (i ** 2 for i in range(11) if i % 2 == 0)
+print(next(generator)) # Saída 0
+print(next(generator)) # Saída 4
+print(next(generator)) # Saída 16
+print(next(generator)) # Saída 36
+print(next(generator)) # Saída 64
+print(next(generator)) # Saída 100
+```
+
+- #### Generator com FOR
+Facilitador para acessar-mos os dados, sem necessidade de tantos print's com next(*variável*);
+```python
+generator = (i ** 2 for i in range(10) if i % 2 == 0)
+
+for numero in generator:
+    print(numero)
+```
+
+- #### Dict comprehension
+Criação fácil de dicionários com a ajuda do comprehension;
+
+```python
+dicionario = {i: i * 2 for i in range(10) if i % 2 == 0}
+print(dicionario)
+
+# Mostrando como tabuada:
+for numero, dobro in dicionario.items():
+    print(f'{numero} x 2 = {dobro}')
+```
+
+### Funções
+#### Parâmetros
+* Posicional: Serão passados os parâmetros para uma função como argumento de acordo com a posição relativa que foram colocadas
+    ```
+    função: def função(p1, p2, p3)
+    main: função(2, 4, 7)
+    ```
+* Nomeado: Nele, nomeados quais são os parâmetros que irão receber um determinado argumento
+    ```
+    função: def função(p1, p2, p3)
+    main: função(p2 = 4, p3 = 7, p1 = 2)
+    ```
+
+Alguns modelos de parâmetros
+```
+*<args> -> irá gerar uma tupla;
+**<kwargs> -> irá gerar um dicionário
+```
+
+### Pacotes
+
 
 ## Certificado
