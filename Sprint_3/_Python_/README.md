@@ -543,6 +543,63 @@ Alguns modelos de parâmetros
 ```
 
 ### Pacotes
+Projetos em python muitas vezes podem não serem feitos apenas em um arquivo/programa;  
+Para isso, é necessário a utilização de pacotes, com diferentes arquivos que unificam um mesmo programa;  
+Dentro de uma pasta adicionamos o arquivo: '__init__.py' para mostrar que a pasta é um programa;  
+Podemos importar um código em outro arquivo fora da pasta onde o __init__.py;  
+A partir de um módulo, podemos importar as funcionalidades de outros módulos ou pacotes;
 
+Ao chamarmos módulos, não podemos ter na conciência que eles irão rodar em um outro pacote apenas por chamá-los, precisamos declará-los diretamente:
+```python
+# Errado
+from pacote1 import modulo2
 
+# Correto
+from pacote1 import modulo2
+modulo2.main() # Declaração direta.
+```
+- #### Modulos com os mesmos nomes
+Em casos de nomes iguais de módulos em pacotes diferentes precisamos apelidar um deles para que não exista nenhum erro!!
+```python
+# Adicione um apelido a um deles com "as"
+from pacote1 import modulo1
+from pacote2 import modulo1 as mod1
+```
+- #### Importação direta de funções
+Veja a diferença entre chamadas diretas e indeiretas de funções:
+```python
+# Direta:
+from pacote1.modulo1 import soma
+from pacote2.modulo1 import sub
+
+# Indireta
+from pacote1 import modulo1
+from pacote2 import modulo1
+```
+Nesse caso, ao chamarmos a nossa função **'soma'** no pacote, não precisaremos chamar junto a seu módulo:
+```python
+# Direta
+print('Soma', soma(3, 2))
+
+# Indireta
+print('Soma', modulo1.soma(3, 2))
+```
+
+- #### Pacote como façade
+Façade, exemplificando, é como uma fachada para o seu programa que mostra suas principais funcionalidades, "os produtos mais importantes", o "pãozinho francês".  
+Expor um conjunto de funcionalidades do seu sistema de forma simples;  
+Nesse sentido, podemos criar um pacote que expõe funcionalidades de outros pacotes de maneira simples;  
+```python
+# Importação de funcionalidades no pacote de fachada e implementação no __all__ do arquivo __init__.py:
+from pacote1.modulo1 import soma
+from pacote2.modulo1 import sub
+
+__all__ = ['soma', 'sub']
+
+# Pacote de fechada agora pode efetuar somente um import com todas as funções desejadas:
+from calc import soma, sub
+
+print('Soma', soma(3, 2))
+print('Subtração', sub(3, 2))
+```
 ## Certificado
