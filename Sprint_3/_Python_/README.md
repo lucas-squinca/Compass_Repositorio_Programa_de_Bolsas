@@ -602,4 +602,97 @@ from calc import soma, sub
 print('Soma', soma(3, 2))
 print('Subtração', sub(3, 2))
 ```
+
+### Programação Orientada a Objetos
+É o paradigma que organização de idéias para transformar cenários/problemas do mundo real para dentro de um código de programação;  
+
+Em paradigmas focados em procedimentos, a função é o agente principal e o dado é apenas uma informação a ser usada pela função:
+```python
+len(lista)
+```
+
+Já no contexto orientado a objetos, o dado se torna o principal, e as funções são métodos e comportamentos pertencentes a esse dado:
+```python
+lista.len()
+```
+
+O objeto é algo central dentro do paradigma voltado a objetos, composto por outras partes:
+* Atributos: os dados;
+* Comportamentos: as funções (métodos);
+
+Agora os objetos são donos de seus comportamentos e não são apenas informações passadas por parâmetros para funções específicas;
+#### Classe Vs Objeto
+Classe funciona como o molde, enquanto o objeto seriam as instâncias criadas através desse molde;  
+Conseguimos criar **n** instâncias a partir de um único molde;  
+Quando criamos uma classe com seus devidos comportamentos e a partir dela criamos objetos, os mesmos terão espaços de memória correspondentes aos comportamentos da classe;  
+**Classe** -> Estrutura de dados personalizada (para criarmos estruturas próprias);  
+#### Pilares da OO
+* **Herança**: A capacidade de a partir de um determinado objeto, herdar características de um outro objeto/classe; (Reuso de código)  
+Ex: Todos os carros precisam ter características em comum, como a habilidade de frear, acelerar... Sendo assim, é mais fácil termos uma relação única "CARRO" com essas características do que criarmos as mesmas relações para cada tipo diferente de carro;
+* **Polimorfismo**: Capacidade de substituir um determinado elemento concreto por um abstrato;  
+Ex: Se um determinado objeto consegue realizar as atividades/ações de um classe, ele pode ser referido como essa classe. Um civic tem todas as funções de um carro, logo ele pode ser considerado um carro, por exemplo.
+* **Encapsulamento**: Capacidade de usar determinado objeto na vida real sem entendê-lo internamente.  
+Ex: Usamos a tv todos os dias, mas não sabemos como ela funciona internamente, temos visão apenas de sua interface manipulada por um controle remoto;
+* **Abstração**: Fato de abstrair o mundo real para dentro do seu código (Modelar o que é do mundo real para dentro do sistema - **apenas o necessário**)
+Ex: Num hospital e uma mecânica, ambos possuem clientes, mas para cada um as especificidades do cliente são distintas: No hospital deve-se levar em conta o tipo sanguíneo, enquanto numa mecânica precisamos saber o tipo de carro do cliente, a placa do carro, etc... 
+
+#### Construtor
+Toda vez que chamamos nossa classe no código com o auxílio de parênteses;  
+Faz o "portal" entre a classe e o objeto gerado;  
+Chamamos com o mesmo nome de nossa classe;  
+
+    <var> = <nome_classe()>
+
+No python, podemos ter somente um construtor;  
+Criamos o construtor a partir de uma função \_\_init\_\;
+```python
+class Data:
+    def __init__(self, dia, mes, ano):
+        self.dia = dia
+        self.mes = mes
+        self.ano = ano
+```
+
+#### Classe tarefa
+Possui: Descrição, atributo, data...
+```python
+class Tarefa:
+    def __init__(self, descricao):
+        self.descricao = descricao
+        self.feito = False
+        self.criacao = datetime.now()
+
+    def concluir(self):
+        self.feito = True
+
+    def __str__(self):
+        return self.descricao + (' (Concluído)' if self.feito else '')
+```
+Nesse caso, a tarefa é construída com descrição e é feito um sistema que mostra quais estão concluídas.
+
+#### \_\_iter\_\_
+Permite que o que foi inserido em sua função seja iterável.  
+```python
+def __iter__(self):
+    return self.tarefas.__iter__()
+```
+Nesse sentido, não precisamos mais acrescentar o objeto a ser modificado em nosso código:
+```python
+# Antes:
+for tarefa in mercado.tarefas:
+    print(f'- {tarefa}')
+# Depois:
+for tarefa in mercado:
+    print(f'- {tarefa}')
+```
+#### Herança
+Atribuição das características e do código de uma classe pai para uma classe filha que terá funcionalidades mais específicas em relação à classe pai;
+```python
+class Tarefa: # Classe pai
+class TarefaRecorrente(Tarefa): # Classe filha
+```
+
+#### Métodos Privados
+Métodos que iniciam-se com "_" e são exclusivos de uma determinada classe.  
+Não podem ser chamados fora dela.
 ## Certificado
