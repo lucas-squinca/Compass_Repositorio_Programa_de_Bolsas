@@ -771,6 +771,7 @@ python -m venv .<nome_pasta>
 python -c "import sys; print('\n'.join(sys.path))"
 pip install requests==<versao>
 pip freeze > requirements.txt
+pip install -r requirements.txt
 ```
 
 
