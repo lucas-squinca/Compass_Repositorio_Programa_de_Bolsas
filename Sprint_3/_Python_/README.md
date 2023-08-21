@@ -695,4 +695,83 @@ class TarefaRecorrente(Tarefa): # Classe filha
 #### Métodos Privados
 Métodos que iniciam-se com "_" e são exclusivos de uma determinada classe.  
 Não podem ser chamados fora dela.
+```python
+def _add_tarefa(self, tarefa, **kwargs):
+    self.tarefas.append(tarefa)
+
+def _add_nova_tarefa(self, descricao, **kwargs):
+    self.tarefas.append(Tarefa(descricao, kwargs.get('vencimento', None)))
+```
+Essas funções são usadas para complementar outras funções as quais sim são chamadas na main;
+```python
+ def adicionar(self, tarefa, vencimento=None, **kwargs):
+        funcao_escolhida = self._add_tarefa if isinstance(tarefa, Tarefa) else self._add_nova_tarefa
+        kwargs['vencimento'] = vencimento
+        funcao_escolhida(tarefa, **kwargs)
+```
+
+### POO Avançada
+#### Membros Instância Vs Estáticos
+Instância == Objeto;
+
+Ao criarmos uma classe com seus devidos atributos e logo pós criamos instâncias relativas à classe, caso todos os atributos sejam de instância, em cada região de determinada instância estará "ligada" ao respectivo atributo da classe;  
+
+Se um matributo da classe não se relaciona com as suas instâncias, ele é estático e seu valor será atribuído na própria classe. Além disso, ele poderá ser acessado pela própria classe, não sua instância.
+
+Quando temos um método de instância, precisamos primeiramente criar uma instância chamando os atributos para depois chamar a função;  
+```python
+exemplo = ClasseExemplo(dado1, dado2)
+    ...
+exemplo.metodo()
+    ...
+```
+Já no método de classe(estático), acessamos os dados diretamente pela classe;
+```python
+ClasseExemplo.metodo_estatico()
+```
+
+#### Tipos de Métodos
+* Instância:
+```
+```
+* Classe:
+```
+```
+* Estático:
+```
+```
+
+#### Propriedades
+- #### Método Get/Set
+Bom para validações
+
+- #### Método c/ Decorator
+
+#### Classe Abstrata
+Contrário de uma classe concreta;  
+Usado com, por exemplo, conceitos tão genéricos que se fossemos especificar adentraríamos muito em partes específicas. Assim, usamos este método que não possui implementação;
+Este conceito não está disponível nativamente no Python;
+
+#### Herança Múltipla
+Herda de mais de uma classe;
+
+### Gerenciamento de Pacotes
+Muitas vezes é necessário baixar pacotes de terceiros para avançar em nosso projeto, adicionando novas bibliotecas utilizáveis e novas funcionalidades e facilidades para o código;
+
+#### PIP
+Achar comandos importantes:
+
+    pip --help
+
+#### Como iniciar um ambiente virtual
+Dentro da pasta escolhida, executar no prompt:
+```
+python -m venv .<nome_pasta>
+.venv\Scripts\activate
+python -c "import sys; print('\n'.join(sys.path))"
+pip install requests==<versao>
+pip freeze > requirements.txt
+```
+
+
 ## Certificado
