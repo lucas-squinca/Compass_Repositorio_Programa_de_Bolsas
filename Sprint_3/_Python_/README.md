@@ -763,7 +763,7 @@ Achar comandos importantes:
 
     pip --help
 
-#### Como iniciar um ambiente virtual
+#### **Como iniciar um ambiente virtual:**
 Dentro da pasta escolhida, executar no prompt:
 ```
 python -m venv .<nome_pasta>
