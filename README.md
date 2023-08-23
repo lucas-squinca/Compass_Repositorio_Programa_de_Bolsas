@@ -12,7 +12,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 **⌚Semestre:** [2º];  
 **🏃Hobbies:** [Cozinhar | Academia | Livros];  
 **📖Livros Preferidos:** [Bíblia | Dom Casmurro | Viagens à minha terra | Bons Dias!];  
-**✨Animes Preferidos:** [Black Clover | Ousama Ranking | Spy X Family];    
+**✨Animes Preferidos:** [Black Clover | Ousama Ranking | Spy X Family | Anohana | Tonari to Totoro | Sen to Chihiro no Kamikakushi];    
 **🛠️Experiências:** [None];  
 **📁Portfólio:** [[nicitov.github.io]][Portfólio];
 ------
