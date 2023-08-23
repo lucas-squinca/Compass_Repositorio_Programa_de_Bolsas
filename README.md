@@ -27,7 +27,6 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ## Aprendendo...
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ---------------
 ## Segurança em aplicações Web
 
@@ -599,6 +598,11 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
     >##### Acesse o [resumo completo](/Sprint_2/Big_Data_Fundamentos_3.0/README.md) para informações mais aprofundadas!
 
+## Sprint #3
+- ### Python
+    >### Acesse o Resumo completo de Python [clicando aqui](/Sprint_3/_Python_/README.md)
+
+
 
 ## Certificados AWS
 ### Sprint #1
@@ -606,7 +610,9 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ---------------
 ### Sprint #2
 ![image](Certificados%20AWS/Certificado%20AWS%202-10.jpg)
-
+---------------
+### Sprint #3
+#### ***COMING SOON*** 
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
 [Twitter]: https://twitter.com/lucas_squinca
