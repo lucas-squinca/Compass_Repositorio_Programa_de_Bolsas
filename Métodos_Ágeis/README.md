@@ -5,11 +5,175 @@ Diretório Métodos Ágeis de A a Z
 ## Resumo
 
 ### Gestão de Projetos: Do Tradicional ao Ágil
+#### O que é um Produto?
+Aquilo que cria valor para o cliente ou consumidor final de nosso projeto e/ou serviço;
+
+#### O que é um Projeto?
+É o esforço temporário empreendido para criar im produto, serviço ou resultado único;
+
+- #### Estruturas de Administração Complexas
+	1. Empreendimentos independentes;
+	2. Possuem propósitos bem definidos;
+	3. Tempo bem definido: Início, meio e fim;
+	4. Entregam resultado único;
+
+#### Quem são os StakeHolders?
+As pessoas que serão afetadas pelo projeto, seja em aspectos positivos ou netativos;
+
+#### Abordagem Ágil
+**Gerenciamento de projeto:** Aplicação do conhecimento, habilidades, ferramentas e técnicas. Atividades do projeto para atender aos seus requisitos.
+- #### Como começar?
+	1. Identificar as necessidades;
+	2. Estabelecer objetivos claros e alcançáveis;
+	3. Balancear demandas conflitantes;
+	4. Balancear objetivos frente as expectativas dos stakeholders;
+
+#### Gestão Ágil
+Planejar e entregar o projeto e partes de maneira incremental, de modo a trabalhar em metas com períodos curtos;
+
+Existem alguns conceitos necessários a serem explicados, como: **Mundo VUCA** e **Mundo Fani**
+- #### Mundo VUCA
+	* Volátil: A velocidade das mudanças é brutal;
+	* Incerto: Muito flexível, mais difícil encontrar ameaças e desafios;
+	* Complexo: Aprender; pensar de forma não linear;
+	* Ambíguo: Múltiplas estratégias possíveis;
+
+- #### Mundo FANI
+	* Frágil: Rápido; pode se desfazer a qualquer momento;
+	* Ansioso: O imprevisível gera ansiedade pelo desconhecido;
+	* Não-Linear: Uma decisão tomada hoje pode não ter os resultados esperados;
+	* Incompreensível: Uso de dados parece uma forma de solução, mas a capacidade humana não acompanha;
+
+#### Ciclo de vida do Projeto
+Formada por várias fases que podem ser desenvolvidas de modo:
+* Sequencialmente;
+* Iterativamente;
+* Sobreposta;
+
+Cada fase do ciclo de vida possuirá:
+* Escopo de trabalho bem definido;
+* Prazo com começo e fim bem delimitados;
+* Controles específicos e bem definidos;
+
+- #### Ciclo de vida Preditivo
+	Quando se possui pleno conhecimento do que será desenvolvido.  
+	Não existe dúvida sobre o plano de atividades e sua respectiva execução;
+
+- #### Cliclo de vida Ágil
+	O cliente recebe entregáveis funcionais durante o desenvolvimento do projeto.  
+	Espera-se por mudanças no projeto durante o desenvolvimento.
+
+#### Ciclo de vida do Produto
+Resume-se em: **Concepção -> Crescimento -> Maturidade -> Declínio -> Retirada**
+
+#### MVP (Mínimo Produto Viável)
+Menor versão de um produto entregue, que atinge com sucesso os resultados desejados;  
+É a versão mais simplificada de um determinado produto, a qual é disponibilizada para uso com o objetivo de validar um certo conjunto de hipóteses de um negócio;  
+**Factível + Usável + Valioso = Produto**  
+O mesmo produto é aprimorado com o tempo até chegar em seu resultado final esperado;
 
 ### Manifesto Ágil
+Ocorre a valorização de:
+* Indivíduos e a interação entre os mesmos;
+* Software funcionando;
+* Colaboração com o cliente;
+* Resposta rápida a mudanças;
 
+**A comunicação direta é necessária para a equipe avançar no desenvolvimento, evitando duplas interpretações de mensagens e valorizando o contato humano, o que evidentemente traz mais resultados**
+
+#### Princípios:
+1. A maior prioridade é satisfazer o cliente com entregas contínuas e adiantadas de software com valor agregado;
+
+2. Mudanças nos requisitos são bem vindas, mesmo tardiamente no desenvolvimento. Os processos ágeis tiram vantagens das mudanças, visando a vantagem competitiva para o cliente;
+
+3. Entregar frequentemente software funcionando, de poucas semanas a poucos meses, com preferência à menor escala de tempo;
+
+4. Pessoas de negócio e desenvolvedores devem trabalhar diariamente em conjuto por todo o projeto;
+
+5. Construa projetos em torno de indivíduos motivados. Dê a eles o ambiente e o suporte necessários e confie neles para realizar o trabalho; 
+
+6. O método mais eficiente e eficaz de transmitir informação para a equipe e entre a equipe de desenvolvimento é a conversa frente a frente;
+
+7. Software funcional é a medida primária de progresso;
+
+8. Os processos ágeis promovem o desenvolvimento sustentável. Deve-se manter um ritmo constante **sempre**;
+
+9.  Contínua atenção é excelência técnica e bom design aumenta a agilidade;
+
+10. Simplicidade - a arte de maximizar a quantidade de trabalho não realizado - é **essencial**;
+
+11. As melhores arquiteturas, requisitos e design emergem de times auto-organizáveis;
+
+12. Em intervalos regulares, o time reflete sobre como se tornar mais eficaz e então refina e ajusta seu comportamento de acordo. **Não existe receita de bolo**.  
+A regra básica é a melhora contínua;
 ### Método SCRUM
+#### O que é?
+Um framework por meio do qual pessoas podem tratar e resolver problemas complexos e adaptativos, enquanto produtiva e criativamente entregam produtos com o mais alto valor possível;  
+É um gerenciamento de desenvolvimento de produtos: É um conceito/idéia e não possui uma ferramenta específica, ficando a cargo da empresa desenvolver esse método com sua equipe;  
 
+#### Processo SCRUM
+Processo realizado por etapas e ciclos(testados e validades para o inícios de um novo ciclo) com duração fixa para a produção de um produto.
+
+##### Conceitos:
+* **Visão:** Macro-objetivos a contextualização do produto;
+* **UserStories**: Unidades de documentação que declaram cada um dos requisitos da solução desejada, escritas na perspectiva do usuário;
+* **Product BackLog:** Lista de requisitos mínimos ou que agreguem valor ao produto, conforme a necessidade do usuário. É Dinâmico;
+* **Seleção do Product BackLog;**
+* **Sprint Planning:** Reunião entre a equipe visando uma entrega de sucesso;
+* **Sprint BackLog:** Lista de requisitos do referido ciclo a ser desenvolvido -> Geralmente duas a quatro semanas por Sprint;
+* **Daily Scrum:** Reunião diária para que cada integrante do time se posicione;
+* **Sprint Review:** Momento de reflexao sobre aquilo que pode melhorar, o que deve permanecer para alcançar o sucesso;
+* **Retrospectiva:** Como o nome já diz, é uma retrospectiva de tudo que foi desenvolvido durante a referida Sprint(que já passou);
+  
+Ex de Processo SCRUM:
+![processo_scrum]()
+
+#### Os Três Pilares do Scrum
+>No modelo ágil é imprescindível que não hajam surpresas, sejam elas boas ou ruins.  
+>Preza-se muito pela comunicação e colaboração de todos os envolvidos: Boas idéias são construídas quando todos colaboram;
+
+* **Transparência**: Todas as informações para o desenvolvimento do produto devem estar disponíveis para todos;  
+Todas as pessoas devem falar o que estão fazendo no projeto;  
+* **Inspeção**: Inspecionar o desenvolvimento do produto e o método de desenvolvimento;
+* **Adaptação**: Alinhamento de plano de ação para resolver dificuldades, problemas, etc...
+
+#### Principais papéis da equipe Scrum
+* **Product Owner:** Organiza e inspeciona o negócio em termos gerais;
+* **Scrum Master:** Ajuda todo o time a como adotar os valores e práticas do Scrum. É o "Guardião do processo Scrum", deve ser paciente e transparente;
+* **Time de Desenvolvimento:** Pessoas que estão dedicadas a construção do produto. Nela ocorrem subdivisões entre cargos convencionais, como programador, analista, testador, UX Designer...
+
+##### Características da Equipe Scrum
+* Autônomo;
+* Auto-organizado;
+* Pequeno;
+* MultiFuncional;
+
+#### User Stories
+Descrições simples das funcionalidades do produto.  
+Tem foco em como gerar valor ao negócio e ao usuário.
+
+**Faz-se as seguintes perguntas:**
+* Quem? A storie deve indicar quem usará a funcionalidade;
+* O que? Aquilo que o usuário quer/gostaria;
+* Por que? Qual é a entrega de valor;
+
+#### Artefatos
+Os artefatos são partes do processo Scrum, os quais já foram citados resumidamente anteriormente, são eles:
+* **Product BackLog:** Lista de tudo que é necessário para o produto;
+* **Sprint BackLog:** Lista de metas bem definidas para o Sprint;
+* **Incremento de Produto Liberável:** Definição do produto como "pronto", estando ele analizado e testado pelo P.O e pelo Scrum Master;
+
+#### Eventos do Scrum
+1. **Sprint Planning:** Nela determina-se o que poderá ser entregue nessa Sprint e como o trabalho será feito;
+2. **Daily Scrum:** Reunião feita rapidamente para inspeção do trabalho, sobre: No que cada integrante da equipe está trabalhando; Se há algum impedimento que estã bloqueando o trabalho(pedir ajuda);
+3. **Review:** Início do último dia da Sprint, tendo foco no produto em produção;
+4. **Retrospectiva:** Final do último dia, foco no processo de desenvolvimento.  
+Nela discute-se os erros e acertos cometidos na Sprint, agregando _conhecimento_;
+
+**A grande sacada do Scrum não é a prganização teórica, mas sim fazer com que ele seja inserido e efetivado num processo de maneira prática**  
+**É como em um jogo de xadrez, a organização das peças e o que cada uma faz é fácil de compreender. Agora, como vencer uma partida que é o ponto chave**.
+
+#### ***Esteja sempre de Mente Aberta!!!***
 ### Método Kanban
 #### Fluxo de Trabalho
 Kanban é um método visual para gerenciar o trabalho. Visualizar o seu trabalho, maximizar a produção e limitar as atividades em andamento.
