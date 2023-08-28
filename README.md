@@ -602,7 +602,8 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 - ### Python
     >### Acesse o Resumo completo de Python [clicando aqui](/Sprint_3/_Python_/README.md)
 
-
+## Sprint #4
+- ### Programação Funcional
 
 ## Certificados AWS
 ### Sprint #1

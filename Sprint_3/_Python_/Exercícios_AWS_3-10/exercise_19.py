@@ -2,11 +2,9 @@ import random
 
 random_list = random.sample(range(500), 50)
 
-def sum(lista):
+def media(lista):
     tam = len(lista)
-    soma = 0
-    for num in lista:
-        soma += num
+    soma = sum(lista)
     media = soma / tam
 
     return media
@@ -38,7 +36,7 @@ def mediana(lista):
     return mediana
 
 mediana = mediana(random_list)
-media = sum(random_list)
+media = media(random_list)
 valor_minimo = min(random_list)
 valor_maximo = max(random_list)
 
