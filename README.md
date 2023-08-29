@@ -601,7 +601,10 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ## Sprint #3
 - ### Python
     >### Acesse o Resumo completo de Python [clicando aqui](/Sprint_3/_Python_/README.md)
+  
+    >### Acesse o Desafio Python AWS clicando [aqui](/Sprint_3/_Python_/Desafio%20AWS_python/)
 
+    >### Acesse as atividades AWS 3/10 clicando [aqui](/Sprint_3/_Python_/Exercícios_AWS_3-10/)
 ## Sprint #4
 - ### Programação Funcional
 
