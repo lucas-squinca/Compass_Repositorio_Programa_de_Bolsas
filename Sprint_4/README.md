@@ -132,3 +132,16 @@ Servem para variáveis qualitativas;
 **Ex:**
 ![imagem](/Sprint_4/img/Drivers-de-aumento-de-eficiencia-com-grafico-de-barras-horizontais-2.png)
 
+#### Gráfico em Setores
+Dividir um circulo em setores proporcionais às frequências observadas nas categorias.  
+Recomendável para observar algo em relação ao total.  
+Usado com números de categorias pequenas.
+
+#### Gráfico de Linhas
+Para representar séries cronológicas de dados.  
+Recomendado para representar séries temporais.
+
+#### Histogramas
+Colunas justapostas para representar distribuição de frequência em dados;  
+No eixo horizontal temos os limites das classes de agrupamento.
+
