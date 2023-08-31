@@ -145,3 +145,93 @@ Recomendado para representar séries temporais.
 Colunas justapostas para representar distribuição de frequência em dados;  
 No eixo horizontal temos os limites das classes de agrupamento.
 
+### Medidas de Tendência Central
+São aqueas conhecidas por indicarem um ponto em torno do qual se concentram os dados;  
+A MTC podem ser calculadas a partir de dados populacionais (PARÂMETROS) ou a partir de dados amostrais (ESTIMADORES);
+
+#### Média Aritmética
+Soma de todos os valores observados da variável dividida pelo número total de observações.  
+É o centro de gravidade que representa o ponto de quilíbrio de um conjunto de dados.
+
+A soma dos desvios é sempre **ZERO** -> A soma da diferença de cada valor observado em relação à média é zero.
+
+#### Moda
+Maior frequência da variável entre os valores observados;
+#### Mediana
+Valor que ocupa a posição central dos dados ordenados;
+
+#### Medidas Separatrizes
+Medidas que dividem o conjunto de dados em partes iguais.  
+Elas podem ser:
+* Quartil: divide o conjunto de dados em 4 partes iguais;
+* Decil: divide o conjunto de dados em 10 partes iguais;
+* Percentil: divide o conjunto de dados em 100 partes iguais;
+
+### Medidas de Dispersão
+Permitem identificar até que ponto os resultados se concentram ou não ao redor da tendência central de um conjunto de dados observados.  
+**Os dados apresentam semelhanças e variabilidades.**
+
+As medidas de dispersão nos ajudam nas MTC para descrever melhor os dados.  
+Indicam o quanto os dados estão ou não próximos uns dos outros.  
+Precisamos tanto de uma MTC e MD para descrever de maneira adequada os dados.
+
+#### Amplitude Total
+Diferença entre o maior e o menor valor observado;  
+Não leva em consideração dos dados intermediários;  
+Não temos informações de como os dados estão distribuídos;  
+
+#### Amplitude Interquartílica
+Diferença entre o primeiro e o terceiro quantil;  
+É uma média mais estável do que a amplitude total;  
+Abrange 50% dos dados;  
+É interessante para detectar valores discrepantes;
+
+#### Desvio Médio
+Diferença entre cada valor observado e a média;
+
+A soma dos desvios é sempre igual a **zero**. Neste caso, precisamos tirar o módulo dos valores para que possamos ter um valor inteiro para realizar o cálculo do desvio médio (média das diferenças).
+
+#### Variância e Desvio Padrão
+* Variância: Soma dos quadrados dos desvios. (desvio médio ao quadrado, assim não precisamos tirar o módulo);
+* Desvio Padrão: Retorna a dimensão original dos dados (Raiz quadrada da variância).
+
+#### Coeficiente de Variação
+Indica a variabilidade da medida em relação à média;
+
+Permite comparar a dispersão de diferentes distribuições com diferentes médias e desvios padrões;
+
+### Medidas de Assimetria
+Importantes na construção de um histograma;  
+Estamos interessados em saber a forma da distribuição dos dados;  
+* **Coeficiente de assimetria:**  
+
+##### Classificação das distribuições de frequências:
+* Simétrica: (As = 0);
+* Assimétrica negativa: (As < 0);
+* Assimétrica positiva: (As > 0);
+
+#### Medidas de Curtose
+Quantifica a concentração ou dispersão os valores de um conjunto de dados em relação às medidas de tendência central;  
+Mede o grau de achatamento de uma distribuição;  
+Complementar às informações de disersão -> Kurtosis;
+
+##### Classificação do grau de achatamento:
+* Leptocúrtica: dados muito concentrados em torno do centro (k < 0.263>);
+* Mesocúrtica: dados levemente cocnentrados no centro (k = 0.263);
+* Platicúrtica: dados pouco concentrados em torno do centro (k > 0.263);
+```  
+K = 0,263
+```
+
+#### BloxPot
+Condensa várias informações sobre estatística descritiva;  
+É um gráfico que utiliza cinco medidas estatísticas estudadas anteriormente:
+* Valor mínimo;
+* Valor máximo;
+* Mediana;
+* Primeiro Quartil;
+* Terceiro Quartil;
+
+![exemplo bloxpot](/Sprint_4/img/bloxpot.png)
+
+### Docker
