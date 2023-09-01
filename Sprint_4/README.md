@@ -223,7 +223,7 @@ Complementar às informações de disersão -> Kurtosis;
 K = 0,263
 ```
 
-#### BloxPot
+#### BoxPlot
 Condensa várias informações sobre estatística descritiva;  
 É um gráfico que utiliza cinco medidas estatísticas estudadas anteriormente:
 * Valor mínimo;
@@ -232,6 +232,283 @@ Condensa várias informações sobre estatística descritiva;
 * Primeiro Quartil;
 * Terceiro Quartil;
 
-![exemplo bloxpot](/Sprint_4/img/bloxpot.png)
+![exemplo boxplot](/Sprint_4/img/bloxpot.png)
 
 ### Docker
+#### O que é Docker?
+É um software que reduz a complexidade de setup de aplicações;  
+É onde configuramos containers, que são como um servidor para rodar asa nossas aplicações;  
+Podemos criar ambientes independentes para rodar a aplicação e que funcionam em diversos SO's de maneira extremamente mais fácil;  
+Ainda, deixa os projeto performáticos;  
+
+#### Por que usar Docker?
+* Ele proporciona mais velocidade na configuração do ambiente de um dev; 
+* Gasta-se menos tempo em manutenção, containers são executados como configurados;
+* É mais performático na execução de uma aplicação a uma Virtual Machine;
+* Nos livra da **Matrix from hell**;
+
+#### Conhecendo Matrix from hell
+Dentro de um projeto maior, utilizamos diversos programas, linguagens de programação e softwares diferentes, *TODOS* rodando na máquina.  
+Nesse caso, as tecnlogias devem ser instaladas em cada ambiente diferente da empresa, diversos computadores, máquinas diferentes. **Muito complexo**;  
+Com o Docker, eu crio somente um ambiente e rodo eles em minhas máquinas. **Muito mais prático**.
+
+#### O que é um Container?
+É um pacote de código que pode executar uma ação, por exemplo: rodar uma aplicação em Python, PHP...  
+Ou seja, os nossos projetos são criados dentro de containers que criamos/utilizamos;  
+Containers usam imagens para serem executados.  
+Múltiplos containers podem rodar juntos, como um para PHP e um para MySQL...
+
+#### Container Vs Imagem
+Ambos são conceitos fundamentais do Docker. Porém, imagem é o "projeto" que será executado pelo container, todas as instruções estarão declaradas nela. Já cointainer é o Docker rodando em alguma imagem, consequentemente executando algum código proposto por ela;  
+Geralmente programamos uma imagem para executarmos por meio de um container;
+
+#### Container Vs Virtual Machine
+Container é uma aplicação que serve para um determinado fim, não possui sistema operacional e seu tamanha é de apenas alguns mbs.  
+Enquanto isso, uma VM possui sistema operacional próprio, tamanho em gbs e pode executar diversas funções ao mesmo tempo.  
+
+Containers gastam menos recursos ao passo que exercem algumas funções limitadas e específicas para um uso.  
+Já uma VM gasta mais recursos do sistema na medida que é capaz de exercer diversas outras funções ao mesmo tempo.
+#### Encontrando Imagens
+Podemos encontrar as imagens referentes a alguma tecnologia(Node.js, Python, Js) no site [hub.docker.com](https://hub.docker.com);  
+
+Executamos uma imagem por meio do comando:
+```
+docker run <imagem>
+```
+
+Ao iniciarmos um container podemos ver mais opções da mesmo a iterando:
+```
+docker run -it <imagem>
+```
+
+#### Verificar Containers Executados
+Podemos verificar se um container está sendo rodada por meio do comando:
+```
+docker ps
+```
+```
+docker container ls
+```
+
+Utilizando a flag "-a" observamos todos os caontainers que já foram executados:
+```
+docker ps -a
+```
+Isso é utíl para entender o que está sendo executado o o que está acontecendo em nosso ambiente;
+
+#### Executando container com iteração
+Ao iniciarmos um container com a flag -it podemos deixá-lo executando no terminal:
+```
+docker run -it <imagem>
+```
+
+#### Executando container em background
+Quando icniciamos um container que persiste, ele fica ocupand o terminal;  
+Podemos, assim, executar um container em background para não precisar ficar com diversas abas de terminal aberto. Para isso usamos a flag **-d**(detached);  
+Também verificamos contaienrs em background por meio do "docker ps".
+
+#### Expondo Portas
+Os containers de docker não possuem conexão com anda de fora deles;  
+Em razão disso, precisamos expor portas por meio da flag **-p**;  
+Podemos uá-la da seguinte maneira:
+```
+-p 80:80
+```
+Deste modo, o container ficará disponível na porta 80.
+
+#### Parando Containers
+Podemos parar um container por meio do comando:
+```
+docker stop <id ou nome>
+```
+Desta maneira liberamos recursos que estão sendo gastos pelo mesmo.
+
+#### Reiniciando Containers
+Para voltar a rodar um container que foi parado com o "docker strop" usamos o comando:
+```
+docker start <id>
+```
+
+#### Definindo um nome para um Container
+Definimos um nome do container com a flag **--name**;  
+Caso não coloquemos nomes, receberemos um nome aleatório, o que é um problema para uma aplicação profissional.  
+Esta flag é inserida juntamente com o comando **run**:
+```
+docker run -d -p 80:80 --name <nome> <imagem>
+```
+
+#### Acessando o Log de um Container
+Podemos verificar o que aconteceu em um container co o seguinte comando:
+```
+docker logs <id>
+```
+
+#### Removendo um Container
+Para remover um container da máquina que estamos executando o Docker usamos o seguinte comando:
+```
+docker -rm <id>
+```
+```
+docker -rm -f <id>
+```
+No segundo caso, usamos a flag **-f** para forçar a remoção.
+
+#### O que é uma Imagem?
+São originadas de arquivos que programamos para que o Docker crie uma estrutura que execute determinadas ações em containers;  
+Elas contém informações como: imagem base, diretório base, comandos a serem executados, porta de aplicação, etc.  
+Ao rodar um container baseado em uma imagem, as instruções serão executadas em camadas.
+
+#### Criando uma Imagem
+Para criarmos uma imagem vamos precisar de um arquivo Dockerfile me uma pasta na qual ficará o projeto;  
+Este arquivo vai precisar de algumas instruções para poder ser executado:
+* FROM: imagem base;
+* WORKDIR: diretório da aplicação;
+* EXPOSE: porta da aplicação;
+* COPY: quais arquivos precisasm ser copiados;
+
+#### Executando uma Imagem
+Precisamos, para executar uma imagem, primeiramente fazer o build por meio do comando:
+```
+docker build <dir da imagem>
+```
+Depois utilizamos o comando **run** para executá-la:
+```
+docker run <imagem>
+```
+
+#### Alterando uma Imagem
+Sempre que alterarmos a imagem precisaremos fazer a build dela novamente;  
+Para o Docker é como se ela fosse uma imagem completamente nova;  
+Após o build por um outro id único criado juntamente ao comando **run**.
+
+#### Camadas das imagens
+As imagens do Docker são divididas em camadas;  
+Cada instrução do DockerFile representa uma layer;  
+Quando algo é atualizado apenas as layers depois da linha atualizada são refeitas;  
+O resto permanece em cache, tornando o build mais rápido;
+
+#### Download de imagens
+Podemos fazer o download de alguma imagem do hub e deixá-la disponível em nosso ambiente;  
+Vamos utilizar o comando:
+```
+docker pull <imagem>
+```
+Assim, caso se use em outro container, a imagem já estará pronta para ser utilizada;
+
+**Com a flag *--help* teremos um leque de todas as opções disponíveis nos comandos**
+
+#### Múltiplas aplicações
+Podemos iniciar vários containers com uma mesma imagem para todos.  
+Neste caso, as aplicações estarão funcionando em paralelo.  
+Para testar isso, podemos determinar uma porta diferente para cada uma e rodar no moto detached.  
+
+#### Nomeando imagens
+Podemos nomear as imagens que criamos:
+```
+docker tag <id> <nome>
+```
+Também podemos modificar a tag, que seria como uma versão da imagem, uam outra versão.  
+
+Para inserir uma tag utilizamos:
+```
+docker tag <id>:<nome>
+```
+
+#### Iniciando imagem com um nome
+Podemos nomear nossa imagem já na criação da mesma por meio do uso da flag **-t**.  
+Neste caso, podemos também adicionar nome **e** tag na sintaxe: **nome:tag**
+
+Torna o processo de nomear imagens mais **simples**
+
+#### Comando start Interativo
+Podemos rodar nossa imagem com o comando "start" ao adicionarmos a flag **-it**. Assim, não é necessário usar o comando "run", que criaria outro container.
+```
+docker start -it <container>
+```
+#### Removendo Imagens
+Podemos remover imagens por meio do comando:
+```
+docker rmi <imagem>
+```
+Imagens que no momento de remoção estão sendo usadas pelo container apresentarão uma mensagem de erro;
+
+Ainda podemos utilizar a flag **-f** para forçar a ação de remoção da imagem.
+
+#### Removendo Imagens e Containers
+```
+docker system prune
+```
+Com este comando, podemos remover imagens, containers e networks que não são utilizados.
+
+Para essa ação, o sistema pedirá confirmação de usuário para realizar a remoção.
+
+#### Removendo container após a utilização
+```
+docker run --rm <container>
+```
+Neste comando, iniciamos um container com o comando "run" e, após utilizá-lo, ele será automaticamente deletado.
+
+#### Copiar Arquivos entre Containers
+```
+docker cp
+```
+Pode ser usado para copiar um arquivo de um diretório para um container, de um container para um diretório determinado ou entre containers divergentes.
+
+#### Verificar Informações de Processamento
+Verificar dados de execuçãoi de um container:
+```
+docker top <container>
+```
+
+#### Inspecionando Container
+Podemos usar um comando para verificar informações diversas de um container, como: id, data de criação, imagem, etc...
+```
+docker inspect <container>
+```
+Com ele, entendemos como o container está configurado.
+
+#### Verificando Processamento (Geral)
+Para verificar os processos que estão sendo executados em um container, devemos utilizar o comando:
+```
+docker stats
+```
+Desta forma temos acesso ao andamento do processamento e a memória gasta pelo mesmo.
+
+#### Autenticação no Docker Hub
+Devemos nos autenticar com a conta do Docker Hub pelo terminal para podermos enviar imagens.  
+Nos autenticamos pelo comando:
+```
+docker login
+```
+
+#### Logout do Docker Hub
+```
+docker logout
+```
+
+#### Enviando imagens para o Docker Hub
+Para enviar imagens para o Hub usamos o comando:
+```
+docker push <imagem>
+```
+Antes de enviarmos a imagem, precisamos criar o repositório para a mesma no site do Hub.
+
+#### Atualizando Imagens no Docker Hub
+Precisamos:
+* Fazer o build da imagem;
+* Trocar a tag da imagem para a aversão atualizada;
+* Fazer um push para o repositório;
+  
+Assim, todas as versões estarão disponíveis para serem utilizadas;
+
+#### Utilizando a Imagem
+Para baixar a imagem usamos:
+```
+docker pull <imagem>
+```
+
+Logo após, criamos um novo container com o comando:
+```
+dockar run <imagem>
+```
+E pronto! Estamos usamos a nossa própria imagem dentro de um container.
