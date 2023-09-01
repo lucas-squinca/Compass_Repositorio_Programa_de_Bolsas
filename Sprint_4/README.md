@@ -512,3 +512,171 @@ Logo após, criamos um novo container com o comando:
 dockar run <imagem>
 ```
 E pronto! Estamos usamos a nossa própria imagem dentro de um container.
+
+#### O que são Volumes?
+São uma forma prática de persistir dados em aplicações e não depender de containers para isso;  
+Todo dad ocriado por um container é salvo nele, quando o container é removido perdemos os dados;  
+Precisaremos dos volumes para gerenciar os dados e também conseguir fazer backups de forma mais simples;
+
+#### Tipos de Volumes
+* Anônimos: Criados pela flag **-v**, porém com um nome aleatório;
+* Nomeados: Volumes com nomes, referimo-nos a ele com facilidade;
+* Bind mounts: Uma forma de salvar dados na nossa máquina, sem o gerenciamento do Docker, informamos um diretório para este fim;
+
+#### O problema da Persistência de Dados
+Se criamos um container com alguma imagem, todos os arquivos que geramos dentro dele serão do container;  
+Quando o container foi removido, também removemos os nossos arquivos -> Por isso precisamos dos **Volumes**
+
+#### Volumes Anônimos
+```
+docker run -v /data
+```
+Neste caso, o /data será o diretório que contém o volume anônimo;  
+Este container estará atrelado ao volume anônimo;  
+Com o comando "docker volume ls" poderemos ver todos os volumes existentes em nosso ambiente;  
+```
+docker volume ls
+```
+
+#### Volumes nomeados
+Podemos criar um volume nomeado com o uso do seguinte comando:
+```
+docker run -v nomedovolume:/data
+```
+Agora o volume possui um nome e pode ser facilmente referenciado;  
+Usado, assim como o anônimo, para armazenar dados;
+
+#### Bind Mounts
+Também é um volume, porém ele fica em um diretório que nós especificamos;  
+Não criamos um volume em si, mas sim apontamos um diretório;  
+
+O comando para criar um bind mount é:
+```
+docker run /dir/data:/data
+```
+Deste modo, o diretório /dir/data no nosso computador será o volume deste container;
+
+#### Extra: BindMount
+O Bind mount não serve somente para a criação de volumes;  
+Podemos usar essa técnica para atualizar o nosso projeto em tempo real, sem precisar refazer o build a cada atualização do mesmo;  
+
+
+#### Criando um Volume Manualmente
+
+```
+docker colume create <nome>
+```
+Desta forma temos um named volume criado, podemos atrelar a algum container na execução;
+
+#### Listando todos os volumes 
+```
+docker volume ls
+```
+
+#### Inspecionando um Volume
+```
+docker volume inspect <nome>
+```
+Neste comando, temos acesso total ao local em que o volume guarda dados, nome, escopo, etc;  
+O docker salva os dados dos volumes em algum diretório do nosso computador. Com esse comando podemos saber qual é;
+
+#### Removendo um Volume
+```
+docker volume rm <nome>
+```
+Observe atentamente que quando removemos um volume também removeremos todos os dados a ele pertencentes
+
+**OBS:** Podemos remover todos os volumes que não estão sendo utilizados com apenas um comando, evitando assim remover os volumes um a um;  
+```
+docker volume prune
+```
+
+#### Volume somente para leitura
+Criação de um volume que possui somente permissão de leitura.  
+Para efetuar esta configuração utilizamos o comando:
+```
+docker run -v volume:/data:ro
+```
+> ro = read only
+
+#### O que são Networks?
+São uma forma de gerenciar a conexão do Docker com outras plataformas ou até mesmo entre containers;  
+As redes são criadas separadas dos containers, como os volumes;  
+Além disso, existem alguns drivers de rede;  
+Uma rede deixa simples a comunicação entre containers;
+
+#### Tipos de Conexão
+* Externa: Conexão com uma API de um servidor remoto;
+* Com o Host: Comunicação com a máquina que está executando o Docker;  
+* Entre Containers: Comunicação que utiliza o driver "bridge" e permite a comunicação entre dois ou mais containers;
+
+#### Tipos de Drivers
+* Bridge: O mais comum do Docker, utilizado quando containers precisam se conectar;  
+* Host: Permite a conexão entre um container a máquina que está hosteando o Docker;
+* macvlan: permite a conexão a um container por um MAC address;
+* none: remove todas as conexões de rede de um container;
+* plugins: permite extensões de terceiros para criar outras redes;
+
+#### Listando Redes
+Podemos verificar todas as redes do nosso ambiente com o comando:
+```
+docker network ls
+```
+
+#### Criando Redes
+```
+docker network create <nome>
+```
+Esta rede, quando não determinamos o tipo, será do tipo **bridge**
+
+Usamos a flag **-d** para determinar o tipo de rede que iremos criar.
+```
+docker network create -d <tipo> <nome>
+```
+#### Removendo Redes
+```
+docker network rm <nome>
+```
+
+Para remover redes que não estamos utilizando de uma vez usamos o comando:
+```
+docker network prune
+```
+
+#### Conexões Externas
+Os containers podem se conectar livremente ao mundo externo, como por exemplo a uma API de código aberto;
+
+#### Conexão com o Host
+Podemos também conectar um container com o host do Docker;  
+Host é uma máquina que está executando o Docker;  
+Como ip de host utilizamos: host.docker.internal;
+
+#### Conexão entre Containers
+Podemos estabelecer uma conexão entre containers: Usado, por exemplo, quando duas imagens distintas rodando em containers separados precisam se conectar para inserir um dado no banco;  
+Neste caso, precisaremos de um rede **bridge** para efetuar a conexão;
+
+#### Conectando um Container a uma Rede
+Podemos conectar um container a uma rede por meio do comando:
+```
+docker network connect <rede> <container>
+```
+
+#### Desconectando um Container
+Podemos também desconectar um container:
+```
+docker network disconnect <rede> <container>
+```
+
+#### Inspecionando Redes
+```
+docker network inspect <nome>
+```
+#### O que é YAML?
+É uma linguagem de serialização, seu nome é YAML ain't Markup Language;  
+É usada geralmente para arquivos de configuração, incluindo o Docker na hora de configurar  o Docker Compose;  
+* De fácil leitura para o ser humano;
+* Extensão: .yml ou .yaml;
+
+#### Criando o arquivo YAML
+O arquivo .yaml possui chaves e valores, os qusi são de onde iremos retirar as configurações do nosso sistema;  
+Para definir uma chave apenas devemos inserir o nome dela, em seguida colocamos dois pontos e depois o valor;
