@@ -1,2 +1,11 @@
 nome: "Mathes"
 idade: 24
+
+
+objeto:
+  versão: 2
+  arquivo: "teste.txt"
+
+string_sem_aspas: opa
+
+string_com_aspas: "opa2"

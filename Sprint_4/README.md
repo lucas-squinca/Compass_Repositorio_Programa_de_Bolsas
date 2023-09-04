@@ -680,3 +680,387 @@ docker network inspect <nome>
 #### Criando o arquivo YAML
 O arquivo .yaml possui chaves e valores, os qusi são de onde iremos retirar as configurações do nosso sistema;  
 Para definir uma chave apenas devemos inserir o nome dela, em seguida colocamos dois pontos e depois o valor;
+
+#### Espaçamento e Indentação
+O fim de uma linha significa o final da instrução. Neste caso, não usamos ponto e vírgula;  
+A indentação se dá com um ou mais espaços. Não usamos **TAB**;  
+Cada uma define um bloco;  
+O espaço é obrigatório após a declaração das chaves;
+
+#### Comentários do YAML
+Usamos o **#** para usar comentários;
+
+#### Dados numéricos YAML
+* Inteiros: 18
+* Floats: 15.7
+
+#### Strings YAML
+Podemos usar strings tanto com aspas duplas quanto sem aspas nenhuma.
+
+#### Dados nulos YAML
+Podemos colocar um valor nulo (None) dentro do YAML tanto com o valor "null" quanto com o símbolo "~"
+
+#### Booleanos
+* True ou On;
+* False ou Off;
+
+#### Arrays
+Temos duas sintaxes para o uso das listas no YAML:
+```
+items: [1, 2, 3, 4, 5]
+```
+```
+items:
+  - 1
+  - 2
+  - 3
+  - 4
+```
+
+#### Dicionários no YAML
+Sintaxes:
+```
+obj: {a: 1, b: 2, c: 3}
+```
+```
+objeto:
+  chave: 1
+  chave: 2
+```
+
+#### O que é Docker Compose?
+É uma ferramenta para rodar múltiplos containers;  
+Temos apenas um arquivo de configuração, que orquestra totalmente esta situação;  
+É essencial para projetos maiores;
+
+#### Criando arquivo compose
+Primeiro: Criar arquivo docker-compose.yml na raiz do projeto -> Responsável por coordenar containers e imagens;  
+* version: versão do compose; 
+* services: Containers/serviços que vão rodar nessa aplicação;
+* volumes: Possível adição de volumes;
+
+#### Rodando o Compose
+```
+docker compose up
+```
+Assim, as instruções do arquivo serão executadas.
+
+#### Compose em Background
+O compose pode ser executado em modo detached. Para isso, utilizamos a flag **-d** no comando.  
+Deste modo, os containers estarão rodando em background;
+
+#### Parando Compose
+```
+docker compose down
+```
+
+#### Variáveis de Ambiente no Compose
+Como definir uma variável de ambiente: Definindo um arquivo base em env_file;  
+As variáveis podem ser chamadas pela sintaxe: ${VAR}  
+Útil quando o dado a ser inserido é sensível;
+#### Redes no Compose
+O compose cria um rede básica Bridge entre os containers pertencentes à aplicação;  
+Além disso, podemos isolar as redes com a chave networks. Assim poderemos conectar apenas os containers que optarmos.
+
+#### O que é Orquestração de Containers?
+É o ato de conseguir gerenciar e escalar os containers da nossa aplicação;  
+Temos um serviço que rege sobre outros serviços, verificando se os mesmo estão funcionando como deveriam;  
+Desta forma conseguimos garantir uma aplicação saudável e também que estaja sempre disponível;
+#### O que é Docker Swarm?
+Uma ferramenta do Docker que serve para orquestrar containers. Nela, podemos escalar horizontalmente nossos projetos de maneira simples.  
+
+A facilidade do Swarm para outros orquestradores é que todos os comandos são muito semelhantes ao do Docker;
+#### Conceitos Fundamentais do Swarm
+* Nodes: É uma instância que participa do Swarm;
+* Manager Node: Node que gerencia os demais Nodes;
+* Worker Node: Nodes que trabalham em função do Manager;
+* Service: Um conjunto de tasks que  o Manager Node manda o Work Node executar; 
+* Task: Comandos que são executados nos Nodes;
+#### Formas de Executar o Swarm
+Para executar o Swarm precisaremos de mais máquinas. Para isso, temos algumas soluções:
+* AWS;
+* Docker Labs;
+
+#### Iniciando o Swarm
+```
+docker swarm init
+```
+Em alguns casos em que formos iniciar o Swarm precisaremos especifinar o IP com a flag **--advertise-addr**
+
+#### Listando Nodes Ativos
+```
+docker node ls
+```
+Deste modo, poderemos monitorar o que o Swarm está orquestrando;
+
+#### Adicionando Máquinas ao Swarm
+```
+docker swarm join --token <TOKEN> <IP>:<PORTA>
+```
+Com o uso deste comando, duas máquinas estarão conectadas. Deste modo, a nova máquina entrará na hierarquia como Worker.
+
+#### Subindo um novo Serviço
+Iniciamos um novo serviço por meio deste comando:
+```
+docker service create --name <nome> <imagem>
+```
+
+Por meio disso adicionaremos um novo container ao nosso Manager;
+
+#### Verificar Serviços rodando no Swarm
+```
+docker service ls
+```
+Assim os serviços serão exibidos bem como algumas informações importantes sobre os mesmos: nome, replicas, imagem, porta;
+
+#### Removendo Serviços
+```
+docker service rm <nome>
+```
+Para de rodar o serviço selecionado;
+
+#### Replicando Serviços
+Podemos iniciar um determinado serviço já contendo um número maior de réplicas por meio do comando:
+```
+docker service create --name <NOME> --replicas <NUMERO> <IMAGEM>
+```
+
+#### Checando o Token do Swarm
+```
+docker swarm join-token manager
+```
+
+Checamos o token pelo próprio terminal.
+
+#### Removendo instância Swarm
+Podemos parar de executar uma instância Swarm por meio do comando:
+```
+docker swarm leave
+```
+
+#### Removendo um Node
+```
+docker node rm <ID>
+```
+Com este comando, a instância não será considerada mais um Node, saindo do Swarm.
+
+#### Inspecionando Serviços
+```
+docker service inspect <ID>
+```
+
+#### Verificando quais Containers estão rodando
+```
+docker service ps <ID>
+```
+Receberemos uma lista dos containers que estão rodando e daqueles que já receberam baixa;
+
+#### Compose no Swarm
+Usaremos nesta situação os comandos de Stack:
+```
+docker stack deploy -c <ARQUIVO.YAML> <NOME>
+```
+Assim teremos um arquivo compose sendo executado.
+
+#### Replicando no Stack
+```
+docker service scale <NOME>=<REPLICAS>
+```
+
+#### Como parar de receber Tasks
+Podemos fazer com que um serviço pare de receber as ordens do Manager por meio do referido comando;
+```
+docker node update --availability drain <ID>
+```
+
+#### Atualizando uma imagem no Swarm
+```
+docker service update --image <IMAGEM> <SERVIÇO>
+```
+
+#### Criando Redes para serviços no Swarm
+A conexão entre instâncias usa um driver diferente chamado "overlay"  
+Podemos criar uma rede com:
+```
+docker network create
+```
+e depois ao criar um service adicionar a tag: 
+```
+--network <REDE>
+```
+para inserir as instâncias na nossa nova rede.
+
+#### Conectando um serviço a uma rede existente
+```
+docker service update --network <REDE> <NOME>
+```
+
+#### O que é Kubernetes?
+É uma ferramenta de orquestração de containers. Permite a criação de múltiplos containers em diferentes máquinas (nodes);  
+Ela gerencia serviços, garantindo que as aplicações sejam executads sempre da mesma forma.
+
+#### Conceitos Fundamentais - Kubernetes
+* Control Plane: Onde é gerenciado o controle dos processos dos Nodes;
+* Nodes: Máquinas que são gerenciadas pelo Control Plane;
+* Deployment: A execução de uma imagem/projeto em um Pod;
+* Pod: Um ou mais containers que estão em um Node;
+* Services: Serviços que expõe os Pods ao mundo externo;
+* Kubectl: Cliente de linha de comando para o Kubernetes;
+
+#### Inicializando Minikube
+```
+minikube start --driver=<DRIVER>
+```
+Onde o driver vai depender de como foi sua instalação das dependências, seja por virtualbox, hyper-v ou docker.
+
+Podemos testar o minikube com:
+```
+minikube status
+```
+#### Encerrando Minikube
+```
+minikube stop
+```
+#### Acessando a DashBoard
+O minikube nos disponibiliaza uma dashboard e nela podemos ver todo o detalhamento de nosso projeto: Serviços, Pods, etc.  
+A acessamos por meio do comando:
+```
+minikube dashboard
+```
+Ou ainda usamos este comando com a flag **--url** para apenas obter a URL.
+#### Deployment
+É uma parte fundamenta ldo Kubernetes. Com ele, criamos nosso serviço que vai rodar nos Pods;  
+Definimos uma imagem e um nome para posteriormente ser replicado entre os servidores.  
+A partir da criação do deployment teremos containers rodando.
+
+#### Criando o Deployment
+```
+kubectl create deployment <Nome> --image=<Imagem>
+```
+#### Verificando Deployment
+Para verificar o Deployment usamos o comando:
+```
+kubectl get deployments
+```
+E para receber mais detalhes dos mesmos utilizamos:
+```
+kubectl describe deployments
+```
+Com estes comandos saberemos se o projeto está de fato rodando e o que está rodando nele.
+#### Checando Pods
+Os pods são componentes nos quais os containers realmente são executados.  
+Para verificar um Pod usamos:
+```
+kubectl get pods
+```
+E para receber mais detalhes:
+```
+kubectl describe pods
+```
+#### Configurações do Kubernetes
+```
+kubectl config view
+```
+
+#### Services
+Possibilita expor os Pods para o mundo externo.  
+Os Services são uma entidade separada dos Pods, que os expõe eles a uma rede.
+#### Criando um Service
+```
+kubectl expose deployment <NOME> --type=<TIPO> --port=<PORT>
+```
+
+#### Gerando um IP para o Service
+```
+minikube service <NOME>
+```
+#### Detalhes do Service
+Podemos usar o seguinte comando para obter detalhes os services já criados:
+```
+kubectl get services
+```
+#### Escalando Aplicação
+```
+kubectl scale deployment/<NOME> --replicas=<NUMERO>
+```
+
+#### Verificando o número de Réplicas
+```
+kubectl get rs
+```
+
+#### Diminuir número de Réplicas
+```
+kubectl scale deployment/<Nome> --replicas=<NUMERO_MENOR>
+Colocando um número menor do que o número de réplicas existentes, o mesmo será reduzido.
+```
+
+#### Atualização de Imagem
+```
+kubectl set image deployment/<NOME> <NOME_CONTAINER>=<NOVA_IMAGEM>
+```
+
+#### Desfazendo Alterações
+Verificando alterações:
+```
+kbectl rollout status deployment/<NOME>
+```
+
+Voltar a alteração(desfazer):
+```
+kubectl rollout undo deployment/<NOME>
+```
+
+#### Deletando Services
+```
+kubectl delete service <NOME>
+```
+#### Deletando Deployments
+```
+kubectl delete deployment <NOME>
+```
+#### Modo Declarativo
+Até o momento passado estávamos trabalhando com o modo imperativom onde iniciamos a aplicação com comandos.
+
+O modo declarativo é guiado por um arquivo semelhantemente ao Docker Compose. Desta forma tornamos as nossas configurações mais simples e centralizamos tudo em um comando, apenas.
+
+#### Chaves mais usadas no modo declarativo:
+* apiVersion: Versão utilizada da ferramenta;
+* Kind: tipo do arquivo (Deployment, Service);
+* metadata: Descrever algum objeto, inserindo chaves como name;
+* replicas: número de réplicas de Nodes/Pods;
+* containers: Definir as especificações de containers como: nome e imagem;
+
+#### Executando Arquivo Deployment
+```
+kubectl apply -f <ARQUIVO>
+```
+
+#### Parando o Deployment
+```
+kubectl delete -f <ARQUIVO>
+```
+
+#### Executando o serviço (service)
+```
+kubectl apply -f <ARQUIVO>
+```
+
+#### Parando o Serviço
+```
+kubectl delete -f <ARQUIVO>
+```
+
+#### Atualizando o Projeto
+1. Criar uma nova versão da imagem;
+2. Fazer o push para o Hub;
+3. Alterar a tag no arquivo de Deployment;
+4. Reaplicar o comando de Apply;
+#### Unindo Arquivos
+Em um mesmo arquivo podemos ter o nosso Deployment e Service, ocorrendo a separação por meio de "---".
+
+
+## Certificados:
+![estatistica](/Sprint_4/Estatística_python/Certificado/Certificado%20de%20conclusão%20Estatística%20com%20Python.jpg)
+
+![docker](/Sprint_4/Docker/Certificado/Certificado%20de%20Conclusão%20Docker.jpg)
