@@ -324,7 +324,7 @@ docker stop <id ou nome>
 Desta maneira liberamos recursos que estão sendo gastos pelo mesmo.
 
 #### Reiniciando Containers
-Para voltar a rodar um container que foi parado com o "docker strop" usamos o comando:
+Para voltar a rodar um container que foi parado com o "docker stop" usamos o comando:
 ```
 docker start <id>
 ```

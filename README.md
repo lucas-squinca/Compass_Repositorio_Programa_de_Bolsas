@@ -600,7 +600,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 ## Sprint #3
 - ### Python
-    >### Acesse o Resumo completo de Python [clicando aqui](/Sprint_3/_Python_/README.md)
+    >### Acesse o Resumo completo de Python clicando [aqui](/Sprint_3/_Python_/README.md)
   
     >### Acesse o Desafio Python AWS clicando [aqui](/Sprint_3/_Python_/Desafio%20AWS_python/)
 
@@ -617,6 +617,10 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ---------------
 ### Sprint #3
 ![image](/Certificados%20AWS/Certificado%20AWS%203-10.jpg)
+
+### Sprint #4
+![image](/Certificados%20AWS/Certificado%20AWS%204-10.jpg)
+
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
 [Twitter]: https://twitter.com/lucas_squinca
