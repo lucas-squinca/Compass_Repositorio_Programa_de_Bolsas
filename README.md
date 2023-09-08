@@ -600,13 +600,25 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 ## Sprint #3
 - ### Python
-    >### Acesse o Resumo completo de Python clicando [aqui](/Sprint_3/_Python_/README.md)
-  
-    >### Acesse o Desafio Python AWS clicando [aqui](/Sprint_3/_Python_/Desafio%20AWS_python/)
+    >#### Acesse o certificado de Python clicando [aqui]()
 
-    >### Acesse as atividades AWS 3/10 clicando [aqui](/Sprint_3/_Python_/Exercícios_AWS_3-10/)
+    >#### Acesse o Resumo completo de Python clicando [aqui](/Sprint_3/_Python_/README.md)
+  
+    >#### Acesse o Desafio Python AWS clicando [aqui](/Sprint_3/_Python_/Desafio%20AWS_python/)
+
+    >#### Acesse as atividades AWS 3/10 clicando [aqui](/Sprint_3/_Python_/Exercícios_AWS_3-10/)
+
 ## Sprint #4
+>### Acesse o Conteúdo completo dos cursos trabalhados [clicando aqui](/Sprint_4/README.md)
+
 - ### Programação Funcional
+    >#### Acesse o Certificado [clicando aqui](/Sprint_4/programacao_funcional/)
+
+- ### Estatística Descritiva em Python
+    >#### Acesse o certificado [clicando aqui](/Sprint_4/Estatística_python/Certificado/Certificado%20de%20conclusão%20Estatística%20com%20Python.jpg)
+
+- ### Docker para Desenvolvedores
+    >#### Acesse o certificado [clicando aqui](/Sprint_4/Docker/Certificado/Certificado%20de%20Conclusão%20Docker.jpg)
 
 ## Certificados AWS
 ### Sprint #1
