@@ -30,7 +30,15 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ---------------
 ## Segurança em aplicações Web
 
+>### Acesse o Certificado do curso [clicando aqui](/Segurança_Web/Certificado/Certificado%20de%20Conclusão%20Segurança%20Web.jpg)
+
+>### Acesse o [Resumo completo de Segurança Web](/Segurança_Web/README.md)
+
 ## Métodos ágeis de A a Z
+
+>### Acesse o Certificado do curso [clicando aqui](/Métodos_Ágeis/Certificado/Certificado%20de%20conclusão%20Métodos%20Ágeis.jpg)
+
+>### Acesse o [Resumo completo de Métodos Ágeis](/Métodos_Ágeis/README.md)
 
 ## Sprint #1
 - ### *Git & GitHub*
