@@ -600,8 +600,6 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 ## Sprint #3
 - ### Python
-    >#### Acesse o certificado de Python clicando [aqui]()
-
     >#### Acesse o Resumo completo de Python clicando [aqui](/Sprint_3/_Python_/README.md)
   
     >#### Acesse o Desafio Python AWS clicando [aqui](/Sprint_3/_Python_/Desafio%20AWS_python/)
