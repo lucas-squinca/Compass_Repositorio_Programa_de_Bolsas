@@ -612,11 +612,15 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 - ### Programação Funcional
     >#### Acesse o Certificado [clicando aqui](/Sprint_4/programacao_funcional/)
 
+    >#### Acesse o Desafio [Python Funcional](/Sprint_4/Ex_python_AWS_4-10/) 
+
 - ### Estatística Descritiva em Python
     >#### Acesse o certificado [clicando aqui](/Sprint_4/Estatística_python/Certificado/Certificado%20de%20conclusão%20Estatística%20com%20Python.jpg)
 
 - ### Docker para Desenvolvedores
     >#### Acesse o certificado [clicando aqui](/Sprint_4/Docker/Certificado/Certificado%20de%20Conclusão%20Docker.jpg)
+
+    >#### Acesse o Desafio [Docker](/Sprint_4/Docker/Desafio_AWS_4-10/)
 
 ## Certificados AWS
 ### Sprint #1
