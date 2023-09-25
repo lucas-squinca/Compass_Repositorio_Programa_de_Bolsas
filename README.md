@@ -643,6 +643,9 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ### Sprint #4
 ![image](/Certificados%20AWS/Certificado%20AWS%204-10.jpg)
 
+### Sprint #5
+![image](/Certificados%20AWS/Certificado%20AWS%205-10.jpg)
+
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
 [Twitter]: https://twitter.com/lucas_squinca
