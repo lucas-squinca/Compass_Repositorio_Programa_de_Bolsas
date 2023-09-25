@@ -630,6 +630,10 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
     >#### Acesse o Desafio [Docker](/Sprint_4/Docker/Desafio_AWS_4-10/)
 
+## Sprint #5
+>### Acesse o resumo [aqui](/Sprint_5/README.md)
+
+>### Acesse os Certificados [aqui](/Sprint_5/Certificados_img/)
 ## Certificados AWS
 ### Sprint #1
 ![image](Certificados%20AWS/Certificado%20AWS%201-10.jpg)
