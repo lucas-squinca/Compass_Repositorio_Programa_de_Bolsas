@@ -490,3 +490,228 @@ Elaborar um relatório sólido que fornecerá aos consumidores o que eles precis
 * Identificar o público, as expectativas dele e o método apropriado de entrega.
 * Identificar os estilos de visualização e o estilo de relatório que melhor atendem às necessidades do público.
 * Criar os relatórios e painéis.
+
+## Usando Amazon RedShift
+Como executo o Amazon Redshift e configuro um cluster?
+
+Nas demonstrações a seguir, você iniciará e interagirá com os componentes básicos necessários para usar o Amazon Redshift em um caso de uso comum. Este curso adota uma abordagem baseada em cenários para ajudá-lo a conceituar os recursos implantados e as opções de configuração selecionadas.
+
+Além disso, ao longo das demonstrações do curso, você também aprenderá:
+
+* Como lançar um data warehouse
+* Como se conectar ao data warehouse usando o editor de consultas v2
+* Como criar visualizações materializadas para acelerar consultas de BI
+* Como usar procedimentos armazenados para automatizar tarefas
+* Como limpar recursos do Amazon Redshift
+
+Cenário: você é administrador de banco de dados de sua empresa, que é um atacadista on-line que vende diversos produtos, como eletrodomésticos, máquinas e móveis. Você foi solicitado a configurar um novo data warehouse para o departamento de vendas da sua empresa. A equipe de vendas afirmou que armazenará cerca de 2 TB de dados não compactados. Algumas das consultas desses dados serão alimentadas em uma ferramenta de BI para monitoramento pelos líderes de vendas. Essas consultas repetíveis exigem tempo de resposta inferior a um segundo, e processos diários de ETL devem ocorrer para alimentar dados novos. A maioria das consultas só precisa acessar os dados dos últimos 30 dias, mas os dados dos 15 meses anteriores podem ser consultados uma única vez. Para criar eficientemente um data warehouse para atender a esses requisitos, você provisionará os recursos nas demonstrações a seguir.
+
+Custo estimado para realizar as demonstrações
+
+Se você decidir realizar esta demonstração em sua própria conta, a AWS cobrará pelos serviços utilizados. Os preços listados na tabela a seguir baseiam-se na duração estimada de 1 hora necessária para configurar e executar a demonstração. Siga a etapa Limpando recursos depois de concluir a demonstração e certifique-se de não manter os recursos em execução por mais de 1 hora.
+
+### Como me conectar ao Cluster com Query Editor V2
+* Passo 1: Inicializar o Editor de Consultas
+  
+Depois que o estado do cluster Redshift se tornar Disponível, você poderá começar a executar consultas. No painel de navegação esquerdo, escolha Editor de consultas v2.
+
+
+
+Para alternar o estado ampliado, escolha a imagem a seguir.
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696021200/LTs3jJYczJkL98Xi7oqKWw/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/B1c3Tdt__GDLkSa6_83MEGH7viMwuv7lD.png)
+
+* Passo 2: Criar bancos de dados de amostra
+Com o editor de consultas v2 aberto, use a seta suspensa para expandir seu cluster e escolha sample_data_dev. Você verá três conjuntos de dados:
+
+  * tickit
+  * tpch
+  * tpcds
+
+Para criar esquemas de amostra separados, escolha o ícone da pasta próximo aos esquemas tickit e tpch. Se uma caixa de diálogo for exibida, escolha Criar. Após alguns minutos, vários exemplos de guias de consulta estarão disponíveis. Você pode abrir novas guias escolhendo “+” acima do botão Executar.
+
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696021200/LTs3jJYczJkL98Xi7oqKWw/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/ID9l_dlrJfc6fOdf_xlZ_u8Tve3klLJTT.jpg)
+
+* Passo 3: Executar Consultas
+Para examinar a capacidade de consulta do Amazon Redshift, na guia Definição da tabela de vendas, escolha Executar. Na seção inferior da página, as guias Resultados produzem os resultados da consulta.
+
+Você pode explorar as outras consultas para se familiarizar mais com o editor de consultas v2. Após a compilação bem-sucedida da consulta, os resultados na imagem a seguir são exibidos.
+
+Alternativamente, você também pode copiar e colar a consulta abaixo no editor de consultas.
+
+```
+SET search_path to tickit;
+SELECT DISTINCT p.*,
+c.ordinal_position,
+c.column_default,
+c.character_set_name
+FROM INFORMATION_SCHEMA.COLUMNS c
+INNER JOIN pg_table_def p ON p.column = c.column_name
+WHERE c.table_schema = p.schemaname AND
+c.table_name = p.tablename AND
+p.tablename = 'sales'AND
+p.schemaname = 'tickit'
+ORDER BY ordinal_position
+```
+
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696021200/LTs3jJYczJkL98Xi7oqKWw/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/QfElG5FzCq2uUyVA_CRiljRafxEht0LwH.jpg)
+
+### Como posso criar e executar visualizações materializadas?
+
+O procedimento passo a passo a seguir fornece exemplos de código para referência. Para saber mais sobre como usar visualizações materializadas, expanda cada uma das seis etapas a seguir.
+
+* Passo 1: preparando o editor de consultas v2 para o exercício de visualizações materializadas
+
+Para começar, na parte superior da página à direita, em Banco de dados, certifique-se de que o banco de dados sample_data_dev esteja selecionado.
+
+ 
+
+Feche todas as abas criadas no último exercício. Certifique-se de ter uma guia de trabalho limpa para executar algumas consultas manuais. Neste exercício, você consulta tabelas no esquema tpch. Você pode expandir o esquema conforme necessário para visualizar as tabelas.
+
+Para alternar o estado ampliado, escolha a captura de tela a seguir.
+
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696021200/LTs3jJYczJkL98Xi7oqKWw/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/1TLgg6ja6PrJAQKK_NIRZ17xfZBidtH41.jpg)
+
+* Passo 2: Introdução às visualizações materializadas
+
+Os líderes de vendas da sua empresa frequentemente visualizam um painel de análise de segmento de mercado. Por exemplo, uma métrica do painel visualiza a receita em várias categorias de produtos, unindo colunas de várias tabelas. Você pode usar visualizações materializadas do Amazon Redshift para obter um desempenho mais rápido nas consultas do painel. As visualizações materializadas do Amazon Redshift recuperam o conjunto de resultados pré-computados dos dados subjacentes sem acessar sempre as tabelas base. Eles também podem executar uma atualização incremental automática quando as tabelas base são alteradas. Isso resulta inerentemente em tempos de saída de consulta mais rápidos.
+
+ 
+
+Use a sintaxe a seguir para criar uma visualização materializada.
+
+```
+CREATE MATERIALIZED VIEW mv_name
+[ BACKUP { YES | NO } ]
+[ table_attributes ]
+[ AUTO REFRESH { YES | NO } ]
+AS query
+```
+
+Vamos detalhar os parâmetros no comando:
+
+* A cláusula BACKUP especifica se a visualização materializada está incluída em snapshots de cluster automatizados e manuais, que são armazenados no Amazon S3. O valor padrão para BACKUP é SIM. Você pode especificar BACKUP NO para economizar tempo de processamento ao criar e restaurar snapshots e para reduzir a quantidade de armazenamento necessária no Amazon S3.
+* A cláusula table_attributes especifica como os dados na visualização materializada são distribuídos. Para obter mais informações sobre os diferentes estilos de distribuição, na seção CREATE MATERIALIZED VIEW do Guia do desenvolvedor do Amazon Redshift, consulte Parâmetros.
+* A cláusula AUTO REFRESH define se a visão materializada deve ser atualizada automaticamente com as últimas alterações de suas tabelas base. O valor padrão é não.
+
+Em seguida, em sua visualização materializada, examine as tabelas de clientes e pedidos. Role para baixo até suas tabelas no esquema tpch e escolha cliente. Observe que uma nova guia é aberta mostrando a linguagem de definição de dados (DDL) e o estilo de distribuição desta tabela. Repita o mesmo passo para a tabela de pedidos.
+
+
+
+Para alternar o modo de zoom, escolha a captura de tela a seguir.
+
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696021200/LTs3jJYczJkL98Xi7oqKWw/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/k5-G1eOwEADMv2rK_PFDeCR46JQI_4PGd.jpg)
+
+* Passo 3: Criando uma visualização materializada
+
+Em seguida, execute o seguinte comando SQL para criar uma visão materializada que une os pedidos e as tabelas de clientes e agrega o preço total por segmento de mercado e prioridade do pedido.
+
+```
+CREATE MATERIALIZED VIEW tpch.market_segment_analysis_mv AS
+SELECT c_mktsegment, o_orderpriority, sum(o_totalprice)
+FROM tpch.customer c
+JOIN tpch.orders o on c_custkey = o_custkey
+GROUP BY c_mktsegment, o_orderpriority;
+```
+
+Para alternar o modo de zoom, escolha a captura de tela a seguir.
+
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696356000/M5k0qcElGVb0AzDvFpiuSg/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/lT0VIdedlZJyCFmx_aScqtOF_2AjXlgBF.jpg)
+
+* Passo 4: Consultar uma visão materializada
+
+Em seguida, consulte a visão materializada. Execute a seguinte instrução SQL:
+```
+SELECT * FROM tpch.market_segment_analysis_mv
+```
+
+* Passo 5: Testar atualização automática para visualização materializada
+
+Em seguida, teste a funcionalidade AUTO REFRESH para confirmar se sua visualização será atualizada se você fizer alterações na tabela base.
+
+Execute o comando a seguir para excluir todas as linhas da tabela base que não são classificadas como AUTOMOBILE.
+```
+DELETE FROM tpch.customer
+WHERE NOT c_mktsegment = 'AUTOMOBILE'
+```
+Execute o seguinte comando para ver se essas linhas foram eliminadas com sucesso.
+```
+SELECT * FROM tpch.customer
+```
+Agora, verifique se esta atualização é propagada para sua visão materializada. Execute o comando a seguir para consultar a visualização materializada.
+```
+SELECT * FROM tpch.market_segment_analysis_mv
+```
+
+Você vê apenas valores AUTOMOBILE na coluna c_mktsegment? Quando criamos a visão materializada, nunca definimos AUTO REFRESH como YES. A visão materializada ignora alterações na tabela base.
+
+Para alterar este parâmetro, execute o seguinte comando.
+```
+ALTER MATERIALIZED VIEW tpch.market_segment_analysis_mv AUTO REFRESH YES;
+```
+Você sempre pode atualizar manualmente a visualização materializada executando este comando.
+```
+REFRESH MATERIALIZED VIEW market_segment_analysis_mv
+```
+Aguarde alguns segundos para que as alterações sejam divulgadas e execute novamente o comando a seguir.
+```
+SELECT * FROM tpch.market_segment_analysis_mv
+```
+Somente os valores AUTOMOBILE são persistidos porque a tabela base não contém nenhum outro valor.
+
+O recurso de atualização automática ajuda os administradores a manter as visualizações materializadas atualizadas e, ao mesmo tempo, reduzir os custos de manutenção. As visualizações materializadas do Amazon Redshift também apresentam a reescrita automática de consultas para visualizações materializadas, o que pode acelerar consultas que não fazem referência explícita a essas visualizações.
+
+* Passo 6: Deletando uma visão materializada
+```
+DROP MATERIALIZED VIEW IF EXISTS tpch.market_segment_analysis_mv
+```
+
+### Como automatizar tarefas complexas e repetidas com procedimentos armazenados?
+
+* Passo 1: Preparar Query Editor v2
+
+Para começar, certifique-se de que o banco de dados sample_data_dev esteja selecionado.
+
+Feche todas as abas criadas no último exercício. Certifique-se de ter uma guia de trabalho limpa para executar algumas consultas manuais. Neste exercício, você consultará tabelas no mesmo esquema tpch do exercício anterior. Você pode expandir o esquema conforme necessário para visualizar as tabelas.
+
+Para alternar o estado ampliado, escolha a imagem a seguir.
+
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696356000/M5k0qcElGVb0AzDvFpiuSg/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/oBtev-jfFiN6vw3w_1yobEeFwbuGViG_b.jpg)
+
+* Passo 2: Código de processamento armazenado
+
+Considere o seguinte cenário:
+
+Sua empresa tem casos de uso para executar operações repetíveis de transformação de dados em determinados conjuntos de dados para sua ferramenta de BI. Ao combinar várias etapas SQL em um procedimento armazenado, você pode reduzir as viagens de ida e volta entre seus aplicativos e o banco de dados.
+
+O exemplo a seguir mostra um procedimento que insere dados, aplica uma transformação específica e gera o resultado. Esse procedimento armazenado precisará ser executado diariamente em novas tabelas intermediárias.
+
+Execute o seguinte comando.
+
+    CREATE OR REPLACE PROCEDURE tpch.test_sp2(f1 IN int, f2 INOUT varchar(256), out_var OUT varchar(256))
+    AS $$
+    DECLARE
+    loop_var int;
+    BEGIN
+    IF f1 is null OR f2 is null THEN
+    RAISE EXCEPTION 'input cannot be null';
+    END IF;
+    DROP TABLE if exists my_etl;
+    CREATE TEMP TABLE my_etl(a int, b varchar);
+    FOR loop_var IN 1..f1 LOOP
+    insert into my_etl values (loop_var, f2);
+    f2 := f2 || '+' || f2;
+    END LOOP;
+    SELECT INTO out_var count(*) from my_etl;
+    END;
+    $$ LANGUAGE plpgsql;
+    call tpch.test_sp2(2,'2019');
+
+* Passo 3: Ver processamento armazenado
+
+Se você fizer uma busca detalhada no esquema tpch, poderá ver que um novo procedimento armazenado foi criado. Na seção inferior da página, escolha a guia Resultado 2 (1).
+
+Observe a saída deste procedimento armazenado. Neste exemplo, pegamos duas entradas para produzir duas saídas transformadas. A coluna f2 exibe os valores transformados e a coluna out_var exibe a contagem de linhas conforme implementada. O Amazon Redshift oferece suporte a argumentos de entrada (IN), entrada e saída (INOUT) e saída (OUT). Por padrão, os argumentos são argumentos de entrada (IN).
+
+Para alternar o estado ampliado, escolha a imagem a seguir.
+
+![image](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1696356000/M5k0qcElGVb0AzDvFpiuSg/tincan/1795780_1660140616_p1ga41djki1i321a671qdk110tngp4_zip/assets/TNq-TzItVRvHvSUi_4jpbYP99N1VCgi5c.jpg)
