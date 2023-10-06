@@ -33,6 +33,14 @@ Diretório para confirmação das atividades Sprint #6
 
 #### Resultado da consulta inicial solicitada:
 ![image](/Sprint_6/Laboratórios/lab-athena/Query%20editor%20_%20Athena%20_%20us-east-1%20-%20Opera%2004_10_2023%2016_40_02.png)
+
+#### Query da consulta "Crie uma consulta que lista os 3 nomes mais usados em cada década desde o 1950 até hoje."
+![image](/Sprint_6/Laboratórios/lab-athena/_Query%20editor%20_%20Athena%20_%20us-east-1%20-%20Opera%2006_10_2023%2015_47_26.png)
+
+#### Resultado da Query(também disponível como documento .csv na pasta)
+![image](/Sprint_6/Laboratórios/lab-athena/_Query%20editor%20_%20Athena%20_%20us-east-1%20-%20Opera%2006_10_2023%2015_47_54.png)
+
+
 ## Laboratório Lambda
 
 #### Imagem criada:
