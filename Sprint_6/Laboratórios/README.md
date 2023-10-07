@@ -40,6 +40,37 @@ Diretório para confirmação das atividades Sprint #6
 #### Resultado da Query(também disponível como documento .csv na pasta)
 ![image](/Sprint_6/Laboratórios/lab-athena/_Query%20editor%20_%20Athena%20_%20us-east-1%20-%20Opera%2006_10_2023%2015_47_54.png)
 
+#### Query SQL Final:
+
+```sql
+WITH TotalPorDecada AS (
+  SELECT
+    FLOOR(ano / 10) * 10 AS decada,
+    nome,
+    SUM(total) AS total_decada
+  FROM minhatabela
+  GROUP BY FLOOR(ano / 10) * 10, nome
+),
+
+NomesOrdenadosPorDecada AS (
+  SELECT
+    decada,
+    nome,
+    total_decada,
+    ROW_NUMBER() OVER (PARTITION BY decada ORDER BY total_decada DESC) AS posicao
+  FROM TotalPorDecada
+)
+
+SELECT
+  nome,
+  decada,
+  total_decada,
+  posicao
+FROM NomesOrdenadosPorDecada
+WHERE posicao <= 3 and decada >= 1950
+ORDER BY decada asc, posicao;
+```
+
 
 ## Laboratório Lambda
 
