@@ -91,3 +91,14 @@ ORDER BY decada asc, posicao;
 
 #### Layer configurada e aplicada na função:
 ![image](/Sprint_6/Laboratórios/lab-lambda/Lambda%20_%20us-east-1%20-%20Opera%2005_10_2023%2015_12_46.png)
+
+## Excluindo Recursos
+
+#### S3 removido
+![image](/Sprint_6/Laboratórios/lab-s3/S3%20Management%20Console%20-%20Opera%2009_10_2023%2011_36_06.png)
+
+#### Função Lambda removida
+![image](/Sprint_6/Laboratórios/lab-lambda/AwsDataCatalog%20_%20Data%20sources%20_%20Athena%20_%20us-east-1%20-%20Opera%2009_10_2023%2011_32_46.png)
+
+#### Database removida
+![image](/Sprint_6/Laboratórios/lab-athena/AwsDataCatalog%20_%20Data%20sources%20_%20Athena%20_%20us-east-1%20-%20Opera%2009_10_2023%2011_29_40.png)
