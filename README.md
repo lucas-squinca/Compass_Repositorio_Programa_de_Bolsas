@@ -641,6 +641,19 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 >### Acesse os certificados [aqui](/Sprint_6/Certificados/)
 
 >### Acesse os laboratórios AWS [aqui](/Sprint_6/Laboratórios/README.md)
+
+## Sprint #7
+>### Acesse o resumo [aqui](/Sprint_7/README.md)
+
+>### Acesse os certificados [aqui](/Sprint_7/certificados/)
+
+>### Acesse os Exercícios [aqui](/Sprint_7/Exercícios/)
+
+>### Acesse o Lab-Glue [aqui](/Sprint_7/Lab-AWS-Glue/)
+
+>### Acesse o Desafio #1 [aqui](/Sprint_7/Desafio-1/)
+
+
 ## Certificados AWS
 ### Sprint #1
 ![image](Certificados%20AWS/Certificado%20AWS%201-10.jpg)
@@ -659,6 +672,10 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 ### Sprint #6
 ![image](/Certificados%20AWS/Certificado%20AWS%206-10.jpg)
+
+### Sprint #7
+![image](Certificados%20AWS/Certificado%20AWS%207-10.jpg)
+
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
 [Twitter]: https://twitter.com/lucas_squinca
