@@ -653,6 +653,12 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 >### Acesse o Desafio #1 [aqui](/Sprint_7/Desafio-1/)
 
+## Sprint #8
+>### Acesse o Exercício TMDB [aqui](/Compass_Repositorio/Sprint_8/Exercício-TMDB/)
+
+>### Acesse o Exercício Spark [aqui](/Compass_Repositorio/Sprint_8/Exercicio-Spark/)
+
+>### Acesse a Segunda Parte do Desafio [aqui](/Compass_Repositorio/Sprint_8/Desafio-2/)
 
 ## Certificados AWS
 ### Sprint #1
@@ -675,6 +681,9 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 ### Sprint #7
 ![image](Certificados%20AWS/Certificado%20AWS%207-10.jpg)
+
+### Sprint #8
+![image](Certificados%20AWS/Certificado%20AWS%208-10.jpg)
 
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
