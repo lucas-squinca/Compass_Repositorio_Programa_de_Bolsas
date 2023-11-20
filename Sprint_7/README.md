@@ -86,4 +86,42 @@ print(result)
 
 # Encerra o contexto Spark
 sc.stop()
+```
 
+## SparkSQL
+O **Spark SQL** é um módulo do Apache Spark que permite a execução de consultas SQL em dados estruturados, proporcionando uma integração perfeita entre o processamento SQL e os recursos de Big Data do Spark. Isso facilita a análise de dados estruturados usando a linguagem familiar do SQL.
+
+### Principais Recursos:
+
+1. **Processamento Distribuído:** Aproveita a capacidade de processamento distribuído do Apache Spark para consultas SQL em grande escala.
+
+2. **Integração com Dados Estruturados:** Permite a execução de consultas SQL em DataFrames do Spark, que representam dados estruturados em formato tabular.
+
+3. **Suporte a Fontes de Dados Diversificadas:** Pode ser utilizado para consultar uma variedade de fontes de dados, incluindo arquivos Parquet, JSON, Hive, e bancos de dados externos.
+
+4. **Extensibilidade:** Possui suporte para funções SQL personalizadas e extensões, permitindo a personalização de consultas.
+
+### Exemplo de Código:
+
+A seguir, um exemplo simples de utilização do Spark SQL em PySpark:
+
+```python
+from pyspark.sql import SparkSession
+
+# Inicializa uma sessão Spark
+spark = SparkSession.builder.appName("ExemploSparkSQL").getOrCreate()
+
+# Cria um DataFrame de exemplo
+data = [("Alice", 25), ("Bob", 30), ("Catherine", 28)]
+columns = ["Nome", "Idade"]
+df = spark.createDataFrame(data, columns)
+
+# Registra o DataFrame como uma tabela temporária
+df.createOrReplaceTempView("pessoas")
+
+# Executa uma consulta SQL
+resultado = spark.sql("SELECT * FROM pessoas WHERE Idade >= 28")
+
+# Exibe o resultado
+resultado.show()
+```

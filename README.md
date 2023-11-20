@@ -40,6 +40,42 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 >### Acesse o [Resumo completo de Métodos Ágeis](/Métodos_Ágeis/README.md)
 
+#### Manifesto Ágil
+
+O [Manifesto Ágil](https://agilemanifesto.org/) é um conjunto de valores e princípios que orientam o desenvolvimento ágil de software. Destaca a colaboração, respostas rápidas a mudanças, entregas frequentes e trabalho conjunto entre equipes multidisciplinares.
+
+#### Scrum
+
+O [Scrum](https://www.scrum.org/) é um framework ágil amplamente utilizado para desenvolvimento de produtos. Baseia-se em iterações chamadas de Sprints, reuniões diárias e papéis definidos, como Scrum Master e Product Owner.
+
+#### Kanban
+
+O [Kanban](https://kanbanize.com/kanban-resources/getting-started/what-is-kanban) é uma abordagem visual para gestão de projetos. Utiliza quadros para representar tarefas, colunas para estágios do processo e limites para controle do trabalho em progresso.
+
+#### Scrumban
+
+O [Scrumban](https://scrumban.nu/) combina elementos do Scrum e Kanban, buscando flexibilidade e eficiência. Incorpora práticas do Kanban ao Scrum, permitindo adaptações conforme necessário.
+
+#### Lean
+
+Inspirado no sistema de produção da Toyota, o [Lean](https://www.lean.org/whatslean/) enfatiza a eliminação de desperdícios, entrega contínua de valor e melhoria contínua. Busca otimizar processos e reduzir tempo entre concepção e entrega.
+
+#### Extreme Programming (XP)
+
+O [Extreme Programming (XP)](https://www.extremeprogramming.org/) é uma metodologia ágil focada em práticas de programação, como testes automatizados, programação em pares e integração contínua. Busca melhorar a qualidade do software e a satisfação do cliente.
+
+#### Design Sprint Google
+
+A [Design Sprint](https://designsprintkit.withgoogle.com/introduction/overview) é uma abordagem desenvolvida pela Google Ventures para solucionar problemas complexos em curtos períodos. Envolvendo ideação, prototipagem e teste, visa acelerar a inovação.
+
+#### Spotify Squads
+
+O modelo de [Squads da Spotify](https://engineering.atspotify.com/2014/03/27/spotify-engineering-culture-part-1/) organiza equipes em pequenas unidades autônomas chamadas Squads. Cada Squad é responsável por uma parte específica do produto, promovendo agilidade e foco.
+
+#### SMART
+
+A abordagem [SMART](https://www.projectsmart.co.uk/smart-goals.php) refere-se a critérios específicos, mensuráveis, alcançáveis, relevantes e com prazo definido para estabelecer objetivos claros e alcançáveis.
+
 ## Sprint #1
 - ### *Git & GitHub*
     ### Para acessar o certificado [clique aqui](/Sprint_1/Git_&_Hub/Certificado/)
