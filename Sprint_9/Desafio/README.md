@@ -89,3 +89,6 @@ Durante o processamento da refined foi optado o uso dos crawlers para que as tab
 #### Dados salvos como tabelas no Glue Data Catalog
 
 ![image](Tarefa%205%20-%20Processamento%20Refined/img/tabelas_salvas_dataCatalog.png)
+
+#### Dados da tabela salvos no S3
+![image](Tarefa%205%20-%20Processamento%20Refined/img/dados_salvos_s3.png)

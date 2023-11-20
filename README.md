@@ -667,6 +667,39 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 >### Acesse o README do Desafio clicando [aqui](/Sprint_9/Desafio/README.md)
 
+### Modelagem de Dados: Relacional vs Dimensional
+
+- ### Modelagem Relacional
+
+A modelagem relacional é um paradigma de design de banco de dados que utiliza a teoria de conjuntos e álgebra relacional para organizar dados em tabelas inter-relacionadas. A estrutura é composta por entidades, atributos e relacionamentos, e busca atender aos princípios da normalização.
+
+#### Formas Normais
+1. **Primeira Forma Normal (1FN):** Elimina a duplicidade de dados, organizando informações em tabelas com valores atômicos.
+2. **Segunda Forma Normal (2FN):** Garante a remoção de dependências parciais, organizando os dados em tabelas relacionadas com chaves primárias.
+3. **Terceira Forma Normal (3FN):** Elimina dependências transitivas, dividindo as tabelas para atender a uma maior normalização.
+
+#### Normalização
+- **Processo Iterativo:** A normalização é um processo iterativo que visa reduzir a redundância e melhorar a integridade dos dados.
+- **Chaves Primárias e Estrangeiras:** A utilização de chaves primárias e estrangeiras mantém a integridade referencial, facilitando relacionamentos entre tabelas.
+
+#### Vantagens
+- **Integridade Referencial:** Relacionamentos definidos garantem consistência e integridade dos dados.
+- **Flexibilidade Operacional:** Estrutura adaptável a diferentes operações transacionais.
+- **Controle de Acesso:** Permite um controle preciso sobre quem pode acessar e modificar dados.
+
+- ### Modelagem Dimensional
+
+A modelagem dimensional é empregada em data warehousing, focando na eficiência de consultas analíticas e apresentação intuitiva de dados.
+
+#### Estrutura Dimensional
+- **Tabelas de Fatos:** Armazenam métricas e indicadores de desempenho.
+- **Tabelas de Dimensões:** Contêm atributos descritivos que fornecem contexto aos dados.
+
+#### Vantagens
+- **Desempenho Analítico:** Otimizada para consultas analíticas complexas.
+- **Facilidade de Entendimento:** Estrutura hierárquica facilita a compreensão e interpretação dos dados.
+- **Suporte à Tomada de Decisões:** Facilita análises multidimensionais para suportar decisões estratégicas.
+
 ## Certificados AWS
 ### Sprint #1
 ![image](Certificados%20AWS/Certificado%20AWS%201-10.jpg)
