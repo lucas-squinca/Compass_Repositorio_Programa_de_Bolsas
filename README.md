@@ -663,7 +663,9 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ## Sprint #9
 >### Acesse as tarefas 1 e 2 (modelagem dos dados) clicando [aqui](/Sprint_9/modelagem-de-dados/)
 
->### Acesse o Desafio (processamento trusted / modelagem refined / processamento refined) clicando [aqui](/Sprint_9/Desafio/README.md)
+>### Acesse o Desafio (processamento trusted / modelagem refined / processamento refined) clicando [aqui](/Sprint_9/Desafio/)
+
+>### Acesse o README do Desafio clicando [aqui](/Sprint_9/Desafio/README.md)
 
 ## Certificados AWS
 ### Sprint #1
