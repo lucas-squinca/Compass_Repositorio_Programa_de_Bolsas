@@ -660,6 +660,11 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 >### Acesse a Segunda Parte do Desafio [aqui](/Compass_Repositorio/Sprint_8/Desafio-2/)
 
+## Sprint #9
+>### Acesse as tarefas 1 e 2 (modelagem dos dados) clicando [aqui](/Sprint_9/modelagem-de-dados/)
+
+>### Acesse o Desafio (processamento trusted / modelagem refined / processamento refined) clicando [aqui](/Sprint_9/Desafio/README.md)
+
 ## Certificados AWS
 ### Sprint #1
 ![image](Certificados%20AWS/Certificado%20AWS%201-10.jpg)
@@ -684,6 +689,9 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 
 ### Sprint #8
 ![image](Certificados%20AWS/Certificado%20AWS%208-10.jpg)
+
+### Sprint #9
+![image](Certificados%20AWS/Certificado%20AWS%209-10.jpg)
 
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
