@@ -81,6 +81,10 @@ Nesta tarefa foi feito a modelagem dimensional dos dados que serão usados para 
 
 ![image](tarefa%204%20-%20Modelagem%20Refined/img/diagramaDimensional2.png)
 
+#### Criando as views de interesse para facilitar a análise
+
+![image](img/views.png)
+
 ## Tarefa 5: Processamento da Refined
 
 Nesta tarefa foram criadas as tabelas com base na modelagem dimensional feita para a refined.
