@@ -3,6 +3,11 @@ Repositório D&A - Compass UOL
 Repositório destinado para a trilha de atividades da Compass - UOL;  
 Armazenamento de: Anotações e códigos dos assuntos estudados durante o programa de bolsas;
 
+---------------------------------
+## FINALIZADO
+### A todos os monitores e responsáveis pelo programa de bolsas D&A meu grande agradecimento, essa experiência trouxe alegria novamente na minha busca pelo sucesso na carreira profissional, posso agora continuar estudando algo que me dá alegria e prazer de fazer. Muito obrigado!!!
+---------------------------------
+
 ## Apresentação  
 **🧔Nome:** [Lucas Dias Squinca];  
 **👴Idade:** [18];  
@@ -13,7 +18,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 **🏃Hobbies:** [Cozinhar | Academia | Livros];  
 **📖Livros Preferidos:** [Bíblia | Dom Casmurro | Viagens à minha terra | Bons Dias!];  
 **✨Animes Preferidos:** [Black Clover | Ousama Ranking | Spy X Family | Anohana | Tonari to Totoro | Sen to Chihiro no Kamikakushi];    
-**🛠️Experiências:** [None];  
+**🛠️Experiências:** [Estágio D&A CompassUol];  
 **📁Portfólio:** [[nicitov.github.io]][Portfólio];
 ------
 >### **João 3:16 "Porque Deus amou o mundo de tal maneira que entregou o seu Filho unigênito para que todo aquele que nEle crê nao pereça, mas tenha a vida eterna".**
@@ -736,6 +741,13 @@ A modelagem dimensional é empregada em data warehousing, focando na eficiência
 - **Facilidade de Entendimento:** Estrutura hierárquica facilita a compreensão e interpretação dos dados.
 - **Suporte à Tomada de Decisões:** Facilita análises multidimensionais para suportar decisões estratégicas.
 
+## Sprint 10
+
+> ### Acesse o Readme da Sprint clicando [aqui](/Sprint_10/README.md)
+
+> ### Acesse o certificado AWS QuickSight clicando [aqui](/Sprint_10/Certificado/Complete%20Introduction%20to%20AWS%20QuickSight%20[2023%20Edition].jpg)
+
+
 ## Certificados AWS
 ### Sprint #1
 ![image](Certificados%20AWS/Certificado%20AWS%201-10.jpg)
@@ -763,6 +775,9 @@ A modelagem dimensional é empregada em data warehousing, focando na eficiência
 
 ### Sprint #9
 ![image](Certificados%20AWS/Certificado%20AWS%209-10.jpg)
+
+### Sprint #10
+![image](/Certificados%20AWS/Certificado%20AWS%2010-10.jpg)
 
 
 [Stack Overflow]: https://stackoverflow.com/users/22296808/lucas-dias-squinca
