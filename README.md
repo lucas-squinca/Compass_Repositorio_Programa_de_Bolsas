@@ -657,6 +657,73 @@ A abordagem [SMART](https://www.projectsmart.co.uk/smart-goals.php) refere-se a 
 
     >#### Acesse as atividades AWS 3/10 clicando [aqui](/Sprint_3/_Python_/Exercícios_AWS_3-10/)
 
+    #### Resumo
+    Python é uma linguagem de programação de alto nível, interpretada e de propósito geral. Desenvolvida por Guido van Rossum, ela se destaca por sua sintaxe clara e legibilidade, tornando-a uma escolha popular para iniciantes e profissionais.
+
+    #### Recursos Básicos:
+    ```python
+    # Exemplo de variáveis e tipos de dados
+    nome = "Python" #string
+    idade = 30 #int
+    altura = 1.75 #float
+    luz_apagada = True #boolean
+    ```
+
+    #### Estrutura de Controle
+    ```python
+    # Exemplo de estruturas de controle de fluxo
+    if idade >= 18:
+        print("Você é maior de idade.")
+    elif idade < 18 and idade > 0:
+        print("Você é menor de idade.")
+    else:
+        print("Idade inválida")
+    ```
+    #### Estruturas de Repetição
+    ```python
+    for i in range(5):
+        print(f"Contagem: {i}")
+
+    while dados in lista:
+        lista_nova.append(dados)
+    ```
+
+    #### Listas
+    ```python
+    lista_mercado = ["maçã","banana","whey protein","arroz","patinho moído"]
+    ```
+
+    #### Tuplas
+    ```python
+    coordenadas_xy = (2,5)
+    ```
+
+    #### Dicionários
+    ```python
+    pessoa = {"nome": "João", "idade": 25, "cidade": "São Paulo"}
+    ```
+
+    #### Funções
+    ```python
+    def saudacao(nome):
+        return f"Olá, {nome}!"
+
+    if __name__ == "__main__":
+        mensagem = saudacao("Maria")
+        print(mensagem)
+    ```
+
+    #### Classes e Objetos
+    ```python
+    class Carro:
+    def __init__(self, modelo, cor):
+        self.modelo = modelo
+        self.cor = cor
+
+    if __name__ == "__main__"
+        meu_carro = Carro("Civic", "Prata")
+    ```
+
 ## Sprint #4
 >### Acesse o Conteúdo completo dos cursos trabalhados [clicando aqui](/Sprint_4/README.md)
 
@@ -665,13 +732,145 @@ A abordagem [SMART](https://www.projectsmart.co.uk/smart-goals.php) refere-se a 
 
     >#### Acesse o Desafio [Python Funcional](/Sprint_4/Ex_python_AWS_4-10/) 
 
+    #### Resumo
+    A programação funcional é um paradigma que trata a computação como uma avaliação de funções matemáticas e evita a mudança de estado e a mutação de dados. Em Python, podemos aplicar conceitos de programação funcional para escrever código mais conciso e expressivo.
+
+    #### Conceitos
+    - #### Funções de Ordem Superior
+        Em Python, as funções são cidadãos de primeira classe, o que significa que podem ser passadas como argumentos para outras funções e retornadas como valores.
+
+        ```python
+        def aplicar_funcao(funcao, valor):
+            return funcao(valor)
+
+        if __name__ == "__main__":
+            quadrado = lambda x: x ** 2
+            resultado = aplicar_funcao(quadrado, 5)
+        ```
+    - #### Map, Filter e Reduce
+        **map:** Aplica uma função a todos os itens de uma entrada.  
+        **filter:** Filtra os elementos de uma sequência com base em uma função.  
+        **reduce:** Acumula os resultados de uma operação em uma sequência.  
+        ```python
+        # Exemplo de map, filter e reduce
+        numeros = [1, 2, 3, 4, 5]
+        dobro = map(lambda x: x * 2, numeros)
+        pares = filter(lambda x: x % 2 == 0, numeros)
+        soma = reduce(lambda x, y: x + y, numeros)
+        ```
+    - #### Lambda
+        São funções anônimas de uma única linha.
+
+        ```python
+        quadrado = lambda x: x ** 2
+        ```
+    - #### List Comprehension
+        É uma maneira concisa de criar listas.
+
+        ```python
+        quadrados = [x ** 2 for x in range(5)]
+        ```
 - ### Estatística Descritiva em Python
     >#### Acesse o certificado [clicando aqui](/Sprint_4/Estatística_python/Certificado/Certificado%20de%20conclusão%20Estatística%20com%20Python.jpg)
+
+    #### Resumo
+    A estatística descritiva é uma parte fundamental da análise de dados, fornecendo uma descrição resumida das características principais de um conjunto de dados. Em Python, bibliotecas como NumPy e pandas oferecem ferramentas poderosas para realizar análises estatísticas descritivas de maneira eficiente.
+
+    #### Conceitos
+
+    - #### Medidas de Tendência Central
+        Calcular medidas que representam o centro dos dados.
+        ```python
+        import numpy as np
+
+        # Exemplo de média e mediana
+        dados = [10, 15, 20, 25, 30]
+        media = np.mean(dados)
+        mediana = np.median(dados)
+        ```
+    - #### Medidas de Dispersão
+        Avaliar a extensão ou dispersão dos dados.
+        ```python
+        desvio_padrao = np.std(dados)
+        variancia = np.var(dados)
+        ```
+    - #### Análise de Frequência
+        Determinar a frequência de valores únicos em um conjunto de dados.
+        ```python
+        import pandas as pd
+
+        # Exemplo de tabela de frequência
+        serie = pd.Series(dados)
+        tabela_frequencia = serie.value_counts()
+        ```
+    - #### Visualização dos Dados
+        Utilizar gráficos para representar visualmente os dados.
+        ```python
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+
+        # Exemplo de histograma
+        sns.histplot(dados, bins=5, kde=True)
+        plt.title("Histograma dos Dados")
+        plt.show()
+        ```
+    - #### Correlação
+        Analisar a relação entre duas variáveis.
+        ```python
+        dados2 = [5, 10, 15, 20, 25]
+        matriz_correlacao = np.corrcoef(dados, dados2)
+        ```
 
 - ### Docker para Desenvolvedores
     >#### Acesse o certificado [clicando aqui](/Sprint_4/Docker/Certificado/Certificado%20de%20Conclusão%20Docker.jpg)
 
     >#### Acesse o Desafio [Docker](/Sprint_4/Docker/Desafio_AWS_4-10/)
+
+    #### Resumo
+    Docker é uma plataforma de código aberto que permite a automação do ciclo de vida de aplicações em contêineres. Contêineres são unidades leves e portáveis que incluem tudo o que é necessário para executar uma aplicação, incluindo o código, as bibliotecas e as dependências.
+
+    #### Conceitos
+
+    - #### Conteiners
+        Contêineres são instâncias isoladas de uma aplicação, encapsulando seu ambiente de execução. Eles garantem consistência e portabilidade, independentemente do ambiente de implantação.
+
+    - #### Imagens
+        Imagens são snapshots estáticos de um contêiner e contêm o sistema de arquivos da aplicação, as bibliotecas e a configuração. Elas servem como modelos para a criação de contêineres.
+
+        ```docker
+        # Exemplo de uso de uma imagem
+        docker pull nginx:latest
+        docker run -d -p 8080:80 nginx:latest
+        ```
+    - #### DockerFile
+        O Dockerfile é um arquivo de configuração que descreve como construir uma imagem. Ele especifica a base da imagem, as dependências e as etapas para configurar o ambiente da aplicação.
+
+        ```docker
+        FROM python:3.8
+        COPY . /app
+        WORKDIR /app
+        RUN pip install -r requirements.txt
+        CMD ["python", "app.py"]
+        ```
+
+    - #### Compose
+        O Docker Compose é uma ferramenta para definir e executar aplicativos Docker com vários contêineres. Ele permite a configuração de ambientes complexos em um único arquivo.
+
+        ```docker
+        version: '3'
+        services:
+        web:
+            image: nginx:latest
+        app:
+            build: .
+            ports:
+            - "5000:5000"
+        ```
+    #### Vantagens do Docker:
+    - Isolamento: Contêineres garantem isolamento de recursos, evitando conflitos entre aplicações.
+    - Portabilidade: Imagens Docker são leves e podem ser executadas em qualquer ambiente compatível com Docker.
+    - Escalabilidade: Fácil escalabilidade horizontal, adicionando mais instâncias de contêineres conforme necessário.
+    - Eficiência: Uso eficiente de recursos, compartilhando o kernel do sistema operacional.
 
 ## Sprint #5
 >### Acesse o resumo [aqui](/Sprint_5/README.md)
