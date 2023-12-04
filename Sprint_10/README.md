@@ -7,7 +7,7 @@ O seguinte dashboard possui por finalidade apresentar um comparativo dos dados d
 ![image](Desafio-4/dashboard_img/DashBoard_Ghibli_2023-12-01T17_12_00_page-0001.jpg)
 
 
-## Datalhando DashBoard...
+### Detalhando DashBoard...
 
 #### Apresentação inicial sobre o StudioGhibli: O que produz, caractertísticas, fundação, etc.
 ![image](Desafio-4/dashboard_img/Ghibli.png)
