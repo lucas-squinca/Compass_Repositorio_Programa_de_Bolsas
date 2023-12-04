@@ -873,11 +873,15 @@ A abordagem [SMART](https://www.projectsmart.co.uk/smart-goals.php) refere-se a 
     - Eficiência: Uso eficiente de recursos, compartilhando o kernel do sistema operacional.
 
 ## Sprint #5
+Nessa Sprint foram abordados conceitos importantes dos fundamentos da computação em nuvem da Amazon Web Services (AWS). Além disse, foram trabalhados cursos de fundamentação teórica voltado para a certificação Cloud Practitioner.
+
 >### Acesse o resumo [aqui](/Sprint_5/README.md)
 
 >### Acesse os Certificados [aqui](/Sprint_5/Certificados_img/)
 
 ## Sprint #6
+Nessa Sprint demos continuidade à fundamentação teórica da AWS, com os fundamentos da análise de dados, análise de dados com a AWS e a introdução de diversos serviços disponíveis da Amazon Web Services (como AWS Athena, QuickSight, EMR, Kinesis, RedShift, etc) para constuir a melhor solução de dados na nuvem.
+
 >### Acesse o resumo [aqui](/Sprint_6/README.md)
 
 >### Acesse os certificados [aqui](/Sprint_6/Certificados/)
@@ -885,6 +889,7 @@ A abordagem [SMART](https://www.projectsmart.co.uk/smart-goals.php) refere-se a 
 >### Acesse os laboratórios AWS [aqui](/Sprint_6/Laboratórios/README.md)
 
 ## Sprint #7
+Nessa Sprint foram abordados temas como Apache Hadoop (teoria) e Apache Spark, o qual foi de suma importância para o desenvolvimento do desafio final do programa de bolsas.
 >### Acesse o resumo [aqui](/Sprint_7/README.md)
 
 >### Acesse os certificados [aqui](/Sprint_7/certificados/)
@@ -895,7 +900,63 @@ A abordagem [SMART](https://www.projectsmart.co.uk/smart-goals.php) refere-se a 
 
 >### Acesse o Desafio #1 [aqui](/Sprint_7/Desafio-1/)
 
+#### Resumo
+
+- #### Apache Hadoop
+    O Apache Hadoop é um framework de código aberto projetado para processar, armazenar e analisar grandes conjuntos de dados distribuídos em clusters de computadores. Ele fornece uma estrutura escalável para lidar com dados em larga escala.
+
+    #### Fundamentos:
+    ##### MapReduce
+    O conceito chave por trás do Hadoop é o modelo de programação MapReduce. Ele divide tarefas em duas fases:
+
+    1. **Map**: Transformação de dados em pares chave-valor.
+    2. **Reduce**: Agregação e processamento dos resultados intermediários.
+
+    ##### Distribuição de Dados
+    Hadoop distribui dados em blocos (geralmente 128 MB ou 256 MB) e replica esses blocos em vários nós do cluster. Isso melhora a redundância e a recuperação de falhas.
+
+    ##### HDFS (Hadoop Distributed File System)
+    O HDFS é o sistema de arquivos distribuído do Hadoop. Ele armazena os dados em blocos replicados e os distribui pelos nós do cluster. O HDFS fornece tolerância a falhas e alta disponibilidade.
+
+    ##### Escalabilidade Horizontal
+    Hadoop permite a escalabilidade horizontal, o que significa que novos nós podem ser adicionados facilmente ao cluster para lidar com o aumento do volume de dados.
+
+    ##### Ecossistema Hadoop
+    Além do MapReduce e HDFS, o ecossistema Hadoop inclui diversas ferramentas e projetos, como Hive (consulta de dados), Pig (linguagem de script), HBase (banco de dados NoSQL), entre outros.
+
+    ##### Aplicações
+    O Hadoop é amplamente utilizado em cenários onde o processamento de grandes volumes de dados é necessário, como análise de dados, aprendizado de máquina e processamento de logs.
+
+
+- #### Apache Spark
+    O Apache Spark é um framework de processamento de dados em larga escala, rápido e de propósito geral, projetado para análise distribuída de grandes conjuntos de dados. Ele oferece uma interface amigável para programação e é construído para ser eficiente e tolerante a falhas.
+
+    #### Características
+
+    ##### RDD (Resilient Distributed Datasets)
+    O Spark utiliza RDDs, que são coleções imutáveis e distribuídas de objetos, para processamento de dados. Os RDDs oferecem tolerância a falhas por meio de replicação.
+
+    ##### Transformações e Ações
+    Spark facilita operações de transformação em RDDs, como map e filter, e a execução de ações, como count e collect, permitindo construir pipelines de dados de maneira concisa.
+
+    ##### Spark SQL
+    Spark SQL oferece uma interface para consultas SQL em dados estruturados, integrando-se perfeitamente com RDDs e permitindo análises complexas em dados semiestruturados.
+
+    #### Vantagens
+
+    1. **Desempenho**: O Spark é conhecido por seu desempenho superior em relação a frameworks tradicionais, devido à execução em memória.
+  
+    2. **Facilidade de Uso**: API simples e expressiva, facilitando o desenvolvimento de aplicações de análise de dados.
+
+    3. **Ecossistema Unificado**: Integração com Hadoop, Hive, HBase e outros, permitindo aproveitar ferramentas existentes.
+
+    #### Aplicações
+    O Spark é amplamente utilizado em casos de uso como análise de big data, processamento de logs, machine learning e processamento de dados em tempo real.
 ## Sprint #8
+Nesta Sprint entramos em contato com a coleta e o processamento de dados de uma API, no caso, o TMDB.  
+Os dados foram coletados para enriquecer os dados presentes no arquivo "movies.csv", da sprint anterior.  
+Além disso, trabalhamos um pouco mais com o Apache Spark por meio de exercícios de desenvolvimento com pySpark e SparkSql.
+
 >### Acesse o Exercício TMDB [aqui](/Compass_Repositorio/Sprint_8/Exercício-TMDB/)
 
 >### Acesse o Exercício Spark [aqui](/Compass_Repositorio/Sprint_8/Exercicio-Spark/)
@@ -903,6 +964,8 @@ A abordagem [SMART](https://www.projectsmart.co.uk/smart-goals.php) refere-se a 
 >### Acesse a Segunda Parte do Desafio [aqui](/Compass_Repositorio/Sprint_8/Desafio-2/)
 
 ## Sprint #9
+Nesta Sprint trabalhamos com a normalização dos dados para carregá-los posteriormente no AWS QuickSight para produção de um dashbord. Os conceitos de modelagem relacional e dimensional foram aprendidos para serem usados nos dados do desafio.
+
 >### Acesse as tarefas 1 e 2 (modelagem dos dados) clicando [aqui](/Sprint_9/modelagem-de-dados/)
 
 >### Acesse o Desafio (processamento trusted / modelagem refined / processamento refined) clicando [aqui](/Sprint_9/Desafio/)
@@ -943,6 +1006,7 @@ A modelagem dimensional é empregada em data warehousing, focando na eficiência
 - **Suporte à Tomada de Decisões:** Facilita análises multidimensionais para suportar decisões estratégicas.
 
 ## Sprint 10
+Nesta Sprint houve o desenvolvimento do DashBoard final do desafio com base nos dados coletados, processados e carregados das etapas anteriores.
 
 > ### Acesse o Readme da Sprint clicando [aqui](/Sprint_10/README.md)
 
