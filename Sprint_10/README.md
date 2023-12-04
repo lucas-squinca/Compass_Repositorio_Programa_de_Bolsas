@@ -7,14 +7,18 @@ O seguinte dashboard possui por finalidade apresentar um comparativo dos dados d
 ![image](Desafio-4/dashboard_img/DashBoard_Ghibli_2023-12-01T17_12_00_page-0001.jpg)
 
 
-## O que os dados entregam de valor?
+## Datalhando DashBoard...
 
+#### Apresentação inicial sobre o StudioGhibli: O que produz, caractertísticas, fundação, etc.
 ![image](Desafio-4/dashboard_img/Ghibli.png)
 
+#### Comparação de Faturamento dos filmes de grandes produtoras Vs Studio Ghibli
 ![image](Desafio-4/dashboard_img/faturamento.png)
 
+#### Popularidade dos filmes em relação às suas durações
 ![image](Desafio-4/dashboard_img/popularity.png)
 
+#### Nota média dos filmes por ano de lançamento
 ![image](Desafio-4/dashboard_img/media.png)
 
 ## Certificado
