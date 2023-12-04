@@ -126,3 +126,23 @@ Durante o processamento da refined foi optado o uso dos crawlers para que as tab
 
 #### Dados da tabela salvos no S3
 ![image](Tarefa%205%20-%20Processamento%20Refined/img/dados_salvos_s3.png)
+
+## DashBoard
+O seguinte dashboard possui por finalidade apresentar um comparativo dos dados dos filmes de grandes produtoras conhecidas com os dados dos filmes de fantasia do Studio Ghibli, uma produtora japonesa que aborda em suas obras diversos temas e conceitos da cultura e folclore japonês e, mesmo assim, conseguiu cativar o mundo todo com a qualidade e enredo de suas lindas produções!!!
+
+![image](img/DashBoard_Ghibli_2023-12-01T17_12_00_page-0001.jpg)
+
+
+### Detalhando DashBoard...
+
+#### Apresentação inicial sobre o StudioGhibli: O que produz, caractertísticas, fundação, etc.
+![image](img/Ghibli.png)
+
+#### Comparação de Faturamento dos filmes de grandes produtoras Vs Studio Ghibli
+![image](img/faturamento.png)
+
+#### Popularidade dos filmes em relação às suas durações
+![image](img/popularity.png)
+
+#### Nota média dos filmes por ano de lançamento
+![image](img/media.png)
