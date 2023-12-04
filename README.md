@@ -9,6 +9,8 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 ---------------------------------
 
 ## Apresentação  
+<img src="foto_perfil_readme/perfil.jpg" width=270>
+
 **🧔Nome:** [Lucas Dias Squinca];  
 **👴Idade:** [18];  
 **🏡Cidade:** [Mirandópolis/SP];  
