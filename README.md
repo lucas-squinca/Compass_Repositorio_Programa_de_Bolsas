@@ -21,7 +21,7 @@ Armazenamento de: Anotações e códigos dos assuntos estudados durante o progra
 **📖Livros Preferidos:** [Bíblia | Dom Casmurro | Viagens à minha terra | Bons Dias!];  
 **✨Animes Preferidos:** [Black Clover | Ousama Ranking | Spy X Family | Anohana | Tonari to Totoro | Sen to Chihiro no Kamikakushi];    
 **🛠️Experiências:** [Estágio D&A CompassUol];  
-**📁Portfólio:** [[lucas-squinca.github.io]][Portfólio];
+**📁Portfólio:** [[lucas-squinca.github.io](https://lucas-squinca.github.io)];
 ------
 >### **João 3:16 "Porque Deus amou o mundo de tal maneira que entregou o seu Filho unigênito para que todo aquele que nEle crê nao pereça, mas tenha a vida eterna".**
 ------
